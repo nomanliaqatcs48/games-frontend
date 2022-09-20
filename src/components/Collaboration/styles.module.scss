@@ -1,0 +1,87 @@
+.collabContainer {
+    background-color: #F5F5F5;
+    position: relative;
+    padding: 4rem 0rem;
+    .featureLeft {
+        position: absolute;
+        top: 2%;
+    }
+    .featureRight {
+        position: absolute;
+        right: 0;
+        bottom: 8%;
+    }
+    .headText {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 46px;
+        color: #031838;
+    }
+    .descText {
+        font-size: 19px;
+        line-height: 22px;
+        color: #031838;
+    }
+    .inputWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .inputField {
+            border: 0.768259px solid #031838;
+            border-radius: 5px 0px 0px 5px;
+            background-color: transparent;
+            width: 380px;
+            padding: 0rem 0.5rem;
+            height: 52px;
+        }
+        .signUpbtn {
+            background: #0072FF;
+            border-radius: 0px 5px 5px 0px;
+            width: 185px;
+            height: 54px;
+            border: 0.768259px solid #0072FF;
+            color: #fff;
+            font-size: 15px;
+            line-height: 22px;
+            font-weight: 600;
+        }
+    }
+    .autoText {
+        font-size: 15px;
+        line-height: 22px;
+        color: #838383;
+        span {
+            font-size: 15px;
+            line-height: 22px;
+            color: #031838;
+            font-weight: 600;
+            padding-left: 5px;
+        }
+    }
+    .flexWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 45px;    
+        position: relative;
+        padding: 3rem 0rem;
+        .square {
+            position: absolute;
+            right: 29%;
+            top: 4%;
+        }
+    }
+    .flexWrap2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 45px;  
+        position: relative;  
+        .square {
+            position: absolute;
+            top: -12px;
+            left: 42%;
+        }
+    }
+    
+}
