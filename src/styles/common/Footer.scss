@@ -1,0 +1,51 @@
+.footer{
+    background: #031838;
+    .footer_content{
+        h5{
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: "raleway";
+        }
+    }
+    .footer_btn{
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+         h4{
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: "raleway";
+        }
+        input{
+            background: transparent;
+            border-radius: 5px 0 0 5px;
+            border: 0.768259px solid #FFFFFF;
+            padding: 13px 30px 13px 15px;
+            color: #FFFFFF;
+            outline: none;
+        }
+        .footer_sub{
+            background: #FFFFFF;
+            border-radius: 0px 5px 5px 0px;
+            padding: 10px 13px;
+            font-weight: 600;
+            color: #031838;
+        }
+    }
+    .footer_border{
+        border-top: 0.5px solid #0072FF;
+        h4{
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'raleway';
+        }
+        h5{
+            font-size: 14px;
+            color: #FFFFFF;
+            font-family: 'raleway';
+        }
+    }
+}

@@ -1,20 +1,13 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Signup from './components/SignUp';
-
-import './App.css';
+import Header from './components/common/Header';
+import Footer from "./components/common/Footer";
 
 
 function App() {
   return (
-    <div className="App">
-     <h1>InvoChat</h1>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/signup" element={<Signup />}>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    </div>
+      <div>
+          <Header />
+          <Footer />
+      </div>
   );
 }
 
