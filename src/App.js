@@ -1,12 +1,10 @@
-import Header from './components/common/Header';
-import Footer from "./components/common/Footer";
-
+import React from "react";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
       <div>
-          <Header />
-          <Footer />
+          <LandingPage/>
       </div>
   );
 }
