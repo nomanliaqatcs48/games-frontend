@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import footerLogo from "../../assets/images/footer_logo.svg"
-import Twitter from "../../assets/images/twitter.svg";
-import Linkdin from "../../assets/images/linkdin.svg";
-import Facebook from "../../assets/images/fb.svg";
+import footerLogo from "../../Assets/images/footer_logo.svg"
+import Twitter from "../../Assets/images/twitter.svg";
+import Linkdin from "../../Assets/images/linkdin.svg";
+import Facebook from "../../Assets/images/fb.svg";
 import "../../styles/common/Footer.scss"
 
 const Footer = () => {

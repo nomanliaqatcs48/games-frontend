@@ -1,7 +1,7 @@
 import * as React from "react";
 import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button, Container, Grid } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Logo from "../../assets/images/Header_logo.svg";
+import Logo from "../../Assets/images/Header_logo.svg";
 import "../../styles/common/Header.scss";
 
 const navItems = ["About Us", "Pricing", "Features", "Blogs", "Contact us"];

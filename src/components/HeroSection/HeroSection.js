@@ -1,12 +1,12 @@
 import React from 'react'
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import "../HeroSection/HeroSection.scss"
-import HeroPic from "../../assets/images/hero_img.svg"
-import DownArrow from "../../assets/images/down_arrow.svg";
-import IOS from "../../assets/images/ios.svg";
-import Apple from "../../assets/images/apple.svg";
-import Window from "../../assets/images/window.svg";
-import Chrome from "../../assets/images/chrome.svg";
+import HeroPic from "../../Assets/images/hero_img.svg"
+import DownArrow from "../../Assets/images/down_arrow.svg";
+import IOS from "../../Assets/images/ios.svg";
+import Apple from "../../Assets/images/apple.svg";
+import Window from "../../Assets/images/window.svg";
+import Chrome from "../../Assets/images/chrome.svg";
 
 const HeroSection = () => {
   return (

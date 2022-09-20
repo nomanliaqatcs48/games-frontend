@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
-import One from "../../assets/images/one.svg";
-import Two from "../../assets/images/two.svg";
-import Three from "../../assets/images/three.svg";
-import Four from "../../assets/images/four.svg";
+import One from "../../Assets/images/one.svg";
+import Two from "../../Assets/images/two.svg";
+import Three from "../../Assets/images/three.svg";
+import Four from "../../Assets/images/four.svg";
 import "../SimpleSetup/SimpleSetup.scss";
 
 const cards = [
