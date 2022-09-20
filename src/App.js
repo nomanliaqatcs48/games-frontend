@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Signup from './components/SignUp';
+import Features from './pages/Features';
 
 import './App.css';
 
@@ -7,10 +7,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <h1>InvoChat</h1>
       <BrowserRouter>
       <Routes>
-        <Route path="/signup" element={<Signup />}>
+        <Route path="/" element={<Features />}>
         </Route>
       </Routes>
     </BrowserRouter>
