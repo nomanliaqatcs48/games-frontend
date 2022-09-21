@@ -23,7 +23,7 @@ return (
           <Link to="/about">About</Link>
           <Link to="/features">Features</Link>
           <Link to="/pricing">Pricing</Link>
-          <Link to="/blog">Blog</Link>
+          {/* <Link to="/blog">Blog</Link> */}
           <Link to="/faq">FAQs</Link>
           <Link to="/contact">Contact Us</Link>
           <div className="btns">

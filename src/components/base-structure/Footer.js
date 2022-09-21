@@ -35,11 +35,11 @@ export default function Footer() {
                 Pricing
               </Typography>
             </Link>
-            <Link to="/blog">
+            {/* <Link to="/blog">
               <Typography variant="h4">
                 Blog
               </Typography>
-            </Link>
+            </Link> */}
           </Box>
           <Box className="list-content">
             <Link to="/terms">

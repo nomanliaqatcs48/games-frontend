@@ -36,7 +36,7 @@ const IndexPage = ({data}) => (
     <LeadGenerate/>
     <FractionCost/>
     <Consumer/>
-    <Blog blogs={data?.allStrapiBlog?.nodes}/>
+    {/* <Blog blogs={data?.allStrapiBlog?.nodes}/> */}
     <FAQ/>
     <Customizable/>
     <Logos/>
@@ -45,20 +45,20 @@ const IndexPage = ({data}) => (
 
 export default IndexPage
 
-export const query = graphql`
-query MyQueryZaman {
-allStrapiBlog {
-nodes {
-Content
-Slug
-Title
-id
-Image {
-url
-}
-createdAt
-}
-}
-}
-`
+// export const query = graphql`
+// query MyQueryZaman {
+// allStrapiBlog {
+// nodes {
+// Content
+// Slug
+// Title
+// id
+// Image {
+// url
+// }
+// createdAt
+// }
+// }
+// }
+// `
 

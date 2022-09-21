@@ -35,10 +35,10 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-      apiURL: "https://st-backend-invocom.invo.zone/",
-      accessToken: "d4b0ea5623cb21bd7b62f01e4787b379854c7666b014a9f56d9d85e249f867cfb7cde77aee2d4d927dbea6cc12c60d85f46f4acfc32f319fc38721d609ed1c4c7d29bf1c96c175a555a7d75dade5f930ee64c66d23849a639d363df11ec05642732bdb2124dbefc4f6a067a1b4929c55270ffeb76e138de1014fe460d2665784",
+      apiURL: "https://st-backend-invochat.invo.zone/",
+      // add access token
+      accessToken: "f23a59cfe04dda3ac4029c3a6a66e5f248ab44de72c5dcb85c560092a26aa667ea779fb583a7747d443d1b6de203de3a4a89b29b3a1c0d2ef6918518fba7978edbaee6c59245527b468cd143246c85720cc38e3a6895b615c1fe5f4dad5e1c413f53ea3cddc295489c90ec16e714324fc00fd9c5521e45b93abed4d4a3e9298a",
       collectionTypes:
-      // [ "post", "category", "author", "blog" ],
       [ "blog" ],
         queryLimit: 1000,
       },
