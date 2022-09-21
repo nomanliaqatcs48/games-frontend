@@ -34,7 +34,7 @@ export default function DemoForm() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-     axios.post(`https://st-backend-invocom.invo.zone/api/messages`,
+     axios.post(`https://st-backend-invochat.invo.zone/api/messages`,
      {
       data: { Email: email }
      }

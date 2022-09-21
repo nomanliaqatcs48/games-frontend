@@ -50,7 +50,7 @@ export default function Contact() {
     validationSchema: registrationSchema,
     onSubmit: (values, { setSubmitting }) => {
       axios
-        .post(`https://st-backend-invocom.invo.zone/api/contact-uses`, {
+        .post(`https://st-backend-invochat.invo.zone/api/contact-uses`, {
           data: values
         })
         .then((res) => {
