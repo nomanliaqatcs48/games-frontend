@@ -1,0 +1,132 @@
+.modalBack {
+  padding: 50px 0px;
+  background-color: #611f69;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../images/UpdatedBack.svg");
+  @media screen and (max-width: 568px) {
+    background-image: none;
+  }
+}
+.videoImage {
+  width: 100%;
+  @media screen and (max-width: 1100px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 70%;
+  }
+}
+
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .modal-content {
+    h2 {
+      text-align: center;
+      font-size: 55px;
+      font-weight: 700;
+      font-family: "Poppins", sans-serif;
+      color: #fcb92c;
+      @media screen and (max-width: 1100px) {
+        font-size: 45px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 40px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 35px;
+      }
+      @media screen and (max-width: 568px) {
+        font-size: 25px;
+        line-height: 35px;
+      }
+      @media screen and (max-width: 568px) {
+        font-size: 25px;
+        line-height: 35px;
+        padding: 0px 50px;
+      }
+      @media screen and (max-width: 428px) {
+        font-size: 24px;
+        line-height: 30px;
+        padding: 0px 50px;
+      }
+    }
+    h6 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 400;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      margin: 30px 0px;
+      @media screen and (max-width: 1100px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 568px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 428px) {
+        font-size: 10px;
+      }
+    }
+  }
+  .video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-btn {
+    background-color: #fcb92c;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: underline;
+    line-height: 35px;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 40px;
+    margin: 35px 0px;
+    &:hover {
+      background-color: #fcb92c;
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 1100px) {
+      font-size: 25px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 568px) {
+      font-size: 14px;
+      padding: 10px 30px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+      padding: 10px 30px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+      padding: 10px 20px;
+    }
+    @media screen and (max-width: 385px) {
+      font-size: 12px;
+      padding: 5px;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 10px;
+      padding: 5px;
+    }
+  }
+}

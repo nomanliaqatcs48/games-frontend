@@ -1,0 +1,76 @@
+$primaryColor: #611F69;
+$primaryFont: "Poppins",sans-serif;
+
+.policy-wrapper{
+    padding: 30px 0px 100px 0px;
+    .policy-head{
+        h1{
+            color: $primaryColor;
+            font-family: $primaryFont;
+            font-weight: 800;
+            font-size: 46px;
+            text-align: center;
+            margin-bottom: 20px;
+            @media screen and (max-width:768px) {
+                font-size: 40px;
+            }
+            @media screen and (max-width:428px) {
+                font-size: 30px;
+            }
+        }
+        h6{
+            font-family: $primaryFont;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 30px;
+            @media screen and (max-width:768px) {
+                font-size: 17px;
+            }
+            @media screen and (max-width:428px) {
+                font-size: 15px;
+            }
+        }
+    }
+    .policy-content{
+        h1{
+            color: $primaryColor;
+            font-family: $primaryFont;
+            font-weight: 800;
+            font-size: 40px;
+            margin: 30px 0px 20px 0px;
+            @media screen and (max-width:768px) {
+                font-size: 38px;
+            }
+            @media screen and (max-width:428px) {
+                font-size: 30px;
+            }
+        }
+        h6{
+            font-family: $primaryFont;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 30px;
+            @media screen and (max-width:768px) {
+                font-size: 17px;
+            }
+            @media screen and (max-width:428px) {
+                font-size: 15px;
+            }
+        }
+        .policylist-Line{
+            font-family: $primaryFont;
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 30px;
+            @media screen and (max-width:768px) {
+                font-size: 17px;
+            }
+            @media screen and (max-width:428px) {
+                font-size: 15px;
+            }
+        }
+        .policy-listBox{
+            padding-left: 30px;
+        }
+    }
+}

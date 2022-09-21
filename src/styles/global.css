@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Poppins";
+  color: black;
+}
+html, body {
+  min-height: 100%;
+}
+
+p {
+  margin: 16px auto;
+  line-height: 1.5em;
+}
+
+/* layout & nav */
+/* .layout {
+    max-width: 1200px;
+    margin: 0 auto;
+  } */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    background-color: white;
+  }
+  .navBack{
+    border-bottom: 1px solid #D0D0D0;
+  }
+  .links {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+  }
+  .links a{
+    margin: 10px;
+  }
+  .btns a {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 8px;
+  }
+  .sign-up{
+    background-color: #611F69;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: capitalize;
+  }
+  .sign-in{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    border:2px solid black ;
+  }
+  .mob-menu{
+    display: none;
+  }
+  .hamburger{
+    background-color: black;
+    height: 2px;
+    width: 30px;
+    margin-top: 5px;
+  }
+
+  @media screen and (max-width:1100px) {
+    .links{
+      column-gap: 5px;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width:992px) {
+    .links{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      top: 80px;
+      position: absolute;
+      background-color: purple;
+      left: -103%;
+    }
+    .btns .sign-up{
+      display: none;
+    }
+    .mob-menu{
+      display: block;
+    }
+  }
+
+
+  /* ++++++++++++++++++++ */
+
+  /* Footer Section */
+  footer{
+    background-color: #611F69;
+    padding: 50px;
+  }
+  .footerMain{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+  }
+  .footerMenu{
+    display: flex;
+    flex-direction: column;
+  }
+  .footerInput{
+    width: 70%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+  .footerInput::placeholder{
+    color: white;
+  }
+  .footerBtn{
+    background-color: white;
+    border: 2px solid;
+    font-family: 'Poppins';
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px 10px 10px;
+    color: #611F69;
+    font-weight: 600;
+    margin-left: -50px;
+  }
+
+  footer a{
+    color: white;
+  }
+
+  @media screen and (max-width:1100px) {
+    .footerBtn{
+      padding: 5px 10px 10px 10px;
+    }
+  }
+  
+  @media screen and (max-width:992px) {
+    .footerBtn{
+      padding: 5px 10px 10px 10px;
+    }
+    footer a{
+      font-size: 20px;
+    } 
+  }
+  
+  @media screen and (max-width:576px) {
+    .footerBtn{
+      margin-left: -110px;
+      font-size: 15px;
+      padding: 6px 9px 10px;
+    }
+  }
+  
+
+  @media screen and (max-width:428px) {
+    footer{
+      padding: 24px 31px;
+    }
+    .footerInput{
+      font-size: 7px;
+      padding: 4px 8px;
+    }
+    .footerBtn{
+      font-size: 7px;
+      padding: 5px 8px;
+    }
+  }
+
+  /* SearchBox starts */
+  .MuiOutlinedInput-input{
+    border-radius: 40px;
+  }
+  /* SearchBox Ends */

@@ -1,0 +1,262 @@
+.blogBack {
+  background-color: #611f69;
+  padding: 50px 0px;
+  @media screen and (max-width:428px) {
+    padding: 30px 0px;
+  }
+}
+.blogSlideImage {
+  width: 100%;
+  @media screen and (max-width: 1200px) {
+    width: 95%;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 93%;
+  }
+}
+
+.blog-Heading {
+    h2 {
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 55px;
+      line-height: 74px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 55px;
+      @media screen and (max-width: 1100px) {
+        font-size: 45px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 40px;
+      }
+      @media screen and (max-width: 568px) {
+        font-size: 30px;
+        margin-bottom: 35px;
+      }
+      @media screen and (max-width: 428px) {
+        font-size: 24px;
+        margin-bottom: 23px;
+      }
+    }
+  }
+  
+  .blog-slider-container {
+    width: 1070px !important;
+    @media screen and (max-width: 1200px) {
+      width: 900px !important;
+    }
+    @media screen and (max-width: 1100px) {
+      width: 800px !important;
+    }
+    @media screen and (max-width: 992px) {
+      width: 700px !important;
+    }
+    @media screen and (max-width: 800px) {
+      width: 650px !important;
+    }
+    @media screen and (max-width: 768px) {
+      width: 500px !important;
+    }
+    @media screen and (max-width: 600px) {
+      width: 300px !important;
+    }
+    @media screen and (max-width: 428px) {
+      width: 250px !important;
+    }
+    @media screen and (max-width: 360px) {
+      width: 220px !important;
+      padding: 50px 20px;
+    }
+    @media screen and (max-width: 428px) {
+      padding: 20px auto;
+    }
+  }
+  
+  .blog-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .blog-btn {
+      background-color: #fcb92c;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 32px;
+      text-decoration: underline;
+      margin: 30px 0px;
+      text-transform: none;
+      padding: 20px 45px;
+      border-radius: 40px;
+      &:hover {
+        background-color: #fcb92c;
+        text-decoration: underline;
+      }
+      @media screen and (max-width: 1100px) {
+        font-size: 25px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 22px;
+      }
+      @media screen and (max-width: 428px) {
+        font-size: 17px;
+        padding: 5px 18px;
+      }
+    }
+  }
+  
+
+
+// Page Styling
+
+.blogPage {
+  padding: 30px 40px 150px 40px;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+  }
+
+  .blogBanner {
+    img {
+      object-fit: cover;
+      width: 100%;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .blogHeading {
+    margin-top: 60px;
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+    }
+    h1 {
+      font-size: 47px;
+      font-family: "Poppins";
+      line-height: 55px;
+      font-weight: 700;
+      color: #611f69;
+      @media screen and (max-width: 992px) {
+        font-size: 35px;
+      }
+
+      @media screen and (max-width: 428px) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .blogContent {
+    display: flex;
+    margin-top: 50px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      row-gap: 50px;
+    }
+  }
+
+  .cardsLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 30px;
+    row-gap: 40px;
+    max-width: 745px;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+}
+
+
+// BlogCard Styling
+.blogCard{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #FBF7EE;
+    box-shadow: 3.875px 3.875px 36.8125px rgba(0, 0, 0, 0.1);
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+    @media screen and (max-width:1200px) {
+        max-width: 240px;
+        margin: 0 auto;
+    }
+    // @media screen and (max-width: 1100px) {
+    //     max-width: 280px;
+    //     margin: 0 auto;
+    // }
+    @media screen and (max-width: 992px) {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 21px;
+        font-family: "Poppins";
+        font-weight: 700;
+        color: #611F69;
+        line-height: 27px;
+    }
+    h4{
+        font-size: 15px;
+        font-family: "Poppins";
+        font-weight: 700;
+        line-height: 22px;
+    }
+    span{
+        font-size: 15px;
+        font-family: "Poppins";
+        line-height: 22px;
+        @media screen and (max-width:1100px) {
+            font-size: 13px;
+        }
+        @media screen and (max-width:768px) {
+            font-size: 10px;
+        }
+    }
+    .viewMoreBlog{
+        display: flex;
+        column-gap: 10px;
+        span{
+            font-style: italic;
+            text-decoration: underline;
+            color: #611F69;
+        }
+    }
+}
+
+
+// Slider
+.PrevBlog {
+    @media screen and (max-width: 768px) {
+        left: -55px !important;
+        img {
+            width: 50px !important;
+          }
+    }
+  }
+.NextBlog {
+    @media screen and (max-width: 768px) {
+        top: 152px !important;
+        img {
+            width: 50px !important;
+          }
+    }
+  }
+//   .PrevBlog img {
+//     width: 50px !important;
+//   }
+//   .NextBlog {
+//     top: 152px !important;
+//   }
+//   .NextBlog img {
+//     width: 50px !important;
+//   }

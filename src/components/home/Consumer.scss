@@ -1,0 +1,177 @@
+.consumerBack {
+  background-image: url(../../images/communicatbg.svg);
+  padding: 70px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media screen and (max-width:768px){
+    background-image: none;
+  }
+  @media screen and (max-width:428px){
+    padding: 30px 0px 30px 0px;
+  }
+}
+
+
+.consumer-heading {
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 55px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    @media screen and (max-width: 1100px) {
+      font-size: 45px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 33px;
+      line-height: 50px;
+    }
+    @media screen and (max-width: 568px) {
+      font-size: 28px;
+      line-height: 50px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 25px;
+      line-height: 35px;
+    }
+    @media screen and (max-width: 428px) {
+      font-size: 24px;
+      line-height: 31px;
+      padding: 0px 20px;
+    }
+  }
+}
+
+.consumer-slider-container {
+  width: 1050px !important;
+  @media screen and (max-width: 1200px) {
+    width: 900px !important;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 800px !important;
+  }
+  @media screen and (max-width: 992px) {
+    width: 700px !important;
+  }
+  @media screen and (max-width: 800px) {
+    width: 650px !important;
+  }
+  @media screen and (max-width: 768px) {
+    width: 500px !important;
+  }
+  @media screen and (max-width: 600px) {
+    width: 300px !important;
+  }
+  @media screen and (max-width: 428px) {
+    width: 250px !important;
+  }
+  @media screen and (max-width: 360px) {
+    width: 220px !important;
+  }
+  .consumer-slide-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 320px;
+    height: 380px;
+    border-radius: 20px;
+    background-color: #fbf7ee;
+    @media screen and (max-width: 1200px) {
+      width: 250px;
+    }
+    @media screen and (max-width: 1100px) {
+      width: 220px;
+      height: 350px;
+    }
+    @media screen and (max-width: 992px) {
+      width: 280px;
+      height: 350px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 768px) {
+      width: 200px;
+      height: 350px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 360px) {
+      width: 180px;
+      height: 320px;
+      margin: 0 auto;
+    }
+    .consumer-slide-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .consumer-slide-content {
+      h4 {
+        color: #611f69;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        font-size: 30px;
+        line-height: 40px;
+        @media screen and (max-width: 1200px) {
+          font-size: 25px;
+        }
+        @media screen and (max-width: 428px) {
+          font-size: 20px;
+        }
+      }
+      h6 {
+        color: #000000;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0px 25px;
+        @media screen and (max-width: 1100px) {
+          font-size: 13px;
+          padding: 0px 8px;
+        }
+        @media screen and (max-width: 428px) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+// Slider
+.PrevConsume {
+  @media screen and (max-width:768px) {
+    left: -55px !important;
+    img{
+      width: 50px !important;
+    }
+  }
+  @media screen and (max-width:480px) {
+    left: -65px !important;
+    img{
+      width: 60px !important;
+    }
+  }
+}
+.NextConsume {
+  @media screen and (max-width:768px) {
+    top: 152px !important;
+    img{
+      width: 50px !important;
+    }
+  }
+  @media screen and (max-width:480px) {
+    top: 152px !important;
+    img{
+      width: 60px !important;
+    }
+  }
+}
