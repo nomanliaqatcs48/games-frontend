@@ -17,5 +17,5 @@ jobs:
         git reset --hard
         git pull origin Front-end
         npm i
-        npm run build
+        CI=false npm run build
         pm2 reload 0
