@@ -1,0 +1,20 @@
+.cardStronger-wrapper{
+    width: 120px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+    row-gap: 20px;
+    background: #FFFFFF;
+    h6{
+        font-family: 'Raleway';
+        text-align: center;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 17px;
+    }
+}

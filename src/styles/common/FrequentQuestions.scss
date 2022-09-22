@@ -1,0 +1,102 @@
+.faq-back{
+  position: relative;
+  .left-image{
+    position: absolute;
+    top: 95px;
+    left: 0;
+    @media screen and (max-width:899px) {
+      opacity: 0.3;
+    }
+    @media screen and (max-width:576px) {
+      top: 145px;
+      opacity: 0.3;
+    }
+  }
+  .faq-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    .faq-head {
+      margin: 90px 0px 25px 0px;
+      @media screen and (max-width: 899px) {
+          margin: 60px 0px 25px 0px;
+        }
+      h2 {
+        font-family: 'Raleway';
+        font-weight: 800;
+        font-size: 46px;
+        padding-bottom: 20px;
+        line-height: 48px;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+          font-size: 35px;
+        }
+      }
+      h6 {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+        }
+      }
+    }
+    .faq-accordion{
+      margin-top: 50px;
+      min-height: 490px;
+      @media screen and (max-width:899px){
+          min-height: 0;
+         }
+      .MuiAccordion-root{
+       margin-bottom: 20px;
+       border: 1.5px solid rgba(3, 24, 56, 0.4);
+       border-radius: 5px;
+      }
+      .Mui-expanded{
+       background-color: #DFEDFF;
+       border: none;
+      }
+      .MuiAccordionSummary-content{
+       margin: 17px 10px;
+       h2{
+        font-family: 'Raleway';
+         font-weight: 800;
+         font-size: 22px;
+         line-height: 30px;
+         @media screen and (max-width:768px){
+          font-size: 19px;
+         }
+         @media screen and (max-width:576px){
+          font-size: 16px;
+         }
+       }
+      }
+      .MuiAccordionDetails-root{
+        border-top: none;
+       background-color: #DFEDFF;
+       padding: 15px 0px 15px 30px;
+       @media screen and (max-width:576px) {
+        padding: 15px 0px 15px 25px;
+       }
+        h6{
+          font-family: 'Raleway';
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 23px;
+          max-width: 528px;
+          @media screen and (max-width:768px){
+           font-size: 17px;
+          }
+          @media screen and (max-width:576px){
+            font-size: 14px;
+            max-width: 385px;
+           }
+        }
+      }
+    }
+   }
+}
+
+
+

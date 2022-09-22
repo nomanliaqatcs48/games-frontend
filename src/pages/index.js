@@ -1,46 +1,29 @@
 import * as React from "react"
-import Layout from "../components/base-structure/Layout"
-// import Seo from "../components/seo"
-import HeroSection from "../components/home/HeroSection"
-import Communication from "../components/home/Communication"
-import Demo from "../components/home/Demo"
-import ChatbotSection from "../components/home/ChatbotSection"
-import AbidCommunication from "../components/home/AbidCommunication"
-import Revenue from "../components/home/Revenue"
-import InituativeServices from "../components/home/InituativeServices"
-import LeadGenerate from "../components/home/LeadGenerate"
-import FractionCost from "../components/home/FractionCost"
-import Consumer from "../components/home/Consumer"
-import Blog from "../components/home/Blog"
-import FAQ from "../components/home/FAQ"
-import Customizable from "../components/home/Customizable"
-import Logos from "../components/home/Logos"
-import VideoModal from "../components/home/VideoModal"
-import { Link, graphql } from 'gatsby';
-import SEO from '../components/common/SEO';
+import Layout from "../baseStructure/Layout"
+import Seo from "../components/seo"
+import LandingPage from "./LandingPage"
+import '../../src/styles/common/globalStyles.module.scss'
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 // const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
+const theme = createTheme({
+  typography: {
+    allVariants: {
+      fontFamily: "Raleway",
+    },
+    body1: {
+      fontFamily: "Raleway",
+    },
+  },
+});
 const IndexPage = ({data}) => (
-  <Layout>
-    <SEO title="Home" />
-    <HeroSection/>
-    <Communication/>
-    <Demo/>
-    <ChatbotSection/>
-    <VideoModal/>
-    <AbidCommunication/>
-    <Revenue/>
-    <ChatbotSection/> 
-    <InituativeServices/>
-    <LeadGenerate/>
-    <FractionCost/>
-    <Consumer/>
-    {/* <Blog blogs={data?.allStrapiBlog?.nodes}/> */}
-    <FAQ/>
-    <Customizable/>
-    <Logos/>
-  </Layout>
+  <ThemeProvider theme={theme}>
+    <Layout>
+        <Seo title="Home" />
+        <LandingPage/>
+      </Layout>
+  </ThemeProvider>
+ 
 )
 
 export default IndexPage

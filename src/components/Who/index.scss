@@ -1,0 +1,20 @@
+.who-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    .who-content{
+        h2{
+            font-family: 'Raleway';
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 47px;
+            margin-bottom: 20px;
+        }
+        h6{
+            font-family: 'Raleway';
+            font-size: 20px;
+            line-height: 31px;
+            max-width: 475px;
+        }
+    }
+}

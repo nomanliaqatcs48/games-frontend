@@ -1,0 +1,11 @@
+.cardStrongerFlex-wrapper{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    margin-bottom: 37px;
+    flex-wrap: wrap;
+    @media screen and (max-width:768px) {
+        margin-bottom: 30px;
+        row-gap: 30px;
+    }
+}

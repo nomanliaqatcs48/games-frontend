@@ -1,0 +1,33 @@
+.card-position-images {
+    position: relative;
+    .LeftImage {
+      position: absolute;
+      left: 160px;
+      top: -10px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    .RightImage {
+      position: absolute;
+      bottom: 60px;
+      right: 0;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    .card-flex {
+      display: flex;
+      justify-content: center;
+      column-gap: 120px;
+      margin-bottom: 78px;
+      @media screen and (max-width: 992px) {
+        column-gap: 40px;
+        flex-wrap: wrap;
+        row-gap: 30px;
+      }
+      @media screen and (max-width: 428px) {
+        column-gap: 25px;
+      }
+    }
+  }

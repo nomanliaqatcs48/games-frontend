@@ -1,0 +1,148 @@
+.blog {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    position: relative;
+    z-index: 1;
+    .blog_bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+    }
+    h2 {
+        font-size: 46px;
+        font-weight: 800;
+        color: #031838;
+    }
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #031838;
+    }
+    h4 {
+        font-size: 42px;
+        font-weight: 800;
+        color: #031838;
+    }
+    h5 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #031838;
+    }
+    .blog_btn {
+        width: 181px;
+        height: 56px;
+        background: #0072ff;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 20px;
+    }
+    .blog_btn:hover {
+        background: #0072ff;
+    }
+    .card {
+        background: transparent;
+        .card_body:hover {
+            background-color: white;
+        }
+        .card_body {
+            min-height: 230px;
+            position: relative;
+            h6 {
+                font-size: 20px;
+                font-weight: 800;
+                color: #031838;
+                line-height: 28px;
+            }
+            h1 {
+                font-size: 15px;
+                font-weight: 500;
+                color: #031838;
+            }
+            .card_btn {
+                border: 0.813559px solid rgba(3, 24, 56, 0.7);
+                border-radius: 5px;
+                width: 144px;
+                height: 45.56px;
+                position: absolute;
+                color: rgba(3, 24, 56, 0.7);
+                bottom: 0;
+            }
+        }
+    }
+    .css-f8uu9r-MuiPaper-root-MuiCard-root {
+        transition: none !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .blog {
+        .blog_bg{
+            opacity: 0.3;
+        }
+        h4 {
+            font-size: 28px;
+            max-width: 80%;
+        }
+        h5 {
+            font-size: 16px;
+            max-width: 75%;
+        }
+        .blog_btn {
+            font-size: 16px;
+        }
+        .card{
+            .card_body{
+                min-height: 260px;
+                h6{
+                    min-height: 100px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 899px) {
+    .blog {
+        .blog_bg{
+            opacity: 0.2;
+        }
+        h2 {
+            font-size: 36px;
+        }
+        .card {
+            .card_body {
+                min-height: 175px;
+                h6{
+                    min-height: 30px;
+                }
+                .card_btn {
+                    position: static;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 599px) {
+    .blog {
+        h4 {
+            font-size: 26px;
+            max-width: 90%;
+        }
+        h5 {
+            max-width: 90%;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .blog_btn {
+            width: 160px;
+            height: 50px;
+            font-size: 16px;
+        }
+    }
+}

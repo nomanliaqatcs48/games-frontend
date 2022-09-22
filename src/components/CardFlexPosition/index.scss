@@ -1,0 +1,145 @@
+.card-flex {
+    display: flex;
+    justify-content: center;
+    column-gap: 120px;
+    margin-bottom: 78px;
+    @media screen and (max-width: 992px) {
+      column-gap: 40px;
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
+    @media screen and (max-width: 428px) {
+      column-gap: 25px;
+    }
+  
+    .cardAbout-wrapper-One {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 180px;
+      min-height: 150px;
+      padding: 30px;
+      box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+      border-radius: 15.12px;
+      z-index: 1;
+      @media screen and (max-width: 992px) {
+        max-width: 150px;
+        min-height: 130px;
+      }
+      @media screen and (max-width: 768px) {
+        max-width: 130px;
+        min-height: 110px;
+      }
+      @media screen and (max-width: 600px) {
+        max-width: 110px;
+        min-height: 90px;
+      }
+      h2 {
+        font-family: 'Raleway';
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 54px;
+        text-align: center;
+        color: #0072ff;
+        margin-bottom: 11px;
+        @media screen and (max-width: 768px) {
+          font-size: 38px;
+        }
+      }
+      h6 {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 22px;
+        text-align: center;
+        z-index: 1;
+        @media screen and (max-width: 768px) {
+          font-size: 15px;
+          line-height: 17px;
+        }
+      }
+    }
+  
+    // +++++++++++++
+  
+    .cardAbout-wrapper-Two {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 180px;
+      min-height: 150px;
+      padding: 30px;
+      box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+      border-radius: 15.12px;
+      z-index: 1;
+      position: relative;
+      @media screen and (max-width: 992px) {
+        max-width: 150px;
+        min-height: 130px;
+      }
+      @media screen and (max-width: 768px) {
+        max-width: 130px;
+        min-height: 110px;
+      }
+      @media screen and (max-width: 600px) {
+        max-width: 110px;
+        min-height: 90px;
+      }
+      h2 {
+        font-family: 'Raleway';
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 54px;
+        text-align: center;
+        color: #0072ff;
+        margin-bottom: 11px;
+        @media screen and (max-width: 768px) {
+          font-size: 38px;
+        }
+      }
+      h6 {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 22px;
+        text-align: center;
+        z-index: 1;
+        @media screen and (max-width: 768px) {
+          font-size: 15px;
+          line-height: 17px;
+        }
+      }
+    }
+  
+    .cardAbout-wrapper-Two::after {
+      content: "";
+      background-color: #0072ff;
+      position: absolute;
+      width: 120px;
+      height: 5px;
+      left: 240px;
+      top: 80px;
+      @media screen and (max-width:992px) {
+          left: 210px;
+          width: 40px;
+      }
+      @media screen and (max-width:768px) {
+          left: 190px;
+          width: 40px;
+      }
+      @media screen and (max-width:697px) {
+          display: none;
+      }
+      @media screen and (max-width:396px) {
+          display: block;
+          top: 172px;
+          left: 65px;
+          width: 30px;
+          transform: rotate(90deg);
+      }
+    }
+  }

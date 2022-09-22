@@ -1,0 +1,59 @@
+.feedback{
+    .margin{
+        margin: 0 auto !important;
+    }
+    h2{
+        color: #031838;
+        font-size: 46px;
+        font-weight: 800;
+    }
+    .feedback_card{
+        background: #FFFFFF;
+        width: 350px !important;
+        min-height: 190px;
+        border-radius: 5px;
+        padding: 25px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-left: 17px;
+        .client_name{
+            font-weight: 800;
+            font-size: 20px;
+            color: #031838;
+        }
+        .client_about{
+            color: rgba(3, 24, 56, 0.5);
+            font-weight: 500;
+            font-size: 10px;
+        }
+        h5{
+            color: #031838;
+            font-size: 14px;
+            font-weight: 500;
+            max-width: 66%;
+            padding: 20px 0 0 50px;
+        }
+    }
+    .slick-next,.slick-prev{
+        display: none !important;
+    }
+}
+
+@media (max-width:899px){
+    .feedback{
+         h2{
+        font-size: 36px;
+    }
+    }
+}
+@media (max-width:599px){
+    .feedback{
+         h2{
+        font-size: 30px;
+    }
+        .feedback_card{
+            width: 100% !important;
+             min-height: 150px;
+            margin-left: 0;
+        }
+    }
+}
