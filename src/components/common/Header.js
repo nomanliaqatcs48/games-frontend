@@ -93,7 +93,7 @@ function Header(props) {
                     About Us
                   </Button>
                 </Link>
-                <Link to="/Pricing">
+                <Link to="/pricing">
                   <Button
                     className="header_items"
                     sx={{ px: { md: 3.5, lg: 3 } }}
@@ -101,7 +101,7 @@ function Header(props) {
                     Pricing
                   </Button>
                 </Link>
-                <Link to="/Features">
+                <Link to="/features">
                   <Button
                     className="header_items"
                     sx={{ px: { md: 3.5, lg: 3 } }}
