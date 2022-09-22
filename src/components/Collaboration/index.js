@@ -14,7 +14,7 @@ import LeftImage from "../../Assets/images/featureleft.svg";
 import RightImage from "../../Assets/images/featureright.png";
 
 // Styles
-import styles from "../Collaboration/styles.module.scss";
+import * as styles from "../Collaboration/styles.module.scss";
 
 // Components
 import Card from "../Card";
