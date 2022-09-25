@@ -16,10 +16,10 @@ const Why = (props) => {
   return (
     <Container>
         <Box className='why-wrapper'>
-            <Box>
+            <Box className='why-image'>
                 <img src={props.image} alt=""/>
             </Box>
-            <Box className=''>
+            <Box className='why-cardFlex'>
                 <Typography variant='h2'>{props.title}</Typography>
                 <Box className='icon-text'>
                 <IconAndText icon={Problem} iconText={"Problem solving"}/>

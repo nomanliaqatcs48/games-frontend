@@ -57,11 +57,11 @@ function Header(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-            <Link to="/">
             <Box sx={{ py: { xs: 2, lg: 0 } }}>
+            <Link to="/">
                 <img src={Logo} alt="Logo_picture" />
-            </Box>
                 </Link>
+            </Box>
             <Divider />
             <List>
                 <Box sx={{ display: "flex", flexDirection: "column", pt: 3 }}>
@@ -109,7 +109,9 @@ function Header(props) {
                 <Container>
                     <Toolbar className="toolBar">
                         <Grid item xs={2}>
+                          <Link to="/">
                             <img src={Logo} className="logo" alt="Logo_picture" />
+                          </Link>
                         </Grid>
                         <Grid item xs={6} sx={{ mx: "auto" }}>
                             <Box sx={{ display: { xs: "none", md: "block" } }}>
