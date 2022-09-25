@@ -50,7 +50,7 @@ module.exports = {
       options: {
       apiURL: "https://st-backend-invochat.invo.zone/",
       // add access token
-      accessToken: "f23a59cfe04dda3ac4029c3a6a66e5f248ab44de72c5dcb85c560092a26aa667ea779fb583a7747d443d1b6de203de3a4a89b29b3a1c0d2ef6918518fba7978edbaee6c59245527b468cd143246c85720cc38e3a6895b615c1fe5f4dad5e1c413f53ea3cddc295489c90ec16e714324fc00fd9c5521e45b93abed4d4a3e9298a",
+      accessToken: "d1cc1ce431884a3dac5d00b915b6afd701ae9e89aa3b7999a254a63fe00512874a34f1330015fb599678496a026abf07b5ddbc716284497c6e6d701a77a5aed5d0dacd7d82eb9f14f25e3855c21914996d9205da08f1ceebd2736e8661f23aa96be1b55328e6a87831b79b5b99d50fcc2b3854cda4715c36cc00d33769068fc2",
       collectionTypes:
       [ "blog" ],
         queryLimit: 1000,
