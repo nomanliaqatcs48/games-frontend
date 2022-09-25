@@ -26,7 +26,7 @@
         color: #031838;
     }
     h5 {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         color: #031838;
     }
@@ -36,29 +36,35 @@
         background: #0072ff;
         border-radius: 5px;
         color: #ffffff;
-        font-size: 20px;
+        font-size: 19px;
     }
     .blog_btn:hover {
         background: #0072ff;
     }
     .card {
         background: transparent;
+        border-radius: 5px;
         .card_body:hover {
             background-color: white;
         }
         .card_body {
-            min-height: 230px;
+            min-height: 220px;
             position: relative;
             h6 {
                 font-size: 20px;
                 font-weight: 800;
                 color: #031838;
-                line-height: 28px;
+                line-height: 25px;
+                height: 70px;
+            }
+            .two_heading{
+                height: 70px;
             }
             h1 {
                 font-size: 15px;
                 font-weight: 500;
                 color: #031838;
+                max-width: 95%;
             }
             .card_btn {
                 border: 0.813559px solid rgba(3, 24, 56, 0.7);
@@ -66,23 +72,22 @@
                 width: 144px;
                 height: 45.56px;
                 position: absolute;
+                margin-bottom: 3px;
                 color: rgba(3, 24, 56, 0.7);
                 bottom: 0;
             }
         }
     }
-    .css-f8uu9r-MuiPaper-root-MuiCard-root {
-        transition: none !important;
-    }
 }
+
 
 @media (max-width: 1199px) {
     .blog {
-        .blog_bg{
+        .blog_bg {
             opacity: 0.3;
         }
         h4 {
-            font-size: 28px;
+            font-size: 27px;
             max-width: 80%;
         }
         h5 {
@@ -92,19 +97,35 @@
         .blog_btn {
             font-size: 16px;
         }
-        .card{
-            .card_body{
-                min-height: 260px;
-                h6{
-                    min-height: 100px;
+        .card {
+            .card_body {
+                min-height: 190px;
+                .one_heading{
+                    width: 264px;
                 }
+                .two_heading{
+                    height: 50px;
+                    width: 399px;
+                }
+                 .one_p{
+                    max-width: 80%;
+                }
+                .zero_p{
+                    max-width: 83%;
+                }
+                .zero_heading{
+                    width: 316px;
+                }
+                h6{
+                height: 49px;
+            }
             }
         }
     }
 }
 @media (max-width: 899px) {
     .blog {
-        .blog_bg{
+        .blog_bg {
             opacity: 0.2;
         }
         h2 {
@@ -113,8 +134,14 @@
         .card {
             .card_body {
                 min-height: 175px;
-                h6{
-                    min-height: 30px;
+                .one_p{
+                    max-width: 75%;
+                }
+                .zero_p{
+                    max-width: 75%;
+                }
+                .two_p{
+                    max-width: 78%;
                 }
                 .card_btn {
                     position: static;
@@ -143,6 +170,21 @@
             width: 160px;
             height: 50px;
             font-size: 16px;
+        }
+        .card{
+            .card_body{
+                .two_heading{
+                    max-width: 89%;
+                    height: auto;
+                    margin-bottom: 10px;
+                }
+                h6{
+                    height: auto;
+                }
+                .zero_heading{
+                    max-width: 89%;
+                }
+            }
         }
     }
 }

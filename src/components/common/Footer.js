@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import footerLogo from "../../Assets/images/footer_logo.svg"
+import footerLogo from "../../Assets/images/footer_logo.svg";
 import Twitter from "../../Assets/images/twitter.svg";
 import Linkdin from "../../Assets/images/linkdin.svg";
 import Facebook from "../../Assets/images/fb.svg";

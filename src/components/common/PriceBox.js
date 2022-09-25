@@ -48,20 +48,7 @@ function PriceBox(props) {
                     <Box className="features">
                         <Typography variant="h1">Includes</Typography>
                         <Box className="list">
-                            <img src={Arrow} alt="" />
-                            <Typography variant="span">{boxContent.map((contents) => contents.listItems.itemOne)}</Typography>
-                        </Box>
-                        <Box className="list">
-                            <img src={Arrow} alt="" />
-                            <Typography variant="span">{boxContent.map((contents) => contents.listItems.itemTwo)}</Typography>
-                        </Box>
-                        <Box className="list">
-                            <img src={Arrow} alt="" />
-                            <Typography variant="span">{boxContent.map((contents) => contents.listItems.itemThree)}</Typography>
-                        </Box>
-                        <Box className="list">
-                            <img src={Arrow} alt="" />
-                            <Typography variant="span">{boxContent.map((contents) => contents.listItems.itemFour)}</Typography>
+                            <Typography variant="span">{props.listArray}</Typography>
                         </Box>
                     </Box>
                 </Box>

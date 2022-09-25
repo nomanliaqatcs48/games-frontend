@@ -14,7 +14,7 @@
     }
     .hero_content{
         input {
-            width: 195px;
+            width: 210px;
             background: #FFFFFF;
             border: 1.75053px solid #053564;
             border-radius: 5px 0 0 5px;
@@ -25,7 +25,7 @@
         }
         .hero_btn {
             height: 48px;
-            width: 230px;
+            width: 235px;
             background: #053564;
             border-radius: 0px 5px 5px 0px;
             color: #FFFFFF;
@@ -34,9 +34,14 @@
         h5{
             color: #031838;
             font-size: 18px;
-            max-width: 86%;
+            max-width: 90%;
         }
     }
+    .down_arrow{
+            img{
+                cursor: pointer !important;
+            }
+        }
     .hero_social{
         background: #FFFFFF;
         box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);

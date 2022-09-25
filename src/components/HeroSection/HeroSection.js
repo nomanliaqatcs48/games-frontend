@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import "../HeroSection/HeroSection.scss"
@@ -27,7 +26,7 @@ const HeroSection = () => {
                               </Box>
                               <span>
                                   <Box sx={{ display: "flex", justifyContent: { xs: "center", sm: "flex-start" } }}>
-                                      <Button className="hero_btn">Try invochat It’s FREE</Button>
+                                      <Button className="hero_btn">Try invochat It's FREE</Button>
                                   </Box>
                               </span>
                           </Box>
