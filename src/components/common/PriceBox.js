@@ -1,27 +1,7 @@
 import React from "react";
-import { Typography, Button, Box, Container } from "@mui/material";
-import Arrow from "../../Assets/images/PriceArrow.svg";
-import backImage from "../../Assets/images/price-G1.svg";
+import { Typography, Button, Box } from "@mui/material";
 import "../../styles/common/PriceBox.scss";
 
-const boxContent = [
-    {
-        title: "Free",
-        subTitle: "Best for professional",
-        priceUnit: "$",
-        price: "0",
-        duration: "per / month",
-        buttonText: "Get Started",
-        listHead: "Includes",
-        listImage: { Arrow },
-        listItems: {
-            itemOne: "Monthly Active Users",
-            itemTwo: "Custom Bot",
-            itemThree: "Robust Analytics",
-            itemFour: "Ticketing system",
-        },
-    },
-];
 
 function PriceBox(props) {
     return (

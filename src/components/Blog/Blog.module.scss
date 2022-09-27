@@ -1,3 +1,5 @@
+$fontFamily: "Raleway";
+
 .blog {
     img {
         max-width: 100%;
@@ -11,21 +13,25 @@
         top: 0;
     }
     h2 {
+        font-family: $fontFamily;
         font-size: 46px;
         font-weight: 800;
         color: #031838;
     }
     h3 {
+        font-family: $fontFamily;
         font-size: 24px;
         font-weight: 500;
         color: #031838;
     }
     h4 {
+        font-family: $fontFamily;
         font-size: 42px;
         font-weight: 800;
         color: #031838;
     }
     h5 {
+        font-family: $fontFamily;
         font-size: 18px;
         font-weight: 500;
         color: #031838;
@@ -37,6 +43,7 @@
         border-radius: 5px;
         color: #ffffff;
         font-size: 19px;
+        font-family: $fontFamily;
     }
     .blog_btn:hover {
         background: #0072ff;
@@ -51,6 +58,7 @@
             min-height: 220px;
             position: relative;
             h6 {
+                font-family: $fontFamily;
                 font-size: 20px;
                 font-weight: 800;
                 color: #031838;
@@ -61,6 +69,7 @@
                 height: 70px;
             }
             h1 {
+                font-family: $fontFamily;
                 font-size: 15px;
                 font-weight: 500;
                 color: #031838;
@@ -75,6 +84,7 @@
                 margin-bottom: 3px;
                 color: rgba(3, 24, 56, 0.7);
                 bottom: 0;
+                font-family: $fontFamily;
             }
         }
     }

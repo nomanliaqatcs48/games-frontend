@@ -90,7 +90,7 @@ $fontFamily: "Raleway";
             margin: 8px 0px 20px 0px;
             h1 {
                 font-family: $fontFamily;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 56px;
                 line-height: 82px;
                 color: #03183880;
@@ -103,7 +103,7 @@ $fontFamily: "Raleway";
             }
             h2 {
                 font-family: $fontFamily;
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 56px;
                 line-height: 82px;
                 color: #031838;
@@ -120,6 +120,7 @@ $fontFamily: "Raleway";
                 font-size: 15px;
                 line-height: 17px;
                 color: #03183880;
+                margin-left: 10px;
             }
         }
 

@@ -80,7 +80,7 @@ function Header(props) {
                         Features
                     </Button>
                     </Link>
-                    <Link to="/">
+                    <Link to="/blog">
                     <Button onClick={() => blogClicked()} className={`${"header_items"} ${blogActive}`} sx={{ my: 2 }}>
                         Blogs
                     </Button>
@@ -130,7 +130,7 @@ function Header(props) {
                                     Features
                                 </Button>
                                 </Link>
-                                <Link to="/">
+                                <Link to="/blog">
                                 <Button onClick={() => blogClicked()} className={`${"header_items"} ${blogActive}`} sx={{ px: { md: 3.5, lg: 3 } }}>
                                     Blogs
                                 </Button>
