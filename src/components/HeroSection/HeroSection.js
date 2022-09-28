@@ -1,13 +1,13 @@
 import React from 'react'
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Link } from 'gatsby';
-import "../HeroSection/HeroSection.scss"
 import HeroPic from "../../Assets/images/hero_img.svg"
 import DownArrow from "../../Assets/images/down_arrow.svg";
 import IOS from "../../Assets/images/ios.svg";
 import Apple from "../../Assets/images/apple.svg";
 import Window from "../../Assets/images/window.svg";
 import Chrome from "../../Assets/images/chrome.svg";
+import "../HeroSection/HeroSection.scss"
 
 const HeroSection = () => {
   return (
@@ -38,7 +38,7 @@ const HeroSection = () => {
                           </Box>
                       </Box>
                       <Box className="down_arrow" sx={{ pt: { md: 5, lg: 7 } }}>
-                          <Link to="/SimpleSetup">
+                          <Link to="#SimpleSetup">
                           <img src={DownArrow} alt="Image-of-scroll-icon" />
                           </Link>
                       </Box>
