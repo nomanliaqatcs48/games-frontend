@@ -19,7 +19,7 @@ const Footer = () => {
                                 <img src={footerLogo} className="footer_logo" alt="Logo_image_for_footer" />
                                 </Link>
                             </Box>
-                            <Box sx={{ pt: { xs: 4, md: 6 }, pl: 1 }}>
+                            <Box sx={{ pt: { xs: 4, md: 5.2 }, pl: 1 }}>
                                 <Link to="/about">
                                 <Typography sx={{ textAlign: { xs: "center", md: "left" } }} variant="h5">
                                     About Us
@@ -58,7 +58,7 @@ const Footer = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={5} lg={4} className="footer_btn" sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" }, alignItems: "center" }}>
-                        <Box sx={{ pt: { xs: 3, md: 11 } }}>
+                        <Box sx={{ pt: { xs: 3, md:11.5 } }}>
                             <Typography sx={{ textAlign: { xs: "center", md: "left" }, my: { xs: 3, md: 0 } }} variant="h4">
                                 Newsletter subscription
                             </Typography>
