@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Grid, Typography, Button, CardActionArea } from "@mui/material";
+import { Link } from "gatsby";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -63,9 +64,11 @@ const Blog = () => {
                                 </Typography>
                             </Box>
                             <Box sx={{ pt: { xs: 2, lg: 2.8 }, display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
+                                <Link to="/InnerBlog">
                                 <Button className={styles.blog_btn} sx={{ pl: 0 }}>
                                     View more
                                 </Button>
+                                </Link>
                             </Box>
                         </Box>
                     </Grid>
