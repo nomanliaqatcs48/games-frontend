@@ -33,7 +33,7 @@ const cards = [
     },
 ];
 
-const Blog = () => {
+const Blog = (props) => {
     return (
         <Box className={styles.blog} sx={{ pt: 8 }}>
             <Container>
@@ -48,19 +48,19 @@ const Blog = () => {
                 <Grid container sx={{ display: "flex", flexDirection: { xs: "column-reverse", md: "row" }, pt: { xs: 4, md: 6 } }}>
                     <Grid item xs={12} md={6} sx={{ pt: { xs: 4, md: 0 } }}>
                         <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
-                            <img src={BlogImage} alt="picture_of_individuals" />
+                            <img src={props.blog?.Image[0].url} alt="picture_of_individuals" />
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Box sx={{ pl: { xs: 0, md: 4, lg: 8 } }}>
                             <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
                                 <Typography variant="h4" sx={{ textAlign: { xs: "center", md: "left" } }}>
-                                    Set Your Collaborative Workspace And Initiate Mapping Your Business!
+                                {props?.blog?.Title}
                                 </Typography>
                             </Box>
                             <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
                                 <Typography variant="h5" sx={{ textAlign: { xs: "center", md: "left" }, py: 2 }}>
-                                    Digital transformation has become the table stakes in recent times and makes business processes a lot easier than the labor exertion we expected previously. Find
+                                {props.blog?.Content.substring(0, 100)}
                                 </Typography>
                             </Box>
                             <Box sx={{ pt: { xs: 2, lg: 2.8 }, display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
@@ -78,13 +78,13 @@ const Blog = () => {
                         <Grid item xs={12} md={6} lg={4} sx={{ pt: { xs: 2, lg: 3 }, display: "flex", justifyContent: "center", my: { md: 2, lg: 0 } }}>
                             <Card className={styles.card} sx={{ boxShadow: "none" }}>
                                 <CardActionArea>
-                                    <CardMedia component="img" image={val.imageName} />
+                                    <CardMedia component="img"  src={props.blog?.Image[0].url} />
                                     <CardContent sx={{ pl: 0 }} className={`${i === 2 ? styles.card_body_2 : ""} ${i === 1 ? styles.card_body_1 : ""} ${styles.card_body}`}>
                                         <Typography className={`${i === 2 ? styles.two_heading : ""} ${i === 1 ? styles.one_heading : ""} ${i === 0 ? styles.zero_heading : ""}`} sx={{ py: 1 }} gutterBottom variant="h6" key={i}>
-                                            {val.cardHeading}
+                                        {props?.blog?.Title}
                                         </Typography>
                                         <Typography className={`${i === 2 ? styles.two_p : ""} ${i === 1 ? styles.one_p : ""} ${i === 0 ? styles.zero_p : ""}`} variant="h1">
-                                            {val.cardParagraph}
+                                        {props.blog?.Content.substring(0, 100)}
                                         </Typography>
                                         <Button className={styles.card_btn} sx={{ pl: 0 }}>
                                             {val.cardBtnText}
