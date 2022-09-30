@@ -15,7 +15,7 @@ jobs:
       run: |-
         cd /home/invochat-io/public_html/invochat-frontend
         git reset --hard
-        git pull origin Front-end
+        git pull origin Frontend-live
         npm i
         CI=false npm run build
         pm2 reload 0
