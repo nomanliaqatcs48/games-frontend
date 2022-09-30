@@ -14,4 +14,8 @@ jobs:
     - name: Applying Changes
       run: |-
         cd /home/invochat-io/public_html/invochat-frontend
-        touch test.txt
+        git reset --hard
+        git pull origin Front-end
+        npm i
+        CI=false npm run build
+        pm2 reload 0
