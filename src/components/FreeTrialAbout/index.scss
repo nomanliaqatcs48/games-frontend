@@ -80,5 +80,8 @@
   .BlogPage{
     display: flex;
     flex-direction: column;
-    row-gap: 100px;
+    row-gap: 80px;
+    @media(max-width:899px){
+      row-gap: 60px;
+    }
   }

@@ -1,45 +1,45 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Layout from "../baseStructure/Layout";
-import InnerBlogMainImg from "../Assets/images/inner_blog_main.svg"
+import InnerBlogMainImg from "../Assets/images/inner_blog_main.svg";
 import InnerBlogMiddleImg from "../Assets/images/Inner_blog_img2.svg";
 import InnerBlogMiddleImg2 from "../Assets/images/middle_img2.svg";
 import "../styles/common/InnerBlog.scss";
 
-const scrollText =[
+const scrollText = [
     {
-        text:"Handle all the first-hand challenges like...",
+        text: "Handle all the first-hand challenges like...",
     },
     {
-        text:"Process Mapping"
+        text: "Process Mapping",
     },
     {
-        text:"Highlight problems and solutions"
+        text: "Highlight problems and solutions",
     },
     {
-        text:"Business process"
+        text: "Business process",
     },
     {
-        text:"Outline the boundaries"
+        text: "Outline the boundaries",
     },
     {
-        text:"Handle all the first-hand challenges like..."
+        text: "Handle all the first-hand challenges like...",
     },
     {
-        text:"Process Mapping"
-    }, 
-    {
-        text:"Highlight problems and solutions"
+        text: "Process Mapping",
     },
     {
-        text:"Business process"
+        text: "Highlight problems and solutions",
     },
     {
-        text:"Outline the boundaries"
+        text: "Business process",
     },
     {
-         text:"Handle all the first-hand challenges like..."
-    }
+        text: "Outline the boundaries",
+    },
+    {
+        text: "Handle all the first-hand challenges like...",
+    },
 ];
 
 const blogInnerContent = [
