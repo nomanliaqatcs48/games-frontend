@@ -8,7 +8,9 @@ import Blog from "../components/Blog/Blog";
 import FrequentQuestions from "../components/common/FrequentQuestions";
 import FreeTrial from "../components/FreeTrial/FreeTrial";
 import Plateforms from "../components/Plateforms/Plateforms";
-const LandingPage = () => {
+import { Link, graphql } from "gatsby";
+
+const LandingPage = ({ data }) => {
     return (
         <div>
             <HeroSection />
@@ -17,7 +19,9 @@ const LandingPage = () => {
             <SuperEasy />
             <GetStarted />
             <Feedback />
-            <Blog />
+            {data?.allStrapiBlog?.nodes?.map((blog, index) => {
+                            return <Blog blog={blog} key={index} customClass={index === 0 ? true : false} />;
+            })}
             <FrequentQuestions />
             <FreeTrial />
         </div>
@@ -25,3 +29,25 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+export const query = graphql`
+    query MyQuerys {
+        allStrapiBlog {
+            nodes {
+                Slug
+                Content
+                Title
+                id
+                Image {
+                    url
+                }
+                createdAt
+                check {
+                    data {
+                        check
+                    }
+                }
+            }
+        }
+    }
+`;

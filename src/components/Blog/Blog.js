@@ -24,9 +24,11 @@ const Blog = (props) => {
                                 {props?.blog?.Title}
                             </Typography>
                             <Typography variant="h1">{props.blog?.Content.substring(0, 100)}</Typography>
+                            <Link to={`/blog/${props?.blog?.Slug}`}>
                             <Button className={`${styles.card_btn} ${props.customClass ? styles.firstBtn : ""}`} sx={{ pl: 0 }}>
                                 View more
                             </Button>
+                            </Link>
                         </CardContent>
                     </CardActionArea>
                 </Card>

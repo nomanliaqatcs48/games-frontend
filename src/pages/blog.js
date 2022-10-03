@@ -7,6 +7,7 @@ import { Link, graphql } from "gatsby";
 import "../components/FreeTrialAbout/index.scss";
 import BlogHead from "../components/BlogHead";
 const blog = ({ data }) => {
+   
     return (
         <Layout>
             <Container>

@@ -103,6 +103,7 @@ const blogInnerContent = [
 ];
 const InnerBlog = ({data}) => {
     console.log(data, 'zaman inner')
+    const record = data.strapiBlog;
     return (
         <Layout>
             <Box className="innerBlog">
@@ -124,129 +125,11 @@ const InnerBlog = ({data}) => {
                                 {blogInnerContent.map((val) => (
                                     <>
                                         <Box>
-                                            <Typography variant="h2">{val.title}</Typography>
-                                            <Typography variant="h3" sx={{ pt: 3 }}>
-                                                {val.description1}
-                                            </Typography>
-                                            <Typography variant="h3" sx={{ py: 3.5 }}>
-                                                {val.description2}
-                                            </Typography>
-                                            <Typography variant="h3">{val.description3}</Typography>
+                                            <Typography variant="h3" dangerouslySetInnerHTML={{__html: record.check.data.check}} ></Typography>
                                         </Box>
-                                        <Box>
-                                            <Box sx={{ pt: 5 }}>
-                                                <img src={val.Image} alt="main_img" />
-                                            </Box>
-                                            <Box>
-                                                <Typography variant="h3" sx={{ pt: 4 }}>
-                                                    {val.description4}
-                                                </Typography>
-                                                <Typography variant="h3" sx={{ py: 3.5 }}>
-                                                    {val.description5}
-                                                </Typography>
-                                            </Box>
-                                        </Box>
-                                        <Box>
-                                            <Typography variant="h2" sx={{ pt: 1 }}>
-                                                {val.title2}
-                                            </Typography>
-                                            <Box sx={{ pt: 1 }}>{val.list}</Box>
-                                            <Typography variant="h3" sx={{ pt: 1 }}>
-                                                {val.description6}
-                                            </Typography>
-                                        </Box>
-                                        <Box sx={{ pt: 3.5 }}>
-                                            <Typography variant="h2" sx={{ pt: 1 }}>
-                                                {val.title3}
-                                            </Typography>
-                                            <Typography variant="h3" sx={{ pt: 3 }}>
-                                                {val.description7}
-                                            </Typography>
-                                            <Typography variant="h3" sx={{ py: 3.5 }}>
-                                                {val.description8}
-                                            </Typography>
-                                            <Box sx={{ pt: 2 }}>
-                                                <img src={val.Image2} alt="main_img" />
-                                            </Box>
-                                            <Typography variant="h3" sx={{ pt: 3 }}>
-                                                {val.description9}
-                                            </Typography>
-                                            <Typography variant="h3" sx={{ py: 3.5 }}>
-                                                {val.description10}
-                                            </Typography>
-                                        </Box>
-                                        <Box>
-                                            <Typography variant="h2" sx={{ pt: 2 }}>
-                                                {val.title4}
-                                            </Typography>
-                                            <Typography variant="h3" sx={{ pt: 3 }}>
-                                                {val.description11}
-                                            </Typography>
-                                            <Typography variant="h2" sx={{ pt: 4 }}>
-                                                {val.title5}
-                                            </Typography>
-                                            <Box sx={{ pt: 4.5 }}>
-                                                <img src={val.Image3} alt="main_img" />
-                                            </Box>
-                                            <Typography variant="h3" sx={{ pt: 3 }}>
-                                                {val.description12}
-                                            </Typography>
-                                        </Box>
-                                        <Box sx={{ pt: 3 }}>
-                                            <Typography variant="h2" sx={{ pt: 2 }}>
-                                                {val.title6}
-                                            </Typography>
-                                            <Typography variant="h3" sx={{ pt: 2.5 }}>
-                                                {val.description13}
-                                            </Typography>
-                                            <Typography variant="h3" sx={{ pt: 2.5 }}>
-                                                {val.description14}
-                                            </Typography>
-                                        </Box>
-                                        <Box sx={{ pt: 3 }}>
-                                            <Typography variant="h2" sx={{ pt: 2 }}>
-                                                {val.formTitle}
-                                            </Typography>
-                                            <Typography variant="h3" sx={{ pt: 2 }}>
-                                                {val.formDesc}
-                                            </Typography>
-                                            <Box sx={{ pt: 1 }}>
-                                                <p className="comment">
-                                                    <label for="w3review">{val.textareaTitle}</label>
-                                                </p>
-                                                <textarea className="textarea" id="w3review" name="w3review" rows="6" cols="50"></textarea>
-                                                <Box>
-                                                    <form>
-                                                        <Box sx={{ pt: 2 }}>
-                                                            <label for="fname">{val.inputName}</label>
-                                                            <br />
-                                                            <input type="text" id="fname" name="fname" />
-                                                        </Box>
-                                                        <br />
-                                                        <Box>
-                                                            <label for="email">{val.inputEmail}</label>
-                                                            <br />
-                                                            <input type="email" id="email" name="email" />
-                                                        </Box>
-                                                        <br />
-                                                        <Box>
-                                                            <label for="website">{val.inputWebsite}</label>
-                                                            <br />
-                                                            <input type="text" id="website" name="website" />
-                                                        </Box>
-                                                        <Box sx={{ display: "flex", alignItems: "center", pt: 2 }}>
-                                                            <input className="checkbox" type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                                            <label className="check_label" for="vehicle1">
-                                                                {val.checkTitle}
-                                                            </label>
-                                                        </Box>
-                                                    </form>
-                                                    <Box sx={{ mt: 3.5 }}>
-                                                        <Button className="innerBlog_btn">{val.formBtn}</Button>
-                                                    </Box>
-                                                </Box>
-                                            </Box>
-                                        </Box>
+                                      
+                                      
+                                       
                                     </>
                                 ))}
                             </Box>

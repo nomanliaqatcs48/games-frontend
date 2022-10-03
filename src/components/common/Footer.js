@@ -6,8 +6,38 @@ import Twitter from "../../Assets/images/twitter.svg";
 import Linkdin from "../../Assets/images/linkdin.svg";
 import Facebook from "../../Assets/images/fb.svg";
 import "../../styles/common/Footer.scss"
+import axios from 'axios';
+import  { useState } from "react"
 
 const Footer = () => {
+
+    const [email, setEmail] = useState('');
+    const [errors, setErrors] = useState('');
+  
+    const onSubmit = (e) => {
+      e.preventDefault();
+       axios.post(`https://st-backend-invochat.invo.zone/api/messages`,
+       {
+        data: { Email: email }
+       }
+       )
+       .then((res) => {
+        setErrors('Successfully submitted')
+        
+        if(res.status === 200){
+      
+        }
+        else{
+        }
+      })
+      .catch((error) => {
+        
+        setErrors('Invalid Email')
+      })
+       
+     }
+
+     
     return (
         <Box className="footer" sx={{ pt: 7.5, pb: { xs: 3, md: 3.5 } }}>
             <Container>
@@ -63,11 +93,17 @@ const Footer = () => {
                                 Newsletter subscription
                             </Typography>
                             <Box sx={{ my: 2 }}>
-                                <input type="text" placeholder="Enter your email"></input>
+                                <input onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Enter your email"></input>
                                 <span>
-                                    <Button className="footer_sub">Subscribe</Button>
+                                    <Button  onClick={onSubmit} className="footer_sub">Subscribe</Button>
                                 </span>
                             </Box>
+                            <Typography sx={{
+            "& p":{
+            fontSize:'18px',
+            color: errors === 'Invalid Email' ? "red" : errors === 'Successfully submitted' ?  "green" : '' ,
+            fontWeight:'600',}}}>
+              { errors && <p>{errors}</p>}</Typography>
                             <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" }, mt: { xs: 3.5, md: 2.5 } }}>
                                 <Box>
                                     <img src={Twitter} className="footer_logo" alt="social_media_icons" />
