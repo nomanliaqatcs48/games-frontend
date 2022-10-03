@@ -25,7 +25,7 @@ const blog = ({ data }) => {
     );
 };
 export const query = graphql`
-    query MyQuerys {
+    query MyQuerystwo {
         allStrapiBlog {
             nodes {
                 Slug

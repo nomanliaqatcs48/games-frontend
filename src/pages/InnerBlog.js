@@ -130,7 +130,7 @@ const InnerBlog = ({data}) => {
 export default InnerBlog;
 
 export const query = graphql`
-query singleBlog($Slug: String) {
+query singleBlogTwo($Slug: String) {
     strapiBlog(Slug: {eq: $Slug}) {
       id
       Title
