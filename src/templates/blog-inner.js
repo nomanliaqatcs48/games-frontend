@@ -102,7 +102,6 @@ const blogInnerContent = [
     },
 ];
 const InnerBlog = ({data}) => {
-    console.log(data, 'zaman inner')
     const record = data.strapiBlog;
     return (
         <Layout>
