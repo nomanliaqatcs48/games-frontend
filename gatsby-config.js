@@ -6,7 +6,6 @@ module.exports = {
         siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     },
     plugins: [
-     
         `gatsby-plugin-image`,
         `gatsby-plugin-sass`,
         {
@@ -48,7 +47,7 @@ module.exports = {
         {
             resolve: "gatsby-source-strapi",
             options: {
-                //  apiURL: "https://st-backend-invochat.invo.zone/",
+                // apiURL: "https://st-backend-invochat.invo.zone/",
                 apiURL: "http://127.0.0.1:1337",
                 // add access token
                 accessToken:
