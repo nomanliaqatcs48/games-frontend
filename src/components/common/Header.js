@@ -10,85 +10,85 @@ const navItems = ["About Us", "Pricing", "Features", "Blogs", "Contact us"];
 function Header(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const [aboutActive, setaboutActive] = React.useState("fw_500");
-    const [priceActive, setpriceActive] = React.useState("fw_500");
-    const [featureActive, setfeatureActive] = React.useState("fw_500");
-    const [blogActive, setblogActive] = React.useState("fw_500");
-    const [contactActive, setcontactActive] = React.useState("fw_500");
+    // const [aboutActive, setaboutActive] = React.useState("fw_500");
+    // const [priceActive, setpriceActive] = React.useState("fw_500");
+    // const [featureActive, setfeatureActive] = React.useState("fw_500");
+    // const [blogActive, setblogActive] = React.useState("fw_500");
+    // const [contactActive, setcontactActive] = React.useState("fw_500");
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
-    const aboutClicked = () => {
-        setaboutActive("fw_700");
-        setpriceActive("fw_500");
-        setblogActive("fw_500");
-        setfeatureActive("fw_500");
-        setcontactActive("fw_500");
-    };
-    const priceClicked = () => {
-        setpriceActive("fw_700");
-        setaboutActive("fw_500");
-        setblogActive("fw_500");
-        setfeatureActive("fw_500");
-        setcontactActive("fw_500");
-    };
-    const featureClicked = () => {
-        setfeatureActive("fw_700");
-        setpriceActive("fw_500");
-        setblogActive("fw_500");
-        setaboutActive("fw_500");
-        setcontactActive("fw_500");
-    };
-    const blogClicked = () => {
-        setblogActive("fw_700");
-        setpriceActive("fw_500");
-        setaboutActive("fw_500");
-        setfeatureActive("fw_500");
-        setcontactActive("fw_500");
-    };
-    const contactClicked = () => {
-        setcontactActive("fw_700");
-        setpriceActive("fw_500");
-        setblogActive("fw_500");
-        setfeatureActive("fw_500");
-        setaboutActive("fw_500");
-    };
+    // const aboutClicked = () => {
+    //     setaboutActive("fw_700");
+    //     setpriceActive("fw_500");
+    //     setblogActive("fw_500");
+    //     setfeatureActive("fw_500");
+    //     setcontactActive("fw_500");
+    // };
+    // const priceClicked = () => {
+    //     setpriceActive("fw_700");
+    //     setaboutActive("fw_500");
+    //     setblogActive("fw_500");
+    //     setfeatureActive("fw_500");
+    //     setcontactActive("fw_500");
+    // };
+    // const featureClicked = () => {
+    //     setfeatureActive("fw_700");
+    //     setpriceActive("fw_500");
+    //     setblogActive("fw_500");
+    //     setaboutActive("fw_500");
+    //     setcontactActive("fw_500");
+    // };
+    // const blogClicked = () => {
+    //     setblogActive("fw_700");
+    //     setpriceActive("fw_500");
+    //     setaboutActive("fw_500");
+    //     setfeatureActive("fw_500");
+    //     setcontactActive("fw_500");
+    // };
+    // const contactClicked = () => {
+    //     setcontactActive("fw_700");
+    //     setpriceActive("fw_500");
+    //     setblogActive("fw_500");
+    //     setfeatureActive("fw_500");
+    //     setaboutActive("fw_500");
+    // };
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
             <Box sx={{ py: { xs: 2, lg: 0 } }}>
-            <Link to="/">
-                <img src={Logo} alt="Logo_picture" />
+                <Link to="/">
+                    <img src={Logo} alt="Logo_picture" />
                 </Link>
             </Box>
             <Divider />
             <List>
                 <Box sx={{ display: "flex", flexDirection: "column", pt: 3 }}>
                     <Link to="/about">
-                    <Button onClick={() => aboutClicked()} className={`${"header_items"} ${aboutActive}`} sx={{ my: 1.5 }}>
-                        About Us
-                    </Button>
+                        <Button className={`${"header_items"} `} sx={{ my: 1.5 }}>
+                            About Us
+                        </Button>
                     </Link>
                     <Link to="/pricing">
-                    <Button onClick={() => priceClicked()} className={`${"header_items"} ${priceActive}`} sx={{ my: 1.5 }}>
-                        Pricing
-                    </Button>
+                        <Button className={`${"header_items"} `} sx={{ my: 1.5 }}>
+                            Pricing
+                        </Button>
                     </Link>
                     <Link to="/features">
-                    <Button onClick={() => featureClicked()} className={`${"header_items"} ${featureActive}`} sx={{ my: 1.5 }}>
-                        Features
-                    </Button>
+                        <Button className={`${"header_items"} `} sx={{ my: 1.5 }}>
+                            Features
+                        </Button>
                     </Link>
                     <Link to="/blog">
-                    <Button onClick={() => blogClicked()} className={`${"header_items"} ${blogActive}`} sx={{ my: 2 }}>
-                        Blogs
-                    </Button>
+                        <Button className={`${"header_items"} `} sx={{ my: 2 }}>
+                            Blogs
+                        </Button>
                     </Link>
                     <Link to="/contact-us">
-                    <Button onClick={() => contactClicked()} className={`${"header_items"} ${contactActive}`} sx={{ my: 1.5 }}>
-                        Contact Us
-                    </Button>
+                        <Button className={`${"header_items"} `} sx={{ my: 1.5 }}>
+                            Contact Us
+                        </Button>
                     </Link>
                 </Box>
             </List>
@@ -109,37 +109,37 @@ function Header(props) {
                 <Container>
                     <Toolbar className="toolBar">
                         <Grid item xs={2}>
-                          <Link to="/">
-                            <img src={Logo} className="logo" alt="Logo_picture" />
-                          </Link>
+                            <Link to="/">
+                                <img src={Logo} className="logo" alt="Logo_picture" />
+                            </Link>
                         </Grid>
                         <Grid item xs={6} sx={{ mx: "auto" }}>
-                            <Box sx={{ display: { xs: "none", md: "block" } }}>
-                                <Link to = "/about">
-                                <Button onClick={() => aboutClicked()} className={`${"header_items"} ${aboutActive}`} sx={{ px: { md: 3.5, lg: 3 } }}>
-                                    About Us
-                                </Button>
-                                </Link>
-                                <Link to ='/pricing'>
-                                <Button onClick={() => priceClicked()} className={`${"header_items"} ${priceActive}`} sx={{ px: { md: 3.5, lg: 3 } }}>
-                                    Pricing
-                                </Button>
-                                </Link>
-                                <Link to="/features">
-                                <Button onClick={() => featureClicked()} className={`${"header_items"} ${featureActive}`} sx={{ px: { md: 3.5, lg: 3 } }}>
-                                    Features
-                                </Button>
-                                </Link>
-                                <Link to="/blog">
-                                <Button onClick={() => blogClicked()} className={`${"header_items"} ${blogActive}`} sx={{ px: { md: 3.5, lg: 3 } }}>
-                                    Blogs
-                                </Button>
-                                </Link>
-                                <Link to="/contact-us">
-                                <Button onClick={() => contactClicked()} className={`${"header_items"} ${contactActive}`} sx={{ px: { md: 3.5, lg: 3 } }}>
-                                    Contact Us
-                                </Button>
-                                </Link>
+                            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                                <Box sx={{ px: { md: 3.6, lg: 3 } }}>
+                                    <Link className={`${"header_items"} `} to="/about" activeStyle={{ fontWeight: "700" }}>
+                                        About Us
+                                    </Link>
+                                </Box>
+                                <Box sx={{ px: { md: 3.6, lg: 3 } }}>
+                                    <Link to="/pricing" className={`${"header_items"} `} activeStyle={{ fontWeight: "700" }}>
+                                        Pricing
+                                    </Link>
+                                </Box>
+                                <Box sx={{ px: { md: 3.6, lg: 3 } }}>
+                                    <Link to="/features" className={`${"header_items"} `} activeStyle={{ fontWeight: "700" }}>
+                                        Features
+                                    </Link>
+                                </Box>
+                                <Box sx={{ px: { md: 3.6, lg: 3 } }}>
+                                    <Link to="/blog" className={`${"header_items"} `} activeStyle={{ fontWeight: "700" }}>
+                                        Blogs
+                                    </Link>
+                                </Box>
+                                <Box sx={{ px: { md: 3.6, lg: 3 } }}>
+                                    <Link to="/contact-us" className={`${"header_items"} `} activeStyle={{ fontWeight: "700" }}>
+                                        Contact Us
+                                    </Link>
+                                </Box>
                             </Box>
                         </Grid>
                         <Grid item xs={2} sx={{ display: { xs: "none", sm: "block", md: "none", lg: "block" }, mr: { sm: 2, md: 3 } }}>
