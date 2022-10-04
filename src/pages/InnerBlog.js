@@ -7,42 +7,6 @@ import InnerBlogMiddleImg2 from "../Assets/images/middle_img2.svg";
 import "../styles/common/InnerBlog.scss";
 import { Link, graphql } from "gatsby";
 
-const scrollText = [
-    {
-        text: "Handle all the first-hand challenges like...",
-    },
-    {
-        text: "Process Mapping",
-    },
-    {
-        text: "Highlight problems and solutions",
-    },
-    {
-        text: "Business process",
-    },
-    {
-        text: "Outline the boundaries",
-    },
-    {
-        text: "Handle all the first-hand challenges like...",
-    },
-    {
-        text: "Process Mapping",
-    },
-    {
-        text: "Highlight problems and solutions",
-    },
-    {
-        text: "Business process",
-    },
-    {
-        text: "Outline the boundaries",
-    },
-    {
-        text: "Handle all the first-hand challenges like...",
-    },
-];
-
 const blogInnerContent = [
     {
         title: "Set Your Collaborative Workspace And Initiate Mapping Your Business!",

@@ -13,6 +13,7 @@ import { Container } from "@mui/system";
 import * as styles from "../../components/Blog/Blog.module.scss";
 
 const Blog = (props) => {
+    // console.log("PROPS ====>>>", props);
     return (
         <>
             <Grid item xs={12} md={6} lg={props.customClass ? "12" : "4"} className={`${styles.blog} ${props.customClass ? styles.firstBlog : ""}`} sx={{ pt: 8 }}>
@@ -25,9 +26,9 @@ const Blog = (props) => {
                             </Typography>
                             <Typography variant="h1">{props.blog?.Content.substring(0, 100)}</Typography>
                             <Link to={`/blog/${props?.blog?.Slug}`}>
-                            <Button className={`${styles.card_btn} ${props.customClass ? styles.firstBtn : ""}`} sx={{ pl: 0 }}>
-                                View more
-                            </Button>
+                                <Button className={`${styles.card_btn} ${props.customClass ? styles.firstBtn : ""}`} sx={{ pl: 0 }}>
+                                    View more
+                                </Button>
                             </Link>
                         </CardContent>
                     </CardActionArea>

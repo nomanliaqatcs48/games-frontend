@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Container } from "@mui/material";
+import { Box, Grid, Container, Typography } from "@mui/material";
 import Layout from "../baseStructure/Layout";
 import Blog from "../components/Blog/Blog";
 import FreeTrialAbout from "../components/FreeTrialAbout";
@@ -7,7 +7,7 @@ import { Link, graphql } from "gatsby";
 import "../components/FreeTrialAbout/index.scss";
 import BlogHead from "../components/BlogHead";
 const blog = ({ data }) => {
-   
+    console.log("DATA LOGS ======>>>", data);
     return (
         <Layout>
             <Container>
@@ -47,5 +47,3 @@ export const query = graphql`
 `;
 
 export default blog;
-
-

@@ -1,51 +1,53 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Layout from "../baseStructure/Layout";
-import InnerBlogMainImg from "../Assets/images/inner_blog_main.svg"
+import InnerBlogMainImg from "../Assets/images/inner_blog_main.svg";
+import InnerBlogMainImg2 from "../Assets/images/inner_blog_main_2.svg";
 import InnerBlogMiddleImg from "../Assets/images/Inner_blog_img2.svg";
 import InnerBlogMiddleImg2 from "../Assets/images/middle_img2.svg";
 import "../styles/common/InnerBlog.scss";
 import { Link, graphql } from "gatsby";
 
-const scrollText =[
-    {
-        text:"Handle all the first-hand challenges like...",
-    },
-    {
-        text:"Process Mapping"
-    },
-    {
-        text:"Highlight problems and solutions"
-    },
-    {
-        text:"Business process"
-    },
-    {
-        text:"Outline the boundaries"
-    },
-    {
-        text:"Handle all the first-hand challenges like..."
-    },
-    {
-        text:"Process Mapping"
-    }, 
-    {
-        text:"Highlight problems and solutions"
-    },
-    {
-        text:"Business process"
-    },
-    {
-        text:"Outline the boundaries"
-    },
-    {
-         text:"Handle all the first-hand challenges like..."
-    }
-];
+// const scrollText =[
+//     {
+//         text:"Handle all the first-hand challenges like...",
+//     },
+//     {
+//         text:"Process Mapping"
+//     },
+//     {
+//         text:"Highlight problems and solutions"
+//     },
+//     {
+//         text:"Business process"
+//     },
+//     {
+//         text:"Outline the boundaries"
+//     },
+//     {
+//         text:"Handle all the first-hand challenges like..."
+//     },
+//     {
+//         text:"Process Mapping"
+//     },
+//     {
+//         text:"Highlight problems and solutions"
+//     },
+//     {
+//         text:"Business process"
+//     },
+//     {
+//         text:"Outline the boundaries"
+//     },
+//     {
+//          text:"Handle all the first-hand challenges like..."
+//     }
+// ];
 
 const blogInnerContent = [
     {
         title: "Set Your Collaborative Workspace And Initiate Mapping Your Business!",
+        mainImg: InnerBlogMainImg2,
         description1:
             "Digital transformation has become the table stakes in recent times and makes business processes a lot easier than the labor exertion we expected previously. Find tools of collaboration and productivity that can make your tasks more fitting and convenient in a dense environment.",
         description2:
@@ -101,14 +103,14 @@ const blogInnerContent = [
         formBtn: "Post Comment",
     },
 ];
-const InnerBlog = ({data}) => {
+const InnerBlog = ({ data }) => {
     const record = data.strapiBlog;
     return (
         <Layout>
             <Box className="innerBlog">
                 <Container>
                     <Grid container>
-                        <Grid xs={12} md={3.5} lg={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
+                        {/* <Grid xs={12} md={3.5} lg={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
                             <Box className="innerBlog_scroller">
                                 {scrollText.map((item) => (
                                     <>
@@ -118,17 +120,20 @@ const InnerBlog = ({data}) => {
                                     </>
                                 ))}
                             </Box>
-                        </Grid>
-                        <Grid xs={12} md={8.5} lg={9} sx={{ pt: { xs: 6, md: 0 } }}>
+                        </Grid> */}
+                        <Grid xs={12}>
                             <Box className="innerBlog_content">
                                 {blogInnerContent.map((val) => (
                                     <>
                                         <Box>
-                                            <Typography variant="h3" dangerouslySetInnerHTML={{__html: record.check.data.check}} ></Typography>
+                                            <Typography variant="h2">{val.title}</Typography>
                                         </Box>
-                                      
-                                      
-                                       
+                                        <Box>
+                                            <img src={val.mainImg} />
+                                        </Box>
+                                        <Box>
+                                            <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record.check.data.check }}></Typography>
+                                        </Box>
                                     </>
                                 ))}
                             </Box>
@@ -142,24 +147,22 @@ const InnerBlog = ({data}) => {
 
 export default InnerBlog;
 
-
 export const query = graphql`
-query singleBlog($Slug: String) {
-    strapiBlog(Slug: {eq: $Slug}) {
-      id
-      Title
-      Content
-      Slug
-      Image {
-        url
-      }
-      check {
-        data {
-          check
+    query singleBlog($Slug: String) {
+        strapiBlog(Slug: { eq: $Slug }) {
+            id
+            Title
+            Content
+            Slug
+            Image {
+                url
+            }
+            check {
+                data {
+                    check
+                }
+            }
+            createdAt
         }
-      }
-      createdAt
     }
-  }
-  
 `;

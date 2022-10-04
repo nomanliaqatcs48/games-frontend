@@ -9,8 +9,8 @@ import FrequentQuestions from "../components/common/FrequentQuestions";
 import FreeTrial from "../components/FreeTrial/FreeTrial";
 import Plateforms from "../components/Plateforms/Plateforms";
 import { Link, graphql } from "gatsby";
-
 const LandingPage = ({ data }) => {
+    console.log(data, "landing");
     return (
         <div>
             <HeroSection />
@@ -20,16 +20,14 @@ const LandingPage = ({ data }) => {
             <GetStarted />
             <Feedback />
             {data?.allStrapiBlog?.nodes?.map((blog, index) => {
-                            return <Blog blog={blog} key={index} customClass={index === 0 ? true : false} />;
+                return <Blog blog={blog} key={index} customClass={index === 0 ? true : false} />;
             })}
             <FrequentQuestions />
             <FreeTrial />
         </div>
     );
 };
-
 export default LandingPage;
-
 export const query = graphql`
     query MyQuerys {
         allStrapiBlog {
