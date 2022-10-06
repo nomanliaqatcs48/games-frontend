@@ -126,10 +126,10 @@ const InnerBlog = ({ data }) => {
                                 {blogInnerContent.map((val) => (
                                     <>
                                         <Box>
-                                            <Typography variant="h2">{val.title}</Typography>
+                                            <Typography variant="h2">{record?.Title}</Typography>
                                         </Box>
                                         <Box>
-                                            <img src={val.mainImg} />
+                                            <img  src={record.Image[0].url} />
                                         </Box>
                                         <Box>
                                             <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record.check.data.check }}></Typography>
