@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Link } from 'gatsby';
-import HeroPic from "../../Assets/images/hero_img.svg"
+import HeroPic from "../../Assets/images/hero_main.png"
 import DownArrow from "../../Assets/images/down_arrow.svg";
 import IOS from "../../Assets/images/ios.svg";
 import Apple from "../../Assets/images/apple.svg";

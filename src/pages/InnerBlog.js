@@ -72,18 +72,7 @@ const InnerBlog = ({data}) => {
             <Box className="innerBlog">
                 <Container>
                     <Grid container>
-                        {/* <Grid xs={12} md={3.5} lg={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
-                            <Box className="innerBlog_scroller">
-                                {scrollText.map((item) => (
-                                    <>
-                                        <Typography variant="h1" sx={{ py: { xs: 1, sm: 1.5 } }}>
-                                            {item.text}
-                                        </Typography>
-                                    </>
-                                ))}
-                            </Box>
-                        </Grid> */}
-                      
+                        
                     </Grid>
                 </Container>
             </Box>

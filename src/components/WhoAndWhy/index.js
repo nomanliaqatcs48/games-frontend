@@ -1,8 +1,8 @@
 import React from 'react'
 import Who from '../Who'
 import Why from '../Why';
-import WhoImage from "../../Assets/images/Who.svg";
-import WhyImage from "../../Assets/images/Why.svg";
+import WhoImage from "../../Assets/images/Who.png";
+import WhyImage from "../../Assets/images/Why.png";
 
 
 const WhoAndWhy = () => {
