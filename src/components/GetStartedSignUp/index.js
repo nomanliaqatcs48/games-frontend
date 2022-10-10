@@ -9,7 +9,7 @@ import RightImage from '../../Assets/images/featureright.png'
 import Seperator from '../../Assets/images/or.svg'
 
 // Styles
-import styles from '../GetStartedSignUp/styles.module.scss'
+import * as styles from '../GetStartedSignUp/styles.module.scss'
 
 // Components
 

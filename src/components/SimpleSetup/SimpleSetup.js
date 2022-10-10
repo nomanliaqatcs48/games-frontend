@@ -33,7 +33,7 @@ const cards = [
 
 const SimpleSetup = () => {
     return (
-        <Box className="setup" sx={{ pt: 9 }}>
+        <Box id="SimpleSetup" className="setup" sx={{ pt: 9 }}>
             <Container>
                 <Box>
                     <Box sx={{ display: "flex", justifyContent: "center" }}>

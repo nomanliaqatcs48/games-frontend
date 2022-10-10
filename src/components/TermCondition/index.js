@@ -3,7 +3,7 @@ import { Container, Box, Typography } from "@mui/material";
 import Terms from './TermData'
 import PrivacyData from './PrivacyData';
 
-import styles from '../TermCondition/styles.module.scss'
+import * as styles from '../TermCondition/styles.module.scss'
 
 const TermCondition = () => {
   return (

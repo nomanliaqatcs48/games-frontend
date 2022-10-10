@@ -2,6 +2,7 @@
 $hoverBtnBackground: #fcb92b;
 $btnBackground: #0072ff;
 $featuresBackground: #dfedffbf;
+$fontFamily: "Raleway";
 
 .price-Box-Main-Div {
     border-radius: 20px;
@@ -55,6 +56,7 @@ $featuresBackground: #dfedffbf;
         }
         .boxHead {
             h1 {
+                font-family: $fontFamily;
                 font-weight: 800;
                 font-size: 30px;
                 padding-bottom: 7px;
@@ -68,6 +70,7 @@ $featuresBackground: #dfedffbf;
                 }
             }
             span {
+                font-family: $fontFamily;
                 font-weight: 800;
                 font-size: 20px;
                 line-height: 22px;
@@ -86,7 +89,8 @@ $featuresBackground: #dfedffbf;
             align-items: baseline;
             margin: 8px 0px 20px 0px;
             h1 {
-                font-weight: 400;
+                font-family: $fontFamily;
+                font-weight: 500;
                 font-size: 56px;
                 line-height: 82px;
                 color: #03183880;
@@ -98,7 +102,8 @@ $featuresBackground: #dfedffbf;
                 }
             }
             h2 {
-                font-weight: 400;
+                font-family: $fontFamily;
+                font-weight: 600;
                 font-size: 56px;
                 line-height: 82px;
                 color: #031838;
@@ -110,17 +115,18 @@ $featuresBackground: #dfedffbf;
                 }
             }
             span {
-                font-family: 'Raleway';
+                font-family: $fontFamily;
                 font-weight: 500;
                 font-size: 15px;
                 line-height: 17px;
                 color: #03183880;
+                margin-left: 10px;
             }
         }
 
         .getStarted-btn {
             .btn {
-                font-family: 'Raleway';
+                font-family: $fontFamily;
                 font-weight: 700;
                 font-size: 19px;
                 line-height: 24px;
@@ -140,6 +146,7 @@ $featuresBackground: #dfedffbf;
 
         .features {
             h1 {
+                font-family: "Raleway";
                 font-weight: 700;
                 line-height: 22px;
                 margin-bottom: 20px;
@@ -158,6 +165,7 @@ $featuresBackground: #dfedffbf;
             column-gap: 10px;
             margin-bottom: 10px;
             span {
+                font-family: $fontFamily;
                 font-weight: 500;
                 line-height: 22px;
                 font-size: 19px;
@@ -167,6 +175,18 @@ $featuresBackground: #dfedffbf;
                 @media screen and (max-width: 428px) {
                     font-size: 13px;
                 }
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+            }
+            ul li{
+                list-style: none;
+                margin-bottom: 5px;
+            }
+            ul li::before{
+                content: url("../../Assets/images/PriceArrow.svg");
+                margin-right: 5px;
             }
         }
     }
@@ -179,7 +199,7 @@ $featuresBackground: #dfedffbf;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         h5{
-            font-family: 'Raleway';
+            font-family: $fontFamily;
             font-weight: 700;
             line-height: 17px;
             font-size: 15px;

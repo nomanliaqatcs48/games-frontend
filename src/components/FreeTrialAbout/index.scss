@@ -1,5 +1,9 @@
 .freeTrial-wrapper {
-    background: #0072ff;
+    margin-top: 100px;
+    background-image: url("../../Assets/images/Subtract.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     padding: 33px 0px;
     .freeTrial-content {
       h2 {
@@ -74,5 +78,14 @@
           }
         }
       }
+    }
+  }
+
+  .BlogPage{
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    @media(max-width:899px){
+      row-gap: 60px;
     }
   }
