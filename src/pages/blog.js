@@ -18,9 +18,9 @@ const blog = ({ data }) => {
                             return <Blog blog={blog} key={index} customClass={index === 0 ? true : false} />;
                         })}
                     </Grid>
-                    <FreeTrialAbout />
                 </Box>
             </Container>
+            <FreeTrialAbout />
         </Layout>
     );
 };

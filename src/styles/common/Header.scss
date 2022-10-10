@@ -38,6 +38,7 @@
                 font-weight: 700;
             }
             .header_btn_t {
+                 width: 105px;
                 color: #000000;
                 text-transform: unset;
                 font-size: 700;
@@ -48,6 +49,7 @@
                 font-family: "raleway";
             }
             .header_btn_p {
+                width: 177px;
                 color: #ffffff;
                 text-transform: unset;
                 font-size: 700;
@@ -83,7 +85,7 @@
         font-size: 700;
         font-size: 15px;
         margin-top: 30px;
-        padding: 10px 18px;
+        padding: 10px 20px;
         background: #0072ff;
         border-radius: 5px;
         font-family: "raleway";
@@ -97,6 +99,9 @@
     &:active {
         color: red;
     }
+}
+.text_underline{
+    text-decoration: none;
 }
 @media (max-width: 899px) {
     .MuiList-root {

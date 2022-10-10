@@ -1,3 +1,4 @@
+$fontFamily: "Raleway";
 .contactDetail {
     background-color: #f5f5f5;
     position: relative;
@@ -8,7 +9,6 @@
     }
     .flexWrap {
         display: flex;
-        justify-content: space-between;
         @media screen and (max-width: 1100px) {
             flex-direction: column;
             align-items: center;
@@ -18,6 +18,7 @@
             .headText {
                 font-size: 40px;
                 font-weight: 800;
+                font-family: $fontFamily;
                 line-height: 46px;
                 color: #031838;
                 @media screen and (max-width: 1100px) {
@@ -28,6 +29,7 @@
                 font-weight: 400;
                 font-size: 19.5px;
                 line-height: 23px;
+                font-family: $fontFamily;
                 color: #031838;
                 @media screen and (max-width: 1100px) {
                     text-align: center;
@@ -35,6 +37,7 @@
             }
             .emailWrap {
                 font-weight: 400;
+                font-family: $fontFamily;
                 font-size: 20px;
                 span {
                     font-weight: 500;
@@ -48,6 +51,7 @@
             }
             .phoneWrap {
                 font-weight: 400;
+                font-family: $fontFamily;
                 font-size: 20px;
                 span {
                     font-weight: 500;
@@ -65,9 +69,11 @@
         }
         .formBox{
             box-shadow: 25px 25px #0072FF;
+            margin-left: 30px;
             border-radius: 5px;
             .form {
             width: 509px;
+            font-family: $fontFamily;
             height: 593px;
             background: #ffffff;
             border-radius: 5px;
@@ -90,12 +96,14 @@
                     margin-bottom: 1.5rem;
                     .label {
                         font-weight: 800;
+                        font-family: $fontFamily;
                         font-size: 15px;
                         color: #031838;
                         margin-bottom: 5px;
                     }
                     .inputField {
                         border: 1px solid #6c6c6c;
+                        font-family: $fontFamily;
                         border-radius: 5px;
                         padding: 1rem;
                     }
@@ -104,6 +112,7 @@
                         border-radius: 5px;
                         outline: none;
                         border: none;
+                        font-family: $fontFamily;
                         font-weight: 500;
                         font-size: 14px;
                         text-align: center;
@@ -114,21 +123,6 @@
                 }
             }
             
-            // .formBg {
-            //         position: absolute;
-            //         right: -3%;
-            //         top: 6%;
-            //         @media screen and (max-width: 1620px) {
-            //             right: 13%;
-            //             top: 12%;
-            //         }
-            //         @media screen and (max-width: 1366px) {
-            //             right: 6%;
-            //         }
-            //         @media screen and (max-width: 1100px) {
-            //             display: none;
-            //         }
-            //     }
         }
         }
         

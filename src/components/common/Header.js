@@ -65,27 +65,27 @@ function Header(props) {
             <Divider />
             <List>
                 <Box sx={{ display: "flex", flexDirection: "column", pt: 3 }}>
-                    <Link to="/about">
+                    <Link to="/about" className="text_underline">
                         <Button className={`${"header_items"} `} sx={{ my: 1.5 }}>
                             About Us
                         </Button>
                     </Link>
-                    <Link to="/pricing">
+                    <Link to="/pricing" className="text_underline">
                         <Button className={`${"header_items"} `} sx={{ my: 1.5 }}>
                             Pricing
                         </Button>
                     </Link>
-                    <Link to="/features">
+                    <Link to="/features" className="text_underline">
                         <Button className={`${"header_items"} `} sx={{ my: 1.5 }}>
                             Features
                         </Button>
                     </Link>
-                    <Link to="/blog">
+                    <Link to="/blog" className="text_underline">
                         <Button className={`${"header_items"} `} sx={{ my: 2 }}>
                             Blogs
                         </Button>
                     </Link>
-                    <Link to="/contact-us">
+                    <Link to="/contact-us" className="text_underline">
                         <Button className={`${"header_items"} `} sx={{ my: 1.5 }}>
                             Contact Us
                         </Button>
@@ -142,7 +142,7 @@ function Header(props) {
                                 </Box>
                             </Box>
                         </Grid>
-                        <Grid item xs={2} sx={{ display: { xs: "none", sm: "block", md: "none", lg: "block" }, mr: { sm: 2, md: 3 } }}>
+                        <Grid item xs={2} sx={{ display: { xs: "none", sm: "block", md: "none", lg: "block" }, mr: 1 }}>
                             <Button className="header_btn_t">Sign In</Button>
                         </Grid>
                         <Grid item xs={2} sx={{ display: { xs: "none", sm: "block", md: "none", lg: "block" }, mr: { sm: 2, md: 0 } }}>
