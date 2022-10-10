@@ -1,20 +1,70 @@
-.who-wrapper{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
-    .who-content{
-        h2{
-            font-family: 'Raleway';
-            font-weight: 800;
-            font-size: 40px;
-            line-height: 47px;
-            margin-bottom: 20px;
-        }
-        h6{
-            font-family: 'Raleway';
-            font-size: 20px;
-            line-height: 31px;
-            max-width: 475px;
-        }
+$fontFamily: "raleway";
+
+.who-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    margin-top: 30px;
+  }
+  .who-content {
+    h2 {
+      font-family: $fontFamily;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 47px;
+      margin-bottom: 20px;
+      @media screen and (max-width: 992px) {
+        font-size: 36px;
+      }
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+      @media screen and (max-width: 428px) {
+      font-size: 30px;
+      margin-bottom: 5px;
+      }
     }
+    h6 {
+      font-family: $fontFamily;
+      font-size: 20px;
+      line-height: 31px;
+      max-width: 475px;
+      @media screen and (max-width: 992px) {
+        max-width: 400px;
+        font-size: 17px;
+      }
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        max-width: 600px;
+      }
+      @media screen and (max-width: 600px) {
+        text-align: center;
+        max-width: 460px;
+      }
+      @media screen and (max-width: 428px) {
+        font-size: 15px;
+        line-height: 25px;
+      }
+    }
+  }
+  .who-image {
+    text-align: center;
+    img {
+      width: 100%;
+      @media screen and (max-width: 992px) {
+        width: 90%;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 80%;
+      }
+    }
+  }
 }

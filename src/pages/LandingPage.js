@@ -1,8 +1,6 @@
 import React from "react";
-import Header from "../components/common/Header";
 import HeroSection from "../components/HeroSection/HeroSection";
 import SimpleSetup from "../components/SimpleSetup/SimpleSetup";
-import Footer from "../components/common/Footer";
 import SuperEasy from "../components/SuperEasy/SuperEasy";
 import Feedback from "../components/FeedBack/FeedBack";
 import GetStarted from "../components/common/GetStarted";
@@ -10,22 +8,44 @@ import Blog from "../components/Blog/Blog";
 import FrequentQuestions from "../components/common/FrequentQuestions";
 import FreeTrial from "../components/FreeTrial/FreeTrial";
 import Plateforms from "../components/Plateforms/Plateforms";
-const LandingPage = () => {
+import { Link, graphql } from "gatsby";
+const LandingPage = ({ data }) => {
+    console.log(data, "landing");
     return (
         <div>
-            {/* <Header /> */}
             <HeroSection />
             <SimpleSetup />
             <Plateforms />
             <SuperEasy />
             <GetStarted />
             <Feedback />
-            <Blog />
+            {data?.allStrapiBlog?.nodes?.map((blog, index) => {
+                return <Blog blog={blog} key={index} customClass={index === 0 ? true : false} />;
+            })}
             <FrequentQuestions />
             <FreeTrial />
-            {/* <Footer /> */}
         </div>
     );
 };
-
 export default LandingPage;
+export const query = graphql`
+    query MyQuerys {
+        allStrapiBlog {
+            nodes {
+                Slug
+                Content
+                Title
+                id
+                Image {
+                    url
+                }
+                createdAt
+                check {
+                    data {
+                        check
+                    }
+                }
+            }
+        }
+    }
+`;

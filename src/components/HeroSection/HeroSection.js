@@ -1,15 +1,43 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import "../HeroSection/HeroSection.scss"
+import { Link } from 'gatsby';
 import HeroPic from "../../Assets/images/hero_img.svg"
 import DownArrow from "../../Assets/images/down_arrow.svg";
 import IOS from "../../Assets/images/ios.svg";
 import Apple from "../../Assets/images/apple.svg";
 import Window from "../../Assets/images/window.svg";
 import Chrome from "../../Assets/images/chrome.svg";
+import "../HeroSection/HeroSection.scss"
+import axios from 'axios';
+import  { useState } from "react"
 
 const HeroSection = () => {
+    const [email, setEmail] = useState('');
+  const [errors, setErrors] = useState('');
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+     axios.post(`https://st-backend-invochat.invo.zone/api/messages`,
+     {
+      data: { Email: email }
+     }
+     )
+     .then((res) => {
+      setErrors('Successfully submitted')
+      
+      if(res.status === 200){
+    
+      }
+      else{
+      }
+    })
+    .catch((error) => {
+      
+      setErrors('Invalid Email')
+    })
+     
+   }
+
   return (
       <Box className="hero">
           <Container>
@@ -23,14 +51,20 @@ const HeroSection = () => {
                           </Box>
                           <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, justifyContent: { xs: "center", md: "flex-start" }, my: { xs: 2.5, lg: 4 } }}>
                               <Box sx={{ display: "flex", justifyContent: { xs: "center", sm: "flex-start" } }}>
-                                  <input type="text" placeholder="Enter your email"></input>
+                                  <input onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Enter your email"></input>
                               </Box>
                               <span>
                                   <Box sx={{ display: "flex", justifyContent: { xs: "center", sm: "flex-start" } }}>
-                                      <Button className="hero_btn">Try invochat It’s FREE</Button>
+                                      <Button  onClick={onSubmit} className="hero_btn">Try invochat It's FREE</Button>
                                   </Box>
                               </span>
                           </Box>
+                          <Typography sx={{
+            "& p":{
+            fontSize:'18px',
+            color: errors === 'Invalid Email' ? "red" : errors === 'Successfully submitted' ?  "green" : '' ,
+            fontWeight:'600',}}}>
+              { errors && <p>{errors}</p>}</Typography>
                           <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
                               <Typography sx={{ textAlign: { xs: "center", md: "left" } }} variant="h5">
                                   Catch up on important conversations and say hi to productive collaboration - An all-in-one solution. Be it tasks or demanding projects our efficient communication platform is always at your service.
@@ -38,7 +72,9 @@ const HeroSection = () => {
                           </Box>
                       </Box>
                       <Box className="down_arrow" sx={{ pt: { md: 5, lg: 7 } }}>
+                          <Link to="#SimpleSetup">
                           <img src={DownArrow} alt="Image-of-scroll-icon" />
+                          </Link>
                       </Box>
                   </Grid>
                   <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" }, pt: { xs: 4.5, md: 0 } }}>

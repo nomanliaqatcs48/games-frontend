@@ -1,0 +1,27 @@
+$fontFamily: "raleway";
+.blog_head {
+    padding-top: 30px;
+    .custom-css {
+        width: 100% !important;
+    }
+
+    h2 {
+        padding-top: 40px;
+        font-family: $fontFamily;
+        font-size: 46px;
+        @media (max-width: 899px) {
+            font-size: 34px;
+        }
+        @media (max-width: 599px) {
+            font-size: 30px;
+        }
+        font-weight: 800;
+        color: #031838;
+    }
+    h3 {
+        font-family: $fontFamily;
+        font-size: 24px;
+        font-weight: 500;
+        color: #031838;
+    }
+}

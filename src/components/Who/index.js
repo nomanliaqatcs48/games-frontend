@@ -10,7 +10,7 @@ const Who = (props) => {
           <Typography variant="h2">{props.title}</Typography>
           <Typography variant="h6">{props.description}</Typography>
         </Box>
-        <Box>
+        <Box className="who-image">
           <img src={props.image} alt="" />
         </Box>
       </Box>

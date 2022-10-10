@@ -1,23 +1,24 @@
+$fontFamily: "Raleway";
 .contactDetail {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     position: relative;
     padding: 4rem 0rem 8rem 0rem;
     .featureLeft {
         position: absolute;
         bottom: -9%;
     }
-    .flexWrap{
+    .flexWrap {
         display: flex;
-        justify-content: space-between;
-@media screen and (max-width: 1100px) {
-    flex-direction: column;
-    align-items: center;
-}
-        .detail{
+        @media screen and (max-width: 1100px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .detail {
             flex: 0 0 50%;
             .headText {
                 font-size: 40px;
                 font-weight: 800;
+                font-family: $fontFamily;
                 line-height: 46px;
                 color: #031838;
                 @media screen and (max-width: 1100px) {
@@ -28,33 +29,36 @@
                 font-weight: 400;
                 font-size: 19.5px;
                 line-height: 23px;
+                font-family: $fontFamily;
                 color: #031838;
                 @media screen and (max-width: 1100px) {
                     text-align: center;
                 }
             }
-            .emailWrap{
+            .emailWrap {
                 font-weight: 400;
+                font-family: $fontFamily;
                 font-size: 20px;
                 span {
                     font-weight: 500;
                 }
-                .iconWrap{
+                .iconWrap {
                     padding-right: 8px;
-                } 
+                }
                 @media screen and (max-width: 1100px) {
                     text-align: center;
                 }
             }
-            .phoneWrap{
+            .phoneWrap {
                 font-weight: 400;
+                font-family: $fontFamily;
                 font-size: 20px;
                 span {
                     font-weight: 500;
                 }
-                .iconWrap{
+                .iconWrap {
                     padding-right: 8px;
-                } 
+                }
                 @media screen and (max-width: 1100px) {
                     text-align: center;
                 }
@@ -62,72 +66,66 @@
             @media screen and (max-width: 1100px) {
                 padding-bottom: 2rem;
             }
-           
         }
-        .form{
-            width: 509px;
-            height: 593px;
-            background: #FFFFFF;
+        .formBox{
+            box-shadow: 25px 25px #0072FF;
+            margin-left: 30px;
             border-radius: 5px;
-            box-shadow: 0px 0px 32px -3px rgba(181,181,181,0.45);
-            -webkit-box-shadow: 0px 0px 32px -3px rgba(181,181,181,0.45);
-        -moz-box-shadow: 0px 0px 32px -3px rgba(181,181,181,0.45);
-            z-index: 1;
+            .form {
+            width: 509px;
+            font-family: $fontFamily;
+            height: 593px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
+            -webkit-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
+            -moz-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
             position: relative;
             @media screen and (max-width: 540px) {
                 width: 100%;
                 height: auto;
             }
-            .paddingWrap{
+            .paddingWrap {
                 padding: 54px;
                 @media screen and (max-width: 399px) {
                     padding: 30px;
                 }
-                .flexColumn{
+                .flexColumn {
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 1.5rem;
                     .label {
                         font-weight: 800;
+                        font-family: $fontFamily;
                         font-size: 15px;
                         color: #031838;
                         margin-bottom: 5px;
-                       }
-                       .inputField{
-                        border: 1px solid #6C6C6C;
+                    }
+                    .inputField {
+                        border: 1px solid #6c6c6c;
+                        font-family: $fontFamily;
                         border-radius: 5px;
                         padding: 1rem;
-                       }
-                       .msgBtn {
-                        background: #0072FF;
+                    }
+                    .msgBtn {
+                        background: #0072ff;
                         border-radius: 5px;
                         outline: none;
                         border: none;
+                        font-family: $fontFamily;
                         font-weight: 500;
                         font-size: 14px;
                         text-align: center;
-                        color: #FFFFFF;
+                        color: #ffffff;
                         padding: 1rem;
                         cursor: pointer;
-                       }
+                    }
                 }
             }
+            
         }
-        .formBg{
-            position: absolute;
-            right: 14%;
-            top: 13%;
-            @media screen and (max-width: 1620px) {
-                right: 13%;
-                top: 12%;
-            }
-            @media screen and (max-width: 1366px) {
-                right: 6%;
-            }
-            @media screen and (max-width: 1100px) {
-                display: none;
-            }
         }
+        
+        
     }
-
 }

@@ -38,7 +38,7 @@ blogs.forEach(blog => {
   const {Slug} = blog
   createPage({
     path: `blog/${Slug}/`,
-    component: path.resolve(`src/templates/blog-post.js`),
+    component: path.resolve(`src/templates/blog-inner.js`),
     context: { Slug },
   })
 });

@@ -1,5 +1,6 @@
+$fontFamily: "Raleway";
 .collabContainer {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     position: relative;
     z-index: 1;
     padding: 4rem 0rem;
@@ -15,12 +16,14 @@
         bottom: 8%;
     }
     .headText {
+        font-family: $fontFamily;
         font-size: 40px;
         font-weight: 800;
         line-height: 46px;
         color: #031838;
     }
     .descText {
+        font-family: $fontFamily;
         font-size: 19px;
         line-height: 22px;
         color: #031838;
@@ -30,6 +33,7 @@
         justify-content: center;
         align-items: center;
         .inputField {
+            font-family: $fontFamily;
             border: 0.768259px solid #031838;
             border-radius: 5px 0px 0px 5px;
             background-color: transparent;
@@ -38,11 +42,12 @@
             height: 52px;
         }
         .signUpbtn {
-            background: #0072FF;
+            font-family: $fontFamily;
+            background: #0072ff;
             border-radius: 0px 5px 5px 0px;
             width: 185px;
             height: 54px;
-            border: 0.768259px solid #0072FF;
+            border: 0.768259px solid #0072ff;
             color: #fff;
             font-size: 15px;
             line-height: 22px;
@@ -50,10 +55,12 @@
         }
     }
     .autoText {
+        font-family: $fontFamily;
         font-size: 15px;
         line-height: 22px;
         color: #838383;
         span {
+            font-family: $fontFamily;
             font-size: 15px;
             line-height: 22px;
             color: #031838;
@@ -65,7 +72,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        column-gap: 45px;    
+        column-gap: 45px;
         position: relative;
         padding: 3rem 0rem;
         .square {
@@ -78,66 +85,65 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        column-gap: 45px;  
-        position: relative;  
+        column-gap: 45px;
+        position: relative;
         .square {
             position: absolute;
             top: -12px;
             left: 42%;
         }
     }
-    
 }
 
-@media (max-width:1199px){
-    .collabContainer{
+@media (max-width: 1199px) {
+    .collabContainer {
         .flexWrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 20px;    
-    }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 20px;
+        }
     }
 }
-@media (max-width:991px){
-    .collabContainer{
+@media (max-width: 991px) {
+    .collabContainer {
         .flexWrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 0;
-        column-gap: 20px;   
-    }
-    .flexWrap2 {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        column-gap: 20px;   
-    }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 0;
+            column-gap: 20px;
+        }
+        .flexWrap2 {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            column-gap: 20px;
+        }
     }
 }
-@media (max-width:899px){
-    .collabContainer{
+@media (max-width: 899px) {
+    .collabContainer {
         padding: 3rem 0;
         .headText {
-        font-size: 36px;
-    }
-        .featureLeft{
+            font-size: 36px;
+        }
+        .featureLeft {
             opacity: 0.3;
         }
-        .featureRight{
+        .featureRight {
             opacity: 0.3;
         }
     }
 }
-@media (max-width:599px){
-    .collabContainer{
+@media (max-width: 599px) {
+    .collabContainer {
         padding: 2rem 0;
         .headText {
-        font-size: 30px;
-        line-height: 40px;
-    }
+            font-size: 30px;
+            line-height: 40px;
+        }
     }
 }

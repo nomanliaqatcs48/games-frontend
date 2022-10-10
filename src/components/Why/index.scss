@@ -1,19 +1,70 @@
-.why-wrapper{
-    display: flex;
-    justify-content: space-between;
-    column-gap: 140px;
-    margin-top: 70px;
-    h2{
-        font-family: 'Raleway';
-        font-size: 40px;
-        font-weight: 800;
-        line-height: 47px;
+$fontFamily: "raleway";
+
+.why-wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 140px;
+  margin-top: 70px;
+  @media screen and (max-width: 1200px) {
+    column-gap: 70px;
+  }
+  @media screen and (max-width: 992px) {
+    column-gap: 0px;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+  }
+  h2 {
+    font-family: $fontFamily;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 47px;
+    @media screen and (max-width: 992px) {
+      font-size: 36px;
     }
-    .icon-text{
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        row-gap: 15px;
-        margin-top: 40px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
     }
+    @media screen and (max-width: 428px) {
+      font-size: 30px;
+    }
+  }
+  .why-image {
+    flex: 1;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+    img {
+      @media screen and (max-width: 992px) {
+        width: 90%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 70%;
+      }
+    }
+  }
+  .why-cardFlex {
+    flex: 1;
+    .icon-text {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      row-gap: 15px;
+      margin-top: 40px;
+      @media screen and (max-width: 992px) {
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 768px) {
+        max-width: 600px;
+        justify-content: center;
+      }
+      @media screen and (max-width: 600px) {
+        max-width: 460px;
+        justify-content: center;
+      }
+    }
+  }
 }

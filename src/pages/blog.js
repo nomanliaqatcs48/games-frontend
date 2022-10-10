@@ -6,40 +6,10 @@ import FreeTrialAbout from "../components/FreeTrialAbout";
 import { Link, graphql } from "gatsby";
 import "../components/FreeTrialAbout/index.scss";
 import BlogHead from "../components/BlogHead";
-import HeroSection from "../components/HeroSection/HeroSection";
-import SimpleSetup from "../components/SimpleSetup/SimpleSetup";
-import Plateforms from "../components/Plateforms/Plateforms";
-import SuperEasy from "../components/SuperEasy/SuperEasy";
-import GetStarted from "../components/common/GetStarted";
-import Feedback from "../components/FeedBack/FeedBack";
-import FrequentQuestions from "../components/common/FrequentQuestions";
-import FreeTrial from "../components/FreeTrial/FreeTrial";
-import '../../src/styles/common/globalStyles.module.scss'
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-
-const theme = createTheme({
-  typography: {
-    allVariants: {
-      fontFamily: "Raleway",
-    },
-    body1: {
-      fontFamily: "Raleway",
-    },
-  },
-});
-
-
-const IndexPage = ({ data }) => {
+const blog = ({ data }) => {
     console.log("DATA LOGS ======>>>", data);
     return (
-      <ThemeProvider theme={theme}>
         <Layout>
-            <HeroSection/>
-            <SimpleSetup/>
-            <Plateforms/>
-            <SuperEasy/>
-            <GetStarted/>
-            <Feedback/>
             <Container>
                 <Box className="BlogPage">
                     <BlogHead />
@@ -50,10 +20,8 @@ const IndexPage = ({ data }) => {
                     </Grid>
                 </Box>
             </Container>
-            <FrequentQuestions/>
-            <FreeTrial/>
+            <FreeTrialAbout />
         </Layout>
-        </ThemeProvider>
     );
 };
 export const query = graphql`
@@ -78,4 +46,4 @@ export const query = graphql`
     }
 `;
 
-export default IndexPage;
+export default blog;
