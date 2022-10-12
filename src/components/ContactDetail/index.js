@@ -7,7 +7,6 @@ import { Container, Typography, Box } from '@mui/material'
 import Email from '../../Assets/images/email.svg'
 import Phone from '../../Assets/images/phone.svg'
 import LeftBgIcon from '../../Assets/images/featureleft.svg'
-import FormBg from '../../Assets/images/formback.svg'
 import axios from "axios";
 import { useState } from "react";
 import { Formik, useFormik } from 'formik';
@@ -177,7 +176,6 @@ const ContactDetail = () => {
                                         {errors && <p>{errors}</p>}
                                     </Typography>
                                 </div>
-                                {/* <img src={FormBg} alt="" className={styles.formBg} /> */}
                             </div>
                         </div>
                     </Box>
