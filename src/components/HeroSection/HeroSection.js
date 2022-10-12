@@ -80,11 +80,7 @@ const HeroSection = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" }, pt: { xs: 4.5, md: 0 } }}>
-<<<<<<< HEAD
-                        <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" } }}>
-=======
                         <Box className="home_img_box" sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" } }}>
->>>>>>> Front-end
                             <img src={HeroPic} alt="Image-of-web/mobile-screenshot" />
                         </Box>
                     </Grid>
