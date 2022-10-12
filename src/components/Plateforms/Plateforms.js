@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
-import PlateformImgOne from "../../Assets/images/Who.png";
-import PlateformImgTwo from "../../Assets/images/plateform.png";
+import PlateformImgOne from "../../Assets/images/who_new-min.png";
+import PlateformImgTwo from "../../Assets/images/why_new-min.png";
 import Analytics from "../../Assets/images/analytics.svg";
 import Security from "../../Assets/images/security.svg";
 import Alerts from "../../Assets/images/alerts.svg";

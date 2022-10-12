@@ -1,8 +1,8 @@
 import React from "react";
 import Who from "../Who";
 import Why from "../Why";
-import WhoImage from "../../Assets/images/Who.png";
-import WhyImage from "../../Assets/images/why.png";
+import WhoImage from "../../Assets/images/who_new-min.png";
+import WhyImage from "../../Assets/images/why_about-min.png";
 
 const WhoAndWhy = () => {
     return (
