@@ -6,7 +6,7 @@ import DownArrow from "../../Assets/images/down_arrow.svg";
 import IOS from "../../Assets/images/ios.svg";
 import Apple from "../../Assets/images/apple.svg";
 import Window from "../../Assets/images/window.svg";
-import Chrome from "../../Assets/images/chrome.svg";
+import Chrome from "../../Assets/images/chrome_new.png";
 import "../HeroSection/HeroSection.scss";
 import axios from "axios";
 import { useState } from "react";
