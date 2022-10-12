@@ -1,48 +1,14 @@
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box,  Container, Grid, Typography } from "@mui/material";
 import Layout from "../baseStructure/Layout";
 import InnerBlogMainImg from "../Assets/images/inner_blog_main.svg";
 import InnerBlogMainImg2 from "../Assets/images/inner_blog_main_2.svg";
 import InnerBlogMiddleImg from "../Assets/images/Inner_blog_img2.svg";
 import InnerBlogMiddleImg2 from "../Assets/images/middle_img2.svg";
 import "../styles/common/InnerBlog.scss";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
-// const scrollText =[
-//     {
-//         text:"Handle all the first-hand challenges like...",
-//     },
-//     {
-//         text:"Process Mapping"
-//     },
-//     {
-//         text:"Highlight problems and solutions"
-//     },
-//     {
-//         text:"Business process"
-//     },
-//     {
-//         text:"Outline the boundaries"
-//     },
-//     {
-//         text:"Handle all the first-hand challenges like..."
-//     },
-//     {
-//         text:"Process Mapping"
-//     },
-//     {
-//         text:"Highlight problems and solutions"
-//     },
-//     {
-//         text:"Business process"
-//     },
-//     {
-//         text:"Outline the boundaries"
-//     },
-//     {
-//          text:"Handle all the first-hand challenges like..."
-//     }
-// ];
+
 
 const blogInnerContent = [
     {
@@ -110,17 +76,7 @@ const InnerBlog = ({ data }) => {
             <Box className="innerBlog">
                 <Container>
                     <Grid container>
-                        {/* <Grid xs={12} md={3.5} lg={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
-                            <Box className="innerBlog_scroller">
-                                {scrollText.map((item) => (
-                                    <>
-                                        <Typography variant="h1" sx={{ py: { xs: 1, sm: 1.5 } }}>
-                                            {item.text}
-                                        </Typography>
-                                    </>
-                                ))}
-                            </Box>
-                        </Grid> */}
+                        
                         <Grid xs={12}>
                             <Box className="innerBlog_content">
                                 {blogInnerContent.map((val) => (
