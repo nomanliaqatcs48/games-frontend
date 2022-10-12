@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Link } from "gatsby";
-import HeroPic from "../../Assets/images/hero_img.svg";
+import HeroPic from "../../Assets/images/home_new.png";
 import DownArrow from "../../Assets/images/down_arrow.svg";
 import IOS from "../../Assets/images/ios.svg";
 import Apple from "../../Assets/images/apple.svg";
@@ -80,7 +80,11 @@ const HeroSection = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" }, pt: { xs: 4.5, md: 0 } }}>
+<<<<<<< HEAD
                         <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" } }}>
+=======
+                        <Box className="home_img_box" sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" } }}>
+>>>>>>> Front-end
                             <img src={HeroPic} alt="Image-of-web/mobile-screenshot" />
                         </Box>
                     </Grid>
