@@ -8,7 +8,7 @@ import Blog from "../components/Blog/Blog";
 import FrequentQuestions from "../components/common/FrequentQuestions";
 import FreeTrial from "../components/FreeTrial/FreeTrial";
 import Plateforms from "../components/Plateforms/Plateforms";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 const LandingPage = ({ data }) => {
     console.log(data, "landing");
     return (

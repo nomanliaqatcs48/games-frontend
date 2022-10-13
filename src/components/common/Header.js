@@ -1,65 +1,23 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button, Container, Grid } from "@mui/material";
+import { AppBar, Box, Divider, Drawer, IconButton, List, Toolbar, Button, Container, Grid } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../../Assets/images/Header_logo.svg";
 import "../../styles/common/Header.scss";
 
-const navItems = ["About Us", "Pricing", "Features", "Blogs", "Contact us"];
-
 function Header(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    // const [aboutActive, setaboutActive] = React.useState("fw_500");
-    // const [priceActive, setpriceActive] = React.useState("fw_500");
-    // const [featureActive, setfeatureActive] = React.useState("fw_500");
-    // const [blogActive, setblogActive] = React.useState("fw_500");
-    // const [contactActive, setcontactActive] = React.useState("fw_500");
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
-    // const aboutClicked = () => {
-    //     setaboutActive("fw_700");
-    //     setpriceActive("fw_500");
-    //     setblogActive("fw_500");
-    //     setfeatureActive("fw_500");
-    //     setcontactActive("fw_500");
-    // };
-    // const priceClicked = () => {
-    //     setpriceActive("fw_700");
-    //     setaboutActive("fw_500");
-    //     setblogActive("fw_500");
-    //     setfeatureActive("fw_500");
-    //     setcontactActive("fw_500");
-    // };
-    // const featureClicked = () => {
-    //     setfeatureActive("fw_700");
-    //     setpriceActive("fw_500");
-    //     setblogActive("fw_500");
-    //     setaboutActive("fw_500");
-    //     setcontactActive("fw_500");
-    // };
-    // const blogClicked = () => {
-    //     setblogActive("fw_700");
-    //     setpriceActive("fw_500");
-    //     setaboutActive("fw_500");
-    //     setfeatureActive("fw_500");
-    //     setcontactActive("fw_500");
-    // };
-    // const contactClicked = () => {
-    //     setcontactActive("fw_700");
-    //     setpriceActive("fw_500");
-    //     setblogActive("fw_500");
-    //     setfeatureActive("fw_500");
-    //     setaboutActive("fw_500");
-    // };
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
             <Box sx={{ py: { xs: 2, lg: 0 } }}>
                 <Link to="/">
-                    <img src={Logo} alt="Logo_picture" />
+                    <img loading="lazy" src={Logo} alt="Logo_picture" />
                 </Link>
             </Box>
             <Divider />
@@ -110,7 +68,7 @@ function Header(props) {
                     <Toolbar className="toolBar">
                         <Grid item xs={2}>
                             <Link to="/">
-                                <img src={Logo} className="logo" alt="Logo_picture" />
+                                <img loading="lazy" src={Logo} className="logo" alt="Logo_picture" />
                             </Link>
                         </Grid>
                         <Grid item xs={6} sx={{ mx: "auto" }}>

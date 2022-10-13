@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box,Typography, Button } from "@mui/material";
 import "../../components/FreeTrial/FreeTrial.scss";
 
 const FreeTrial = () => {

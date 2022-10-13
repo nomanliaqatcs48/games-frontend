@@ -3,13 +3,6 @@ import { Container, Box, Typography } from "@mui/material";
 import PriceBox from "../common/PriceBox";
 import "../../styles/common/GetStarted.scss";
  
-const listArray = [
-   {itemOne: "Monthly Active Users"},
-   {itemTwo: "Custom Bot"},
-   {itemThree: "Robust Analytics"},
-   {itemFour: "Ticketing system"},
- ];
- 
 function GetStarted() {
  return (
    <div className="getstarted-back">

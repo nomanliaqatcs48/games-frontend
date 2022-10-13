@@ -24,7 +24,7 @@ const Collaboration = () => {
     return (
         <>
             <div className={styles.collabContainer}>
-                <img src={LeftImage} alt="" className={styles.featureLeft} />
+                <img loading="lazy" src={LeftImage} alt="" className={styles.featureLeft} />
                 <Container>
                     <Typography align="center" px={3} className={styles.headText}>
                         Secure and user-friendly features for project collaboration at your disposal{" "}
@@ -45,9 +45,8 @@ const Collaboration = () => {
                         in-one platform{" "}
                     </Typography>
                     <Box className={styles.flexWrap}>
-                        <img src={square} alt="" className={styles.square} />
+                        <img loading="lazy" src={square} alt="" className={styles.square} />
                         <Card
-                            className={styles.card1}
                             icon={Chat}
                             heading={"Topic-specific chat rooms "}
                             description={
@@ -55,24 +54,17 @@ const Collaboration = () => {
                             }
                         />
                         <Card
-                            className={styles.card2}
                             icon={Sharing}
                             heading={"Instant file-sharing "}
                             description={
                                 "Easily upload files of any type into InvoChat — JPEG, PNG, PDF, MP3, Word, Excel, PowerPoint, and more. Make them instantly available to your team members, and drop the headache of tedious email attachments."
                             }
                         />
-                        <Card
-                            className={styles.card3}
-                            icon={Notification}
-                            heading={"Personalized notifications "}
-                            description={"With InvoChat, you can apply custom notification preferences to every conversation so that you can stay focused and in the loop."}
-                        />
+                        <Card icon={Notification} heading={"Personalized notifications "} description={"With InvoChat, you can apply custom notification preferences to every conversation so that you can stay focused and in the loop."} />
                     </Box>
                     <Box py={2} className={styles.flexWrap2}>
-                        <img src={square} alt="" className={styles.square} />
+                        <img loading="lazy" src={square} alt="" className={styles.square} />
                         <Card
-                            className={styles.card1}
                             icon={OneOnOne}
                             heading={"1:1 chat "}
                             description={
@@ -80,7 +72,6 @@ const Collaboration = () => {
                             }
                         />
                         <Card
-                            className={styles.card2}
                             icon={Workspace}
                             heading={"Collaborative workspaces"}
                             description={
@@ -89,7 +80,7 @@ const Collaboration = () => {
                         />
                     </Box>
                 </Container>
-                <img src={RightImage} alt="" className={styles.featureRight} />
+                <img loading="lazy" src={RightImage} alt="" className={styles.featureRight} />
             </div>
             <Productivity />
         </>

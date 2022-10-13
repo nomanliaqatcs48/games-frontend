@@ -1,5 +1,5 @@
 import React from "react";
-import { Box,  Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Layout from "../baseStructure/Layout";
 import InnerBlogMainImg from "../Assets/images/inner_blog_main.svg";
 import InnerBlogMainImg2 from "../Assets/images/inner_blog_main_2.svg";
@@ -7,8 +7,6 @@ import InnerBlogMiddleImg from "../Assets/images/Inner_blog_img2.svg";
 import InnerBlogMiddleImg2 from "../Assets/images/middle_img2.svg";
 import "../styles/common/InnerBlog.scss";
 import { graphql } from "gatsby";
-
-
 
 const blogInnerContent = [
     {
@@ -76,7 +74,6 @@ const InnerBlog = ({ data }) => {
             <Box className="innerBlog">
                 <Container>
                     <Grid container>
-                        
                         <Grid xs={12}>
                             <Box className="innerBlog_content">
                                 {blogInnerContent.map((val) => (
@@ -85,7 +82,7 @@ const InnerBlog = ({ data }) => {
                                             <Typography variant="h2">{record?.Title}</Typography>
                                         </Box>
                                         <Box>
-                                            <img  src={record.Image[0].url} />
+                                            <img loading="lazy" src={record.Image[0].url} alt="Blog_content_image" />
                                         </Box>
                                         <Box>
                                             <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record.check.data.check }}></Typography>
