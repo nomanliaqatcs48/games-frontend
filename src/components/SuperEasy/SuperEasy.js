@@ -26,7 +26,7 @@ const SuperEasy = () => {
                     <Grid container sx={{ display: "flex", flexDirection: { xs: "column-reverse", md: "row" } }}>
                         <Grid item xs={12} md={6} sx={{ pt: { xs: 2, md: 0 } }}>
                             <Box>
-                                <img src={ImageOne} alt="picture_of_mobile" />
+                                <img loading="lazy" src={ImageOne} alt="picture_of_mobile" />
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -45,14 +45,14 @@ const SuperEasy = () => {
                         </Grid>
                         <Grid item xs={12} md={6} sx={{ pt: { xs: 3.5, md: 0 } }}>
                             <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-                                <img src={ImageTwo} alt="picture_of_mobile" />
+                                <img loading="lazy" src={ImageTwo} alt="picture_of_mobile" />
                             </Box>
                         </Grid>
                     </Grid>
                     <Grid container sx={{ display: "flex", flexDirection: { xs: "column-reverse", md: "row" } }}>
                         <Grid item xs={12} md={6} sx={{ pt: { xs: 2, md: 0 } }}>
                             <Box>
-                                <img src={ImageThree} alt="picture_of_mobile" />
+                                <img loading="lazy" src={ImageThree} alt="picture_of_mobile" />
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center", alignItems: "center", pt: { xs: 5, md: 0 } }}>
@@ -71,14 +71,14 @@ const SuperEasy = () => {
                         </Grid>
                         <Grid item xs={12} md={6} sx={{ pt: { xs: 3, md: 0 } }}>
                             <Box sx={{ display: "flex", justifyContent: { xs: "flex-end", md: "flex-start" } }}>
-                                <img src={ImageFour} alt="picture_of_mobile" />
+                                <img loading="lazy" src={ImageFour} alt="picture_of_mobile" />
                             </Box>
                         </Grid>
                     </Grid>
                 </Box>
             </Container>
             <Box className="bg_1">
-                <img src={BgLayerFour} alt="random_Circle_like_picture" />
+                <img loading="lazy" src={BgLayerFour} alt="random_Circle_like_picture" />
             </Box>
         </Box>
     );

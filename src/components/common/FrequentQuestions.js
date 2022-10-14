@@ -38,7 +38,7 @@ function FrequentQuestions() {
 
     return (
         <div className="faq-back">
-            <img src={backImage} alt="" className="left-image" />
+            <img loading="lazy" src={backImage} alt="" className="left-image" />
             <Container>
                 <Box className="faq-wrapper">
                     <Box className="faq-head">

@@ -46,21 +46,21 @@ const SimpleSetup = () => {
                     <Box sx={{ display: "flex", justifyContent: "center" }}>
                         <Box className="line1"></Box>
                     </Box>
-                    <Box sx={{ display:{xs:"flex",md:"none"}, justifyContent: "center" }}>
+                    <Box sx={{ display: { xs: "flex", md: "none" }, justifyContent: "center" }}>
                         <Box className="line2"></Box>
                     </Box>
                     <Box className="dot_left">
-                        <img src={DotsLeft} alt="dots_like_picture" />
+                        <img loading="lazy" src={DotsLeft} alt="dots_like_picture" />
                     </Box>
                     <Box className="dot_right">
-                        <img src={DotsRight} alt="dots_like_picture" />
+                        <img loading="lazy" src={DotsRight} alt="dots_like_picture" />
                     </Box>
                     <Grid container spacing={3} sx={{ pt: 6 }}>
                         {cards.map((val) => (
                             <Grid item xs={12} sm={6} md={3}>
                                 <Box className="card" sx={{ py: 3 }}>
                                     <Box sx={{ display: "flex", justifyContent: "center" }}>
-                                        <img src={val.imageName} alt="picture_showing_one" />
+                                        <img loading="lazy" src={val.imageName} alt="picture_showing_one" />
                                     </Box>
                                     <Box>
                                         <Typography sx={{ textAlign: "center" }} variant="h4">
