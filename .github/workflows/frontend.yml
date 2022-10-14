@@ -7,15 +7,15 @@ on:
 jobs:
   build:
 
-    runs-on: [self-hosted, Linux, X64, invochat-io]
+    runs-on: [self-hosted, Linux, X64, invochat-fe]
 
     steps:
     - uses: actions/checkout@v3
     - name: Applying Changes
       run: |-
-        cd /home/invochat-io/public_html/invochat-frontend
+        cd /home/github-runner/invochat-frontend/
         git reset --hard
         git pull origin Frontend-live
         npm i
         npm run build
-        pm2 reload 0
+        touch test.txt
