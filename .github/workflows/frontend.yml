@@ -7,15 +7,23 @@ on:
 jobs:
   build:
 
-    runs-on: [self-hosted, Linux, X64, invochat-io]
+    runs-on: [self-hosted, Linux, X64, invochat-fe]
 
     steps:
     - uses: actions/checkout@v3
     - name: Applying Changes
       run: |-
-        cd /home/invochat-io/public_html/invochat-frontend
+        cd /home/github-runner/invochat-frontend/
         git reset --hard
         git pull origin Frontend-live
+        export PATH=$PATH:/home/github-runner/.nvm/versions/node/v14.20.0/bin/
         npm i
         npm run build
+        cd /home/github-runner/
+        tar -czf invochat-frontend
+        scp -P invochat-frontend.tar.gz invochat-io@3.14.149.83:/home/invochat-io/public_html/
+        rm -rf invochat-frontend
+        tar -xzf invochat-frontend.tar.gz
+        rm -rf invochat-frontend.tar.gz
         pm2 reload 0
+        
