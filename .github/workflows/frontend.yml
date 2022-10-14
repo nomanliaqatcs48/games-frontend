@@ -19,4 +19,11 @@ jobs:
         export PATH=$PATH:/home/github-runner/.nvm/versions/node/v14.20.0/bin/
         npm i
         npm run build
-        touch test.txt
+        cd /home/github-runner/
+        tar -czf invochat-frontend
+        scp -P invochat-frontend.tar.gz invochat-io@3.14.149.83:/home/invochat-io/public_html/
+        rm -rf invochat-frontend
+        tar -xzf invochat-frontend.tar.gz
+        rm -rf invochat-frontend.tar.gz
+        pm2 reload 0
+        
