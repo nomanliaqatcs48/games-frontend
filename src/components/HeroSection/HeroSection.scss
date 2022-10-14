@@ -104,6 +104,9 @@
 @media (max-width: 899px) {
   .hero {
     position: relative;
+    .home_img_box{
+    width: 450px;
+  }
     .down_arrow {
       position: absolute;
       bottom: 22%;
@@ -135,7 +138,7 @@
         width: 50px;
       }
       position: absolute;
-      bottom: 29%;
+      bottom: 24%;
     }
     h1 {
       font-size: 30px;
