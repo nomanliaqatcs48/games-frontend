@@ -16,6 +16,7 @@ jobs:
         cd /home/github-runner/invochat-frontend/
         git reset --hard
         git pull origin Frontend-live
+        export PATH=$PATH:/home/github-runner/.nvm/versions/node/v14.20.0/bin/
         npm i
         npm run build
         touch test.txt
