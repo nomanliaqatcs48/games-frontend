@@ -22,4 +22,4 @@ jobs:
         cd /home/github-runner/
         tar -czf invochat-frontend.tar.gz invochat-frontend
         scp invochat-frontend.tar.gz invochat-io@3.14.149.83:/home/invochat-io/public_html/
-        ssh invochat-io@3.14.149.83 "cd public_html; rm -rf invochat-frontend; tar -xzf invochat-frontend.tar.gz; rm -rf invochat-frontend.tar.gz; pm2 reload 0;"
+        ssh invochat-io@3.14.149.83 "cd public_html; rm -rf invochat-frontend; tar -xzf invochat-frontend.tar.gz; rm -rf invochat-frontend.tar.gz; export PATH=$PATH:/home/invochat-io/.nvm/versions/node/v14.20.0/bin/; pm2 reload 0;"
