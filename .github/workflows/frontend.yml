@@ -13,9 +13,12 @@ jobs:
     - uses: actions/checkout@v3
     - name: Applying Changes
       run: |-
-        cd /home/invochat-io/public_html/invochat-frontend
+        cd /home/github-runner/invochat-frontend/
         git reset --hard
         git pull origin Frontend-live
+        export PATH=$PATH:/home/github-runner/.nvm/versions/node/v14.20.0/bin/
         npm i
         npm run build
-        pm2 reload 0
+        cd /home/github-runner/
+        tar -czf invochat-frontend
+        scp invochat-frontend.tar.gz invochat-io@3.14.149.83:/home/invochat-io/public_html/
