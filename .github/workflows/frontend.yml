@@ -20,5 +20,5 @@ jobs:
         npm i
         npm run build
         cd /home/github-runner/
-        tar -czf invochat-frontend
+        tar -czf invochat-frontend.tar.gz invochat-frontend
         scp invochat-frontend.tar.gz invochat-io@3.14.149.83:/home/invochat-io/public_html/
