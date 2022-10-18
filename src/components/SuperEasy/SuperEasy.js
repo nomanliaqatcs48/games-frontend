@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Grid, Typography, Button } from "@mui/material";
-import ImageOne from "../../Assets/images/mobile_mockup.png";
-import ImageTwo from "../../Assets/images/mobile_mockup2.png";
-import ImageThree from "../../Assets/images/mobile_mockup4.png";
-import ImageFour from "../../Assets/images/mobile_mockup3.png";
+import ImageOne from "../../Assets/images/superEasy1.png";
+import ImageTwo from "../../Assets/images/superEasy2-min.png";
+import ImageThree from "../../Assets/images/superEasy3-min.png";
+import ImageFour from "../../Assets/images/superEasy4-min.png";
 import BgLayerFour from "../../Assets/images/bg_4.svg";
 import "../../components/SuperEasy/SuperEasy.scss";
 import { Container } from "@mui/system";

@@ -10,7 +10,6 @@ import FreeTrial from "../components/FreeTrial/FreeTrial";
 import Plateforms from "../components/Plateforms/Plateforms";
 import { graphql } from "gatsby";
 const LandingPage = ({ data }) => {
-    console.log(data, "landing");
     return (
         <div>
             <HeroSection />

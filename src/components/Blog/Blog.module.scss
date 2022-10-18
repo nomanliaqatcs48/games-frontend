@@ -56,8 +56,8 @@ $fontFamily: "Raleway";
                 font-size: 20px;
                 font-weight: 800;
                 color: #031838;
-                line-height: 25px;
-                height: 70px;
+                line-height: 36px;
+                min-height: 115px;
             }
             .two_heading {
                 height: 70px;
@@ -73,7 +73,11 @@ $fontFamily: "Raleway";
                 border: 0.813559px solid rgba(3, 24, 56, 0.7);
                 border-radius: 5px;
                 width: 144px;
-                height: 45.56px;
+                height: 52px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
                 text-transform: capitalize;
                 position: absolute;
                 margin-bottom: 3px;
@@ -90,7 +94,7 @@ $fontFamily: "Raleway";
         .card {
             .card_body {
                 .zero_heading {
-                    font-size: 40px;
+                    font-size: 31px;
                 }
             }
         }
@@ -99,7 +103,7 @@ $fontFamily: "Raleway";
         .flexClass {
             display: flex;
             .customImg {
-                width: 68%;
+                width: 50%;
             }
             .margin_left {
                 padding-left: 60px;
@@ -110,8 +114,13 @@ $fontFamily: "Raleway";
             .firstBtn {
                 background-color: #0072ff;
                 color: white !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 font-size: 16px;
-                padding: 18px 26px 18px 22px !important;
+                cursor: pointer;
+                width: 144px;
+                height: 52px;
                 font-family: $fontFamily;
             }
         }
@@ -150,11 +159,12 @@ $fontFamily: "Raleway";
                     max-width: 83%;
                 }
                 .zero_heading {
-                    width: 316px;
+                    // width: 316px;
                     font-size: 20px;
                 }
                 h6 {
-                    height: 49px;
+                    min-height: 75px;
+                    line-height: 32px;
                 }
             }
         }
@@ -179,6 +189,9 @@ $fontFamily: "Raleway";
                 }
                 .two_p {
                     max-width: 78%;
+                }
+                h6 {
+                    width: 400px;
                 }
                 .card_btn {
                     position: static;

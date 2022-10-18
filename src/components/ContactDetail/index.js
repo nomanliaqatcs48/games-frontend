@@ -1,7 +1,7 @@
 import React from "react";
 
 // Library
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography,Button, Box } from "@mui/material";
 
 // Assets
 import Email from "../../Assets/images/email.svg";
@@ -139,9 +139,9 @@ const ContactDetail = () => {
                                         </div>
                                     )}
                                     <Box className={styles.flexColumn}>
-                                        <button onClick={formik.handleSubmit} className={styles.msgBtn}>
+                                        <Button onClick={formik.handleSubmit} className={styles.msgBtn}>
                                             SEND MESSAGE
-                                        </button>
+                                        </Button>
                                     </Box>
                                     <Typography
                                         sx={{
