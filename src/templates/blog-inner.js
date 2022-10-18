@@ -10,6 +10,7 @@ import { graphql } from "gatsby";
 
 const blogInnerContent = [
     {
+        id: 1,
         title: "Set Your Collaborative Workspace And Initiate Mapping Your Business!",
         mainImg: InnerBlogMainImg2,
         description1:
@@ -74,10 +75,10 @@ const InnerBlog = ({ data }) => {
             <Box className="innerBlog">
                 <Container>
                     <Grid container>
-                        <Grid xs={12}>
+                        <Grid item xs={12}>
                             <Box className="innerBlog_content">
                                 {blogInnerContent.map((val) => (
-                                    <>
+                                    <React.Fragment key={val.id}>
                                         <Box>
                                             <Typography variant="h2">{record?.Title}</Typography>
                                         </Box>
@@ -87,7 +88,7 @@ const InnerBlog = ({ data }) => {
                                         <Box>
                                             <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record.check.data.check }}></Typography>
                                         </Box>
-                                    </>
+                                    </React.Fragment>
                                 ))}
                             </Box>
                         </Grid>
