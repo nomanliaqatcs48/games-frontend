@@ -1,7 +1,7 @@
 import React from "react";
 
 // Library
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography,Button, Box } from "@mui/material";
 
 // Assets
 import Chat from "../../Assets/images/chat.svg";
@@ -34,7 +34,7 @@ const Collaboration = () => {
                     </Typography>
                     <Box className={styles.inputWrapper}>
                         <input type="text" placeholder="Enter your email" className={styles.inputField} />
-                        <button className={styles.signUpbtn}>Sign up for free</button>
+                        <Button className={styles.signUpbtn}>Sign up for free</Button>
                     </Box>
                     <Typography py={2} align="center" className={styles.autoText}>
                         Already have an account?<span>Sign in</span>

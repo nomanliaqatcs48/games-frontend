@@ -19,21 +19,25 @@ import "../../components/Plateforms/Plateforms.scss";
 
 const cardAbove = [
     {
+        id: 1,
         imageName: Analytics,
         cardHeading: "Analytics",
         cardParagraph: "View engagement statistics to understand the how, when and who of your team’s InvoChat usage.",
     },
     {
+        id: 2,
         imageName: Security,
         cardHeading: "Security",
         cardParagraph: "Control all the details, like our inactivity lockout interval, password requirements and user invite ability. ",
     },
     {
+        id: 3,
         imageName: Alerts,
         cardHeading: "Custom Alerts",
         cardParagraph: "Use our group-level alert settings to adjust custom notification settings for each chat room. Never miss a beat.",
     },
     {
+        id: 4,
         imageName: Reciept,
         cardHeading: "Read Receipts",
         cardParagraph: "Improve team accountability and reliability with easy-to-access read receipts for every message.",
@@ -42,16 +46,19 @@ const cardAbove = [
 
 const cardDown = [
     {
+        id: 1,
         imageName: Admin,
         cardHeading: "Administration",
         cardParagraph: "View engagement statistics to understand the how, when and who of your team’s InvoChat usage.",
     },
     {
+        id: 2,
         imageName: Meet,
         cardHeading: "Google Meet Integrations",
         cardParagraph: "Control all the details, like our inactivity lockout interval, password requirements and user invite ability. ",
     },
     {
+        id: 3,
         imageName: Export,
         cardHeading: "Import Export Data",
         cardParagraph: "Control all the details, like our inactivity lockout interval, password requirements and user invite ability. ",
@@ -99,7 +106,7 @@ const Plateforms = () => {
                 <Box className="plateform_cards_1">
                     <Grid container spacing={5} sx={{ pt: { xs: 5, md: 9 } }}>
                         {cardAbove.map((val) => (
-                            <Grid item xs={12} sm={6} md={3}>
+                            <Grid key={val.id} item xs={12} sm={6} md={3}>
                                 <Box className="card" sx={{ py: 4 }}>
                                     <Box sx={{ display: "flex", justifyContent: "center" }}>
                                         <img loading="lazy" src={val.imageName} alt="showing_first_card" />
@@ -121,7 +128,7 @@ const Plateforms = () => {
                 <Box className="plateform_cards_2">
                     <Grid container spacing={5} sx={{ pt: 4, display: "flex", justifyContent: "center" }}>
                         {cardDown.map((val) => (
-                            <Grid item xs={12} md={3}>
+                            <Grid key={val.id} item xs={12} md={3}>
                                 <Box className="card" sx={{ py: 4 }}>
                                     <Box sx={{ display: "flex", justifyContent: "center" }}>
                                         <img loading="lazy" src={val.imageName} alt="showing_first_card" />

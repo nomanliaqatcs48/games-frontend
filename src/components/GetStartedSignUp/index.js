@@ -1,7 +1,7 @@
 import React from "react";
 
 // Library
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography, Button, Box } from "@mui/material";
 
 // Assets
 import LeftImage from "../../Assets/images/featureleft.svg";
@@ -32,7 +32,7 @@ const GetStartedSignUp = () => {
                             Are you looking to join an existing Workspace or create a<br /> new one?
                         </Typography>
                         <Box display="flex" justifyContent="center">
-                            <button className={styles.workspaceBtn}>Create a New Workspace</button>
+                            <Button className={styles.workspaceBtn}>Create a New Workspace</Button>
                         </Box>
                         <Typography pt={1} align="center" className={styles.desc}>
                             Set up your Workspace on InvoChat
@@ -41,7 +41,7 @@ const GetStartedSignUp = () => {
                             <img loading="lazy" width="100%" src={Seperator} alt="" />
                         </Box>
                         <Box display="flex" justifyContent="center">
-                            <button className={styles.findBtn}>Find Your Workspace</button>
+                            <Button className={styles.findBtn}>Find Your Workspace</Button>
                         </Box>
                         <Typography pt={1} pb={3} align="center" className={styles.desc}>
                             Join or sign in to an existing Workspace
@@ -54,7 +54,7 @@ const GetStartedSignUp = () => {
                         </Typography>
                         <Box className={styles.inputLaunchWrapper}>
                             <input type="text" placeholder="InvoZone Pvt. Ltd." className={styles.launchInput} />
-                            <button className={styles.launchBtn}>Launch</button>
+                            <Button className={styles.launchBtn}>Launch</Button>
                         </Box>
                         <Typography py={4} className={styles.desc}>
                             If you are looking for a different workspace, you can

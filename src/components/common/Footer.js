@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import footerLogo from "../../Assets/images/footer_logo.svg";
 import Twitter from "../../Assets/images/twitter.svg";
 import Linkdin from "../../Assets/images/linkdin.svg";
+import PoweredBy from "../../Assets/images/powererd.svg";
 import Facebook from "../../Assets/images/fb.svg";
 import "../../styles/common/Footer.scss";
 import axios from "axios";
@@ -122,10 +123,15 @@ const Footer = () => {
             <Box className="footer_border" sx={{ mt: 3 }}>
                 <Container>
                     <Grid container>
-                        <Grid item xs={12} md={10.5} sx={{ display: "flex", flexDirection: { xs: "column-reverse", md: "row" }, justifyContent: { xs: "center", md: "space-between", xl: "space-between" } }}>
-                            <Typography sx={{ pt: 2.5, textAlign: { xs: "center", md: "left" } }} className="poppins" variant="h4">
+                        <Grid xs={12} item sx={{ display: "flex", flexDirection: { xs: "column-reverse", md: "row" }, justifyContent: { xs: "center", md: "space-between" } }}>
+                            <Typography sx={{ pt: 3, textAlign: { xs: "center", md: "left" } }} className="poppins" variant="h4">
                                 All Rights Reserved.
                             </Typography>
+                            <Box sx={{ display: "flex", justifyContent: { xs: "center" } }}>
+                                <Link to="https://invozone.com/" className="powered" sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
+                                    <img loading="lazy" src={PoweredBy} alt="powered-by" />
+                                </Link>
+                            </Box>
                         </Grid>
                     </Grid>
                 </Container>

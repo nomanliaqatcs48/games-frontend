@@ -10,21 +10,25 @@ import "../SimpleSetup/SimpleSetup.scss";
 
 const cards = [
     {
+        id: 1,
         imageName: One,
         cardHeading: "Create an account",
         cardParagraph: "InvoChat is 100% free to start. Pick a team name and a custom URL you can use to access InvoChat easily.",
     },
     {
+        id: 2,
         imageName: Two,
         cardHeading: "Invite your team",
         cardParagraph: "InvoChat works best when your entire team is inside. Use InvoChat with an unlimited number of users. ",
     },
     {
+        id: 3,
         imageName: Three,
         cardHeading: "Add chat rooms",
         cardParagraph: "Pick a few major topics that your team talks about frequently, and create your InvoChat rooms to get started.",
     },
     {
+        id: 4,
         imageName: Four,
         cardHeading: "Message securely",
         cardParagraph: "InvoChat is secured with end-to-end encryption. Securely chat and share files for efficient collaboration.",
@@ -57,7 +61,7 @@ const SimpleSetup = () => {
                     </Box>
                     <Grid container spacing={3} sx={{ pt: 6 }}>
                         {cards.map((val) => (
-                            <Grid item xs={12} sm={6} md={3}>
+                            <Grid key={val.id} item xs={12} sm={6} md={3}>
                                 <Box className="card" sx={{ py: 3 }}>
                                     <Box sx={{ display: "flex", justifyContent: "center" }}>
                                         <img loading="lazy" src={val.imageName} alt="picture_showing_one" />
