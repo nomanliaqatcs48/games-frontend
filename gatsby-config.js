@@ -57,17 +57,7 @@ module.exports = {
                 queryLimit: 1000,
             },
         },
-        {
-            resolve: "gatsby-plugin-load-script",
-            options: {
-                type: "text/javascript",
-                src: "https://widget.invocom.io/widget.js",
-                crossorigin: "*",
-                charset: "UTF-8",
-                async: "true",
-                onLoad: `injectWidget({ APP_ID: '981be528-4cf4-488a-bbbe-fef208d5621f', position: 'right', APP_URL: 'https://invocom.io', API_BASE_URL: 'https://api.invocom.io/api/v1', })`,
-            },
-        },
+
         `gatsby-plugin-offline`,
     ],
 };
