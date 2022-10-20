@@ -1,7 +1,7 @@
 import React from "react";
 
 // Library
-import { Container, Typography,Button, Box } from "@mui/material";
+import { Container, Typography, Button, Box } from "@mui/material";
 
 // Assets
 import Email from "../../Assets/images/email.svg";
@@ -87,7 +87,9 @@ const ContactDetail = () => {
                             <div className={styles.form}>
                                 <div className={styles.paddingWrap}>
                                     <Box className={styles.flexColumn}>
-                                        <label htmlFor="fname" className={styles.label}>Full Name</label>
+                                        <label htmlFor="fname" className={styles.label}>
+                                            Full Name
+                                        </label>
                                         <input id="fname" name="fname" type="text" placeholder="Full Name" {...formik.getFieldProps("FullName")} className={styles.inputField} />
                                         {formik.touched.FullName && formik.errors.FullName && (
                                             <div className="fv-plugins-message-container">
@@ -100,7 +102,9 @@ const ContactDetail = () => {
                                         )}
                                     </Box>
                                     <Box className={styles.flexColumn}>
-                                        <label htmlFor="phone" className={styles.label}>Phone</label>
+                                        <label htmlFor="phone" className={styles.label}>
+                                            Phone
+                                        </label>
                                         <input id="phone" name="phone" type="Number" placeholder="Phone" {...formik.getFieldProps("PhoneNumber")} className={styles.inputField} />
                                         {formik.touched.PhoneNumber && formik.errors.PhoneNumber && (
                                             <div className="fv-plugins-message-container">
@@ -113,7 +117,9 @@ const ContactDetail = () => {
                                         )}
                                     </Box>
                                     <Box className={styles.flexColumn}>
-                                        <label htmlFor="email" className={styles.label}>E-mail Address</label>
+                                        <label htmlFor="email" className={styles.label}>
+                                            E-mail Address
+                                        </label>
                                         <input id="email" name="email" type="email" placeholder="E-mail Address" {...formik.getFieldProps("Email")} className={styles.inputField} />
                                         {formik.touched.Email && formik.errors.Email && (
                                             <div className="fv-plugins-message-container">
@@ -126,7 +132,9 @@ const ContactDetail = () => {
                                         )}
                                     </Box>
                                     <Box className={styles.flexColumn}>
-                                        <label htmlFor="message" className={styles.label}>Message</label>
+                                        <label htmlFor="message" className={styles.label}>
+                                            Message
+                                        </label>
                                         <textarea id="message" name="message" rows="5" placeholder="Message" {...formik.getFieldProps("Message")} className={styles.inputField} />
                                     </Box>
                                     {formik.touched.Message && formik.errors.Message && (
