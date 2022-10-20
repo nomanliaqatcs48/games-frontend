@@ -8,6 +8,8 @@ import Email from "../../Assets/images/email.svg";
 import Phone from "../../Assets/images/phone.svg";
 import LeftBgIcon from "../../Assets/images/featureleft.svg";
 import axios from "axios";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -18,6 +20,7 @@ import * as styles from "../ContactDetail/styles.module.scss";
 
 const ContactDetail = () => {
     const [errors, setErrors] = useState("");
+    const [value, setValue] = useState();
 
     const initialValues = {
         FullName: "",
@@ -105,8 +108,11 @@ const ContactDetail = () => {
                                         <label htmlFor="phone" className={styles.label}>
                                             Phone
                                         </label>
-                                        <input id="phone" name="phone" type="Number" placeholder="Phone" {...formik.getFieldProps("PhoneNumber")} className={styles.inputField} />
-                                        {formik.touched.PhoneNumber && formik.errors.PhoneNumber && (
+                                        {/* <input id="phone" name="phone" type="Number" placeholder="Phone" {...formik.getFieldProps("PhoneNumber")} className={styles.inputField} /> */}
+                                        <Box className={styles.inputField}>
+                                            <PhoneInput international className={styles.phoneInputInput} placeholder="Enter phone number" value={value} onChange={setValue} />
+                                        </Box>
+                                        {/* {formik.touched.PhoneNumber && formik.errors.PhoneNumber && (
                                             <div className="fv-plugins-message-container">
                                                 <div className="fv-help-block">
                                                     <span role="alert" className="from-error">
@@ -114,7 +120,7 @@ const ContactDetail = () => {
                                                     </span>
                                                 </div>
                                             </div>
-                                        )}
+                                        )} */}
                                     </Box>
                                     <Box className={styles.flexColumn}>
                                         <label htmlFor="email" className={styles.label}>

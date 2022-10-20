@@ -67,65 +67,67 @@ $fontFamily: "Raleway";
                 padding-bottom: 2rem;
             }
         }
-        .formBox{
-            box-shadow: 25px 25px #0072FF;
+        .formBox {
+            box-shadow: 25px 25px #0072ff;
             margin-left: 30px;
             border-radius: 5px;
             .form {
-            width: 509px;
-            font-family: $fontFamily;
-            height: 593px;
-            background: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
-            -webkit-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
-            -moz-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
-            position: relative;
-            @media screen and (max-width: 540px) {
-                width: 100%;
-                height: auto;
-            }
-            .paddingWrap {
-                padding: 54px;
-                @media screen and (max-width: 399px) {
-                    padding: 30px;
+                width: 509px;
+                font-family: $fontFamily;
+                height: 593px;
+                background: #ffffff;
+                border-radius: 5px;
+                box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
+                -webkit-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
+                -moz-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
+                position: relative;
+                @media screen and (max-width: 540px) {
+                    width: 100%;
+                    height: auto;
                 }
-                .flexColumn {
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 1.5rem;
-                    .label {
-                        font-weight: 800;
-                        font-family: $fontFamily;
-                        font-size: 15px;
-                        color: #031838;
-                        margin-bottom: 5px;
+                .paddingWrap {
+                    padding: 54px;
+                    @media screen and (max-width: 399px) {
+                        padding: 30px;
                     }
-                    .inputField {
-                        border: 1px solid #6c6c6c;
-                        font-family: $fontFamily;
-                        border-radius: 5px;
-                        padding: 1rem;
-                    }
-                    .msgBtn {
-                        background: #0072ff;
-                        border-radius: 5px;
-                        outline: none;
-                        border: none;
-                        font-family: $fontFamily;
-                        font-weight: 500;
-                        font-size: 14px;
-                        text-align: center;
-                        color: #ffffff;
-                        padding: 1rem;
-                        cursor: pointer;
+                    .flexColumn {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 1.5rem;
+                        .label {
+                            font-weight: 800;
+                            font-family: $fontFamily;
+                            font-size: 15px;
+                            color: #031838;
+                            margin-bottom: 5px;
+                        }
+                        .inputField {
+                            border: 1px solid #6c6c6c;
+                            font-family: $fontFamily;
+                            border-radius: 5px;
+                            padding: 1rem;
+                        }
+                        .inputField input {
+                            padding-left: 5px;
+                            outline: none;
+                            border: none;
+                        }
+                        .msgBtn {
+                            background: #0072ff;
+                            border-radius: 5px;
+                            outline: none;
+                            border: none;
+                            font-family: $fontFamily;
+                            font-weight: 500;
+                            font-size: 14px;
+                            text-align: center;
+                            color: #ffffff;
+                            padding: 1rem;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
-            
         }
-        }
-        
-        
     }
 }
