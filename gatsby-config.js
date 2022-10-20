@@ -10,19 +10,6 @@ module.exports = {
         `gatsby-plugin-image`,
         `gatsby-plugin-sass`,
         {
-            resolve: `gatsby-omni-font-loader`,
-            options: {
-                enableListener: true,
-                preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
-                web: [
-                    {
-                        name: `Raleway`,
-                        file: `https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;600;700;800&display=swap`,
-                    },
-                ],
-            },
-        },
-        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
