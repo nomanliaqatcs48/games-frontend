@@ -38,7 +38,7 @@
                 font-weight: 700;
             }
             .header_btn_t {
-                 width: 105px;
+                width: 105px;
                 color: #000000;
                 text-transform: unset;
                 font-size: 700;
@@ -91,8 +91,14 @@
         font-family: "raleway";
     }
 }
+.close {
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    font-size: 26px;
+}
 .header_items {
-    color: #000000;
+    color: #000000 !important;
     text-transform: unset;
     font-size: 15px;
     font-family: "raleway";
@@ -100,7 +106,7 @@
         color: red;
     }
 }
-.text_underline{
+.text_underline {
     text-decoration: none;
 }
 @media (max-width: 899px) {

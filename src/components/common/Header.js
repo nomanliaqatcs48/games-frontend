@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { AppBar, Box, Divider, Drawer, IconButton, List, Toolbar, Button, Container, Grid } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { MdOutlineClose } from "react-icons/md";
 import Logo from "../../Assets/images/Header_logo.svg";
 import "../../styles/common/Header.scss";
 
@@ -14,11 +15,14 @@ function Header(props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+        <Box sx={{ textAlign: "center" }}>
             <Box sx={{ py: { xs: 2, lg: 0 } }}>
                 <Link to="/">
                     <img loading="lazy" src={Logo} alt="Logo_picture" />
                 </Link>
+                <Box>
+                    <MdOutlineClose onClick={handleDrawerToggle} className="close" />
+                </Box>
             </Box>
             <Divider />
             <List>
