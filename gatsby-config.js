@@ -7,6 +7,7 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-image`,
+        `gatsby-plugin-no-sourcemaps`,
         `gatsby-plugin-sass`,
         {
             resolve: `gatsby-source-filesystem`,
