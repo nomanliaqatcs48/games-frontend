@@ -73,5 +73,5 @@ yarn.lock
 # Yarn Integrity file
 .yarn-integrity
 public/
-# package-lock.json
+package-lock.json
 node_modules
