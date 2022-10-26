@@ -107,13 +107,19 @@ const Footer = () => {
                             </Typography>
                             <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" }, mt: { xs: 3.5, md: 2.5 } }}>
                                 <Box>
+                                    <Link to="https://twitter.com/Invochatnow">
                                     <img loading="lazy" src={Twitter} className="footer_logo" alt="social_media_icons" />
+                                    </Link>
                                 </Box>
                                 <Box sx={{ px: 2 }}>
+                                <Link to="https://www.linkedin.com/company/invochatnow">
                                     <img loading="lazy" src={Linkdin} className="footer_logo" alt="social_media_icons" />
+                                </Link>
                                 </Box>
                                 <Box>
+                                <Link to="https://www.facebook.com/invochatnow">
                                     <img loading="lazy" src={Facebook} className="footer_logo" alt="social_media_icons" />
+                                </Link>
                                 </Box>
                             </Box>
                         </Box>
