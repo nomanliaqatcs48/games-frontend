@@ -30,14 +30,6 @@ export default function HTML(props) {
                     }}
                 />
 
-                {/* <script type="text/javascript">
-                     (function () {  function asyncLoad() { var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0]; s1.async = true; s1.src = "https://widget.invocom.io/widget.js"; s1.charset = "UTF-8"; s1.setAttribute("crossorigin", "*"); s1.onload = function () { injectWidget({ position: "right" }); }; s0.parentNode.insertBefore(s1, s0); }
-          if (window.attachEvent) {
-            window.attachEvent("onload", asyncLoad);
-          } else {
-            window.addEventListener("load", asyncLoad, false);
-          } })();
-           </script> */}
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `(function () {  function asyncLoad() { var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0]; s1.async = true; s1.src = "https://widget.invocom.io/widget.js"; s1.charset = "UTF-8"; s1.setAttribute("crossorigin", "*"); s1.onload = function () { injectWidget({ position: "right" }); }; s0.parentNode.insertBefore(s1, s0); }
