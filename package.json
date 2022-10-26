@@ -44,7 +44,7 @@
     ],
     "license": "0BSD",
     "scripts": {
-        "serve": "gatsby serve",
+        "serve": "gatsby serve -p 8001",
         "build": "gatsby build",
         "develop": "gatsby develop",
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
