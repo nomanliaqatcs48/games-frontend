@@ -6,7 +6,50 @@ module.exports = {
         siteUrl: `https://invochat.io/`,
     },
     plugins: [
-        `gatsby-plugin-advanced-sitemap`,
+        {
+            resolve: `gatsby-plugin-advanced-sitemap`,
+            options: {
+              query: `
+                {
+                    allStrapiBlog {
+                        edges {
+                            node {
+                                slug: Slug
+                                id
+                                createdAt
+                                Title
+                                check {
+                                  data {
+                                    check
+                                  }
+                                }
+                            }
+                        }
+                    }
+                }`,
+              output: `/sitemap-index.xml`,
+              mapping: {
+                allStrapiBlog: {
+                    sitemap: `blogs`,
+                    serializer: (edges) => {
+                        const siteMapEntries = [];
+                        edges.forEach((edge) => {
+                            edge.node.slug = '/blog/' + edge.node.slug;
+                            siteMapEntries.push(edge);
+                        });
+                        return siteMapEntries;
+                    },
+                },
+              },
+              exclude: [
+                `/dev-404-page`,
+                `/404`,
+                `/404.html`,
+              ],
+              createLinkInHead: true,
+              addUncaughtPages: true,
+            },
+        },
         `gatsby-plugin-image`,
         `gatsby-plugin-no-sourcemaps`,
         `gatsby-plugin-sass`,
