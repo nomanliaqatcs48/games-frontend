@@ -40,5 +40,5 @@ Disallow:
 User-agent: psbot
 Disallow:
 User-agent: yahoo-blogs/v3.9
+Sitemap: https://invochat.io/sitemap-index.xml
 Host: https://invochat.io
-https://invochat.io/sitemap-index.xml
