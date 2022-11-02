@@ -7,7 +7,8 @@ import InnerBlogMiddleImg from "../Assets/images/Inner_blog_img2.svg";
 import InnerBlogMiddleImg2 from "../Assets/images/middle_img2.svg";
 import "../styles/common/InnerBlog.scss";
 import { graphql } from "gatsby";
-import Seo from "../components/seo";
+// import Seo from "../components/seo";
+import SEO from "../components/common/SEO";
 const blogInnerContent = [
     {
         title: "Set Your Collaborative Workspace And Initiate Mapping Your Business!",
@@ -71,7 +72,6 @@ const InnerBlog = ({ data }) => {
     const record = data.strapiBlog;
     return (
         <Layout>
-            <Seo/>
             <Box className="innerBlog">
                 <Container>
                     <Grid container>
@@ -79,6 +79,7 @@ const InnerBlog = ({ data }) => {
                             <Box className="innerBlog_content">
                                 {blogInnerContent.map((val) => (
                                     <>
+                                       <SEO title={record?.Title} blogId={record?.id} pageUrl="blogs"/>
                                         <Box>
                                             <Typography variant="h2">{record?.Title}</Typography>
                                         </Box>
