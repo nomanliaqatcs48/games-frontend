@@ -89,6 +89,7 @@ const InnerBlog = ({ data }) => {
                                         <Box>
                                             <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record.check.data.check }}></Typography>
                                         </Box>
+                                        <script type="text/javascript">{record?.Add_Schema}</script>
                                     </>
                                 ))}
                             </Box>
@@ -118,6 +119,7 @@ export const query = graphql`
                 }
             }
             createdAt
+            Add_Schema
         }
     }
 `;
