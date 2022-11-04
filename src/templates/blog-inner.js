@@ -119,7 +119,6 @@ export const query = graphql`
                 }
             }
             createdAt
-            Add_Schema
         }
     }
 `;

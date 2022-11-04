@@ -105,10 +105,14 @@ function Header(props) {
                             </Box>
                         </Grid>
                         <Grid item xs={2} sx={{ display: { xs: "none", sm: "block", md: "none", lg: "block" }, mr: 1 }}>
+                        <Link to="https://invo.chat/signin">
                             <Button className="header_btn_t">Sign In</Button>
+                        </Link>
                         </Grid>
                         <Grid item xs={2} sx={{ display: { xs: "none", sm: "block", md: "none", lg: "block" }, mr: { sm: 2, md: 0 } }}>
+                           <Link to="https://invo.chat/signup/email">
                             <Button className="header_btn_p">FREE TRIAL</Button>
+                            </Link>
                         </Grid>
                         <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ display: { lg: "none" } }}>
                             <MenuIcon></MenuIcon>
