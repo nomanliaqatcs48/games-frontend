@@ -93,7 +93,8 @@ $fontFamily: "Raleway";
                     .flexColumn {
                         display: flex;
                         flex-direction: column;
-                        margin-bottom: 1.5rem;
+                        margin-bottom: 0.5rem;
+                        margin-top: 0.5rem;
                         .label {
                             font-weight: 800;
                             font-family: $fontFamily;

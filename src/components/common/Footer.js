@@ -22,7 +22,7 @@ const Footer = () => {
             })
             .then((res) => {
                 setErrors("Successfully submitted");
-
+                setEmail('')
                 if (res.status === 200) {
                 } else {
                 }

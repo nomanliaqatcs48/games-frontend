@@ -25,28 +25,30 @@ const ContactDetail = () => {
     const initialValues = {
         FullName: "",
         Email: "",
-        PhoneNumber: "",
+        PhoneNumber: 0,
         Message: "",
     };
 
     const registrationSchema = Yup.object().shape({
         FullName: Yup.string().min(3, "Minimum 3 symbols").max(50, "Maximum 50 symbols").required("First name is required"),
         Email: Yup.string().email("Wrong email format").min(3, "Minimum 3 symbols").max(50, "Maximum 50 symbols").required("Email is required"),
-        PhoneNumber: Yup.string().min(3, "Minimum 3 symbols").max(11, "Maximum 11 numbers").required("Phone number is required"),
+        PhoneNumber: Yup.string().required("Phone number is required"),
         Message: Yup.string().min(3, "Minimum 3 symbols").max(50, "Maximum 50 symbols").required("Message is required"),
     });
 
     const formik = useFormik({
         initialValues,
         validationSchema: registrationSchema,
-        onSubmit: (values, { setSubmitting }) => {
+        onSubmit: (values, { setSubmitting, resetForm }) => {
+            values.PhoneNumber = value
             axios
                 .post(`https://st-backend-invochat.invo.zone/api/contact-uses`, {
                     data: values,
                 })
                 .then((res) => {
                     setErrors("Successfully submitted");
-
+                    resetForm()
+                    setValue('')
                     if (res.status === 200) {
                         return <p>successful</p>;
                     } else {
@@ -112,7 +114,7 @@ const ContactDetail = () => {
                                         <Box className={styles.inputField}>
                                             <PhoneInput international className={styles.phoneInputInput} placeholder="Enter phone number" value={value} onChange={setValue} />
                                         </Box>
-                                        {/* {formik.touched.PhoneNumber && formik.errors.PhoneNumber && (
+                                        {formik.touched.PhoneNumber && formik.errors.PhoneNumber && (
                                             <div className="fv-plugins-message-container">
                                                 <div className="fv-help-block">
                                                     <span role="alert" className="from-error">
@@ -120,7 +122,7 @@ const ContactDetail = () => {
                                                     </span>
                                                 </div>
                                             </div>
-                                        )} */}
+                                        )}
                                     </Box>
                                     <Box className={styles.flexColumn}>
                                         <label htmlFor="email" className={styles.label}>
