@@ -7,6 +7,7 @@ import ImageFour from "../../Assets/images/superEasy4-min.png";
 import BgLayerFour from "../../Assets/images/bg_4.svg";
 import "../../components/SuperEasy/SuperEasy.scss";
 import { Container } from "@mui/system";
+import { Link } from "gatsby";
 
 const SuperEasy = () => {
     return (
@@ -17,7 +18,9 @@ const SuperEasy = () => {
                         Super Easy to Start
                     </Typography>
                     <Box sx={{ display: "flex", justifyContent: "center", pt: 4 }}>
-                        <Button className="super_btn">FREE SIGN UP</Button>
+                        <Link to="https://invo.chat/signup/email" className="link-st">
+                            <Button className="super_btn">FREE SIGN UP</Button>
+                        </Link>
                     </Box>
                 </Box>
             </Box>

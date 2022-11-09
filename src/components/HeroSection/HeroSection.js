@@ -23,7 +23,7 @@ const HeroSection = () => {
             })
             .then((res) => {
                 setErrors("Successfully submitted");
-
+                setEmail('')
                 if (res.status === 200) {
                 } else {
                 }
