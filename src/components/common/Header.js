@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { AppBar, Box, Divider, Drawer, IconButton, List, Toolbar, Button, Container, Grid } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { MdOutlineClose } from "react-icons/md";
-import Logo from "../../Assets/images/Header_logo.svg";
+import Logo from "../../Assets/images/InvoChat-Logo.png";
 import "../../styles/common/Header.scss";
 
 function Header(props) {
