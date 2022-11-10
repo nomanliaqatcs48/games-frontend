@@ -27,6 +27,8 @@ const Seo = ( {description, lang, meta, title, blogId, tag, pageUrl} ) => {
             metaTitle
             metaDescription
             Tags
+            Add_Canonical_Link
+            
           }
         }
       }
@@ -44,7 +46,7 @@ const Seo = ( {description, lang, meta, title, blogId, tag, pageUrl} ) => {
          link={[
             {
                rel: `canonical`,
-               href: pageUrl == "blogs" ? siteMetadata.siteUrl +'blog/' + results[0].Slug : siteMetadata.siteUrl + pageUrl,
+               href: pageUrl == "blogs" ? results[0].Add_Canonical_Link : siteMetadata.siteUrl + pageUrl,
             },
          ]}
          meta={[
@@ -53,16 +55,60 @@ const Seo = ( {description, lang, meta, title, blogId, tag, pageUrl} ) => {
                content: description || results[0].metaDescription,
             },
             {
+               name: `robots`,
+               content: "index, follow"
+            },
+            {
+               name: `keywords`,
+               content: results[0] ? results[0].metaKeywords : ''
+            },
+            {
                property: `og:title`,
                content: title || results[0].metaTitle,
             },
             {
                property: `og:description`,
-               content: description || results[0].metaTitle,
+               content: description || results[0].metaDescription,
+            },
+            {
+               property: `og:url`,
+               content: pageUrl == "blogs" ? results[0].Add_Canonical_Link : siteMetadata.siteUrl + pageUrl,
+            },
+            {
+               property: `og:type`,
+               content: 'website'
+            },
+            {
+               property: `og:image`,
+               content: results[0] ? results[0].Image[0].url : ''
+            },
+            {
+               property: `og:image:alt`,
+               content: results[0] ? results[0].Image[0].alternativeText : ''
             },
             {
                property: `tag`,
                content: tag || results[0].Tags,
+            },
+            {
+               name: `twitter:card`,
+               content: `summary_large_image`,
+            },
+            {
+               name: `twitter:title`,
+               content: title || results[0].metaTitle,
+            },
+            {
+               name: `twitter:description`,
+               content: description || results[0].metaDescription,
+            },
+            {
+               name: `twitter:url`,
+               content: pageUrl == "blogs" ? results[0].Add_Canonical_Link : siteMetadata.siteUrl + pageUrl,
+            },
+            {
+               property: `twitter:image`,
+               content: results[0] ? results[0].Image[0].url : ''
             },
          ].concat(meta)}
       >

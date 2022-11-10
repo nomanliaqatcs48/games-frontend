@@ -18,7 +18,7 @@ const Blog = (props) => {
                                 {props?.blog?.Title}
                             </Typography>
                             <Typography variant="h1">{props.blog?.Content.substring(0, 100)}</Typography>
-                            <Link to={`/blog/${props?.blog?.Slug}`}>
+                            <Link to={`/blog/${props?.blog?.Slug}/`}>
                                 <Box className={`${styles.card_btn} ${props.customClass ? styles.firstBtn : ""}`} sx={{ pl: 0 }}>
                                     View more
                                 </Box>

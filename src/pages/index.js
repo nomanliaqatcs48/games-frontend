@@ -15,6 +15,8 @@ import FrequentQuestions from "../components/common/FrequentQuestions";
 import FreeTrial from "../components/FreeTrial/FreeTrial";
 import '../../src/styles/common/globalStyles.module.scss'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Seo from "../components/common/SEO";
+import {Helmet} from 'react-helmet'
 
 const theme = createTheme({
   typography: {
@@ -32,6 +34,11 @@ const IndexPage = ({ data }) => {
     return (
       <ThemeProvider theme={theme}>
         <Layout>
+            <Helmet>
+                <meta name="robots" content="index, follow"/>
+                <meta name="robots" content="max-image-preview:standard"/>
+            </Helmet>
+            <Seo title="Home" description="home" tag='index' pageUrl='/' />
             <HeroSection/>
             <SimpleSetup/>
             <Plateforms/>
@@ -71,6 +78,7 @@ export const query = graphql`
                         check
                     }
                 }
+                createdAt
             }
         }
     }

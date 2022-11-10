@@ -3,7 +3,7 @@ module.exports = {
         title: `InvoChat`,
         description: `Streamline in-house & remote teams with collaboration tool`,
         author: `InvoChat`,
-        siteUrl: `https://invochat.io/`,
+        siteUrl: `http://localhost:9000/`,
     },
     plugins: [
         {
@@ -19,16 +19,37 @@ module.exports = {
                                 createdAt
                                 Title
                                 check {
-                                  data {
+                                    data {
                                     check
-                                  }
+                                    }
                                 }
                             }
                         }
                     }
+                    allSitePage {
+                        edges {
+                            node {
+                                slug: path
+                                id
+                            }
+                        } 
+                    }
                 }`,
               output: `/sitemap-index.xml`,
               mapping: {
+                /* Filtering out the blog pages from the sitemap. */
+                allSitePage: {
+                    sitemap: `page`,
+                    serializer: (edges) => {
+                        const siteMapEntries = [];
+                        edges.forEach((edge) => {
+                            if(!edge.node.slug.includes('/blog/')){
+                                siteMapEntries.push(edge);
+                            }
+                        });
+                        return siteMapEntries;
+                    }
+                },
                 allStrapiBlog: {
                     sitemap: `blogs`,
                     serializer: (edges) => {
