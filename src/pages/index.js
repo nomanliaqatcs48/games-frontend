@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
                 <meta name="robots" content="index, follow"/>
                 <meta name="robots" content="max-image-preview:standard"/>
             </Helmet>
-            <Seo title="Home" description="home" tag='index' pageUrl='/' />
+            <Seo title="Home" description="home" tag='index' pageUrl='' />
             <HeroSection/>
             <SimpleSetup/>
             <Plateforms/>
