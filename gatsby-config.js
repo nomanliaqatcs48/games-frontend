@@ -3,7 +3,7 @@ module.exports = {
         title: `InvoChat`,
         description: `Streamline in-house & remote teams with collaboration tool`,
         author: `InvoChat`,
-        siteUrl: `http://localhost:9000/`,
+        siteUrl: `https://invochat.io/`,
     },
     plugins: [
         {
