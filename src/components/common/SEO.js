@@ -17,6 +17,7 @@ const Seo = ( {description, lang, meta, title, blogId, tag, pageUrl} ) => {
             id
             Image {
               url
+              alternativeText
             }
             createdAt
             check {
