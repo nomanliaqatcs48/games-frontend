@@ -18,7 +18,7 @@ function Header(props) {
         <Box sx={{ textAlign: "center" }}>
             <Box sx={{ py: { xs: 2, lg: 0 } }}>
                 <Link to="/">
-                    <img loading="lazy" src={Logo} alt="Logo_picture" height="auto" width="100%"/>
+                    <img loading="lazy" src={Logo} alt="Logo_picture" />
                 </Link>
                 <Box>
                     <MdOutlineClose onClick={handleDrawerToggle} className="close" />
@@ -72,7 +72,7 @@ function Header(props) {
                     <Toolbar className="toolBar">
                         <Grid item xs={2}>
                             <Link to="/">
-                                <img loading="lazy" src={Logo} className="logo" alt="Logo_picture" height="auto" width="100%"/>
+                                <img loading="lazy" src={Logo} className="logo" alt="Logo_picture" />
                             </Link>
                         </Grid>
                         <Grid item xs={6} sx={{ mx: "auto" }}>
