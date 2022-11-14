@@ -78,46 +78,44 @@ const IndexPage = ({ data }) => {
         </script>
         <script type="application/ld+json">
         {`
-            {
-                "@context": "https://schema.org/",
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "How much does InvoChat cost?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "InvoChat is free to use. You can see further details about the features we offer for free from here."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What features do I get with InvoChat?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "1. What features do I get with InvoChat? 2. Read receipts 3. Screen pin lock 4. Google Drive and Meet integration 5. Notification management 6. Dedicated workspaces 7. Topic-specific chatroom 8. Unlimited team members 9. File sharing & attachments& attachments"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How to enable desktop notifications for InvoChat?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Go to your ‘notification’ settings. From there you can easily enable or disable notifications for your desktop. You can also turn on email notifications for unread msgs.  Easily manage room-specific notifications. You can change settings accordingly if you want to be notified about everything or nothing or just specific mentions."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How to create workspaces in InvoChat?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Visit the website invochat.io, and click on this ‘create workspace’ button, given on the top right corner of your screen. Enter your email address. You will receive a six-digit confirmation code in your email for confirmation. Set up your details such as first name, last name, and username, and set your password and pin for further security. Give your workspace a name and hand-pick a URL. You can get started by bringing in your team members to your workspace."
-                    }
-                  }
-                ]
-              
+          {
+            "@context": "https://schema.org/",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does InvoChat cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "InvoChat is free to use. You can see further details about the features we offer for free from here."
                 }
-            }
+              },
+              {
+                "@type": "Question",
+                "name": "What features do I get with InvoChat?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "1. What features do I get with InvoChat? 2. Read receipts 3. Screen pin lock 4. Google Drive and Meet integration 5. Notification management 6. Dedicated workspaces 7. Topic-specific chatroom 8. Unlimited team members 9. File sharing & attachments& attachments"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to enable desktop notifications for InvoChat?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Go to your ‘notification’ settings. From there you can easily enable or disable notifications for your desktop. You can also turn on email notifications for unread msgs.  Easily manage room-specific notifications. You can change settings accordingly if you want to be notified about everything or nothing or just specific mentions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to create workspaces in InvoChat?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Visit the website invochat.io, and click on this ‘create workspace’ button, given on the top right corner of your screen. Enter your email address. You will receive a six-digit confirmation code in your email for confirmation. Set up your details such as first name, last name, and username, and set your password and pin for further security. Give your workspace a name and hand-pick a URL. You can get started by bringing in your team members to your workspace."
+                }
+              }
+            ]
+          }
         `}
         </script>
         </ThemeProvider>

@@ -18,7 +18,7 @@ const SuperEasy = () => {
                         Super Easy to Start
                     </Typography>
                     <Box sx={{ display: "flex", justifyContent: "center", pt: 4 }}>
-                        <Link to="https://invo.chat/signup/email" className="link-st">
+                        <Link to="https://invo.chat/signup/email/" className="link-st">
                             <Button className="super_btn">FREE SIGN UP</Button>
                         </Link>
                     </Box>

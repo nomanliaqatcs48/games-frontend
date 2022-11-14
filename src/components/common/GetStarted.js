@@ -16,7 +16,7 @@ function GetStarted() {
          </Typography>
        </Box>
        <Box className="priceBox-wrapper">
-           <Link className="link-st" to="https://invo.chat/signup/email">
+           <Link className="link-st" to="https://invo.chat/signup/email/">
            <PriceBox title="Free" subtitle="Perfect to get started" price="0" buttonText="Get Started" listArray={<ul>
             <li>Perfect to get started</li>
             <li>Perfect to</li>

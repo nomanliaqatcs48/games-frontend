@@ -74,7 +74,7 @@ const Footer = () => {
                                     Contact Us
                                 </Typography>
                             </Link>
-                            <Link to="/term-and-condition/">
+                            <Link to="/terms-and-conditions/">
                                 <Typography sx={{ pt: 2.5, textAlign: { xs: "center", md: "left" } }} variant="h5">
                                     Terms and Conditions
                                 </Typography>
