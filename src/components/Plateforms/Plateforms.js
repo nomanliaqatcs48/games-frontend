@@ -72,7 +72,7 @@ const Plateforms = () => {
                 <Grid spacing={3} container sx={{ display: "flex", flexDirection: { xs: "column-reverse", md: "row" } }}>
                     <Grid item xs={12} md={6}>
                         <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" }, pt: { xs: 1, md: 0 } }}>
-                            <img loading="lazy" src={PlateformImgTwo} alt="random" />
+                            <img loading="lazy" src={PlateformImgTwo} alt="random" height="auto" width="100%" />
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
@@ -99,7 +99,7 @@ const Plateforms = () => {
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
-                            <img loading="lazy" src={PlateformImgOne} alt="random" />
+                            <img loading="lazy" src={PlateformImgOne} alt="random" height="auto" width="100%"/>
                         </Box>
                     </Grid>
                 </Grid>
@@ -109,7 +109,7 @@ const Plateforms = () => {
                             <Grid key={val.id} item xs={12} sm={6} md={3}>
                                 <Box className="card" sx={{ py: 4 }}>
                                     <Box sx={{ display: "flex", justifyContent: "center" }}>
-                                        <img loading="lazy" src={val.imageName} alt="showing_first_card" />
+                                        <img loading="lazy" src={val.imageName} alt="showing_first_card" height="auto" width="100%"/>
                                     </Box>
                                     <Box sx={{ pt: 1 }}>
                                         <Typography variant="h3">{val.cardHeading}</Typography>
@@ -122,7 +122,7 @@ const Plateforms = () => {
                         ))}
                     </Grid>
                     <Box className="plateform_dots_one">
-                        <img loading="lazy" src={PlateformDotsOne} alt="random_dot" />
+                        <img loading="lazy" src={PlateformDotsOne} alt="random_dot" height="auto" width="100%"/>
                     </Box>
                 </Box>
                 <Box className="plateform_cards_2">
@@ -131,7 +131,7 @@ const Plateforms = () => {
                             <Grid key={val.id} item xs={12} md={3}>
                                 <Box className="card" sx={{ py: 4 }}>
                                     <Box sx={{ display: "flex", justifyContent: "center" }}>
-                                        <img loading="lazy" src={val.imageName} alt="showing_first_card" />
+                                        <img loading="lazy" src={val.imageName} alt="showing_first_card" height="auto" width="100%"/>
                                     </Box>
                                     <Box sx={{ pt: 1 }}>
                                         <Typography variant="h3">{val.cardHeading}</Typography>
@@ -144,24 +144,24 @@ const Plateforms = () => {
                         ))}
                     </Grid>
                     <Box className="plateform_dots_two">
-                        <img loading="lazy" src={PlateformDotsTwo} alt="random_dot" />
+                        <img loading="lazy" src={PlateformDotsTwo} alt="random_dot" height="auto" width="100%"/>
                     </Box>
                     <Box className="plateform_dots_twice">
-                        <img loading="lazy" src={PlateformDotsOne} alt="random_dot" />
+                        <img loading="lazy" src={PlateformDotsOne} alt="random_dot" height="auto" width="100%"/>
                     </Box>
                     <Box className="plateform_circle">
-                        <img loading="lazy" src={Circle} alt="random_Circle" />
+                        <img loading="lazy" src={Circle} alt="random_Circle" height="auto" width="100%"/>
                     </Box>
                 </Box>
             </Container>
             <Box className="plateform_layer_1">
-                <img loading="lazy" src={BgLayerOne} alt="random_Circle" />
+                <img loading="lazy" src={BgLayerOne} alt="random_Circle" height="auto" width="100%"/>
             </Box>
             <Box className="plateform_layer_2">
-                <img loading="lazy" src={BgLayerTwo} alt="random_Circle" />
+                <img loading="lazy" src={BgLayerTwo} alt="random_Circle" height="auto" width="100%"/>
             </Box>
             <Box className="plateform_layer_3">
-                <img loading="lazy" src={BgLayerThree} alt="random_Circle" />
+                <img loading="lazy" src={BgLayerThree} alt="random_Circle" height="auto" width="100%"/>
             </Box>
         </Box>
     );

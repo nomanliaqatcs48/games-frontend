@@ -69,14 +69,14 @@ const Feedback = () => {
                             <Box className="feedback_card">
                                 <Box sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "space-around" }, px: { xs: 4, sm: 0 } }}>
                                     <Box sx={{ display: "flex" }}>
-                                        <img loading="lazy" src={ClientA} alt="picture_of_client" />
+                                        <img loading="lazy" src={ClientA} alt="picture_of_client" height="auto" width="100%"/>
                                         <Box sx={{ pl: 2 }}>
                                             <Typography className="client_name"> Dane A. </Typography>
                                             <Typography className="client_about">Product Manager </Typography>
                                         </Box>
                                     </Box>
                                     <Box sx={{ pt: 0.5 }}>
-                                        <img loading="lazy" src={Comma} alt="picture_of_comma" />
+                                        <img loading="lazy" src={Comma} alt="picture_of_comma" height="auto" width="100%"/>
                                     </Box>
                                 </Box>
                                 <Typography variant="h5">The platform automatically assigns conversations and tickets to availableThe platform automatically assigns conversations and tickets to available </Typography>
@@ -85,14 +85,14 @@ const Feedback = () => {
                         <Box className="feedback_card">
                             <Box sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "space-around" }, px: { xs: 4, sm: 0 } }}>
                                 <Box sx={{ display: "flex" }}>
-                                    <img loading="lazy" src={ClientB} alt="picture_of_client" />
+                                    <img loading="lazy" src={ClientB} alt="picture_of_client" height="auto" width="100%"/>
                                     <Box sx={{ pl: 2 }}>
                                         <Typography className="client_name poppins"> Marie B. Hill </Typography>
                                         <Typography className="client_about poppins">Product Growth Manager </Typography>
                                     </Box>
                                 </Box>
                                 <Box>
-                                    <img loading="lazy" src={Comma} alt="picture_of_comma" />
+                                    <img loading="lazy" src={Comma} alt="picture_of_comma" height="auto" width="100%"/>
                                 </Box>
                             </Box>
                             <Typography variant="h5">The platform automatically assigns conversations and tickets to availableThe platform automatically assigns conversations and tickets to available </Typography>
@@ -100,14 +100,14 @@ const Feedback = () => {
                         <Box className="feedback_card">
                             <Box sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "space-around" }, px: { xs: 4, sm: 0 } }}>
                                 <Box sx={{ display: "flex" }}>
-                                    <img loading="lazy" src={ClientC} alt="picture_of_client" />
+                                    <img loading="lazy" src={ClientC} alt="picture_of_client" height="auto" width="100%"/>
                                     <Box sx={{ pl: 2 }}>
                                         <Typography className="client_name poppins"> Jacob C.. </Typography>
                                         <Typography className="client_about poppins">Contect Writer </Typography>
                                     </Box>
                                 </Box>
                                 <Box>
-                                    <img loading="lazy" src={Comma} alt="picture_of_comma" />
+                                    <img loading="lazy" src={Comma} alt="picture_of_comma" height="auto" width="100%"/>
                                 </Box>
                             </Box>
                             <Typography variant="h5">The platform automatically assigns conversations and tickets to availableThe platform automatically assigns conversations and tickets to available </Typography>
@@ -115,14 +115,14 @@ const Feedback = () => {
                         <Box className="feedback_card">
                             <Box sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "space-around" }, px: { xs: 4, sm: 0 } }}>
                                 <Box sx={{ display: "flex" }}>
-                                    <img loading="lazy" src={ClientB} alt="picture_of_client" />
+                                    <img loading="lazy" src={ClientB} alt="picture_of_client" height="auto" width="100%"/>
                                     <Box sx={{ pl: 2 }}>
                                         <Typography className="client_name poppins"> Marie B. Hill </Typography>
                                         <Typography className="client_about poppins">Product Growth Manager </Typography>
                                     </Box>
                                 </Box>
                                 <Box>
-                                    <img loading="lazy" src={Comma} alt="picture_of_comma" />
+                                    <img loading="lazy" src={Comma} alt="picture_of_comma" height="auto" width="100%"/>
                                 </Box>
                             </Box>
                             <Typography variant="h5">The platform automatically assigns conversations and tickets to availableThe platform automatically assigns conversations and tickets to available </Typography>
