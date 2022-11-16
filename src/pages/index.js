@@ -64,15 +64,16 @@ const IndexPage = ({ data }) => {
         </Layout>
         <script type="application/ld+json">
         {`
-            { "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "name": "Invochat",
-            "url": "https://invochat.io/",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "{search_term_string}",
-              "query-input": "required name=search_term_string"
-                }
+            { 
+              "@context": "https://schema.org/",
+              "@type": "WebSite",
+              "name": "Invochat",
+              "url": "https://invochat.io/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "{search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
             }
         `}
         </script>

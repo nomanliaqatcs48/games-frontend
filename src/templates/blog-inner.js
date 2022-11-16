@@ -81,7 +81,7 @@ const InnerBlog = ({ data }) => {
                                     <>
                                        <SEO title={record?.Title} blogId={record?.id} pageUrl="blogs"/>
                                         <Box>
-                                            <Typography variant="h2">{record?.Title}</Typography>
+                                            <Typography variant="h1">{record?.Title}</Typography>
                                         </Box>
                                         <Box>
                                             <img loading="lazy" src={record.Image[0].url} alt="Blog_content_image" />
@@ -89,7 +89,7 @@ const InnerBlog = ({ data }) => {
                                         <Box>
                                             <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record.check.data.check }}></Typography>
                                         </Box>
-                                        <script type="text/javascript">{record?.Add_Schema}</script>
+                                        <span dangerouslySetInnerHTML={{__html: record?.Add_Schema}} />
                                     </>
                                 ))}
                             </Box>
@@ -119,6 +119,7 @@ export const query = graphql`
                 }
             }
             createdAt
+            Add_Schema
         }
     }
 `;

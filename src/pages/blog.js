@@ -33,25 +33,25 @@ const blog = ({ data }) => {
     );
 };
 export const query = graphql`
-    query MyQuerystwo {
-        allStrapiBlog {
-            nodes {
-                Slug
-                Content
-                Title
-                id
-                Image {
-                    url
-                }
-                createdAt
-                check {
-                    data {
-                        check
-                    }
-                }
-            }
+query MyQuerystwo {
+    allStrapiBlog(sort: {fields: createdAt, order: DESC}) {
+      nodes {
+        Slug
+        Content
+        Title
+        id
+        Image {
+          url
         }
+        createdAt
+        check {
+          data {
+            check
+          }
+        }
+      }
     }
+  }  
 `;
 
 export default blog;
