@@ -12,7 +12,8 @@ import Workspace from "../../Assets/images/workspace.svg";
 import square from "../../Assets/images/square.svg";
 import LeftImage from "../../Assets/images/featureleft.svg";
 import RightImage from "../../Assets/images/featureright.png";
-
+import axios from "axios";
+import { useState } from "react";
 // Styles
 import * as styles from "../Collaboration/styles.module.scss";
 
@@ -21,6 +22,28 @@ import Card from "../Card";
 import Productivity from "../Productivity";
 
 const Collaboration = () => {
+
+    const [email, setEmail] = useState("");
+    const [errors, setErrors] = useState("");
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        axios
+            .post(`https://st-backend-invochat.invo.zone/api/messages`, {
+                data: { Email: email },
+            })
+            .then((res) => {
+                setErrors("Successfully submitted");
+                setEmail('')
+                if (res.status === 200) {
+                } else {
+                }
+            })
+            .catch((error) => {
+                setErrors("Invalid Email");
+            });
+    };
+
     return (
         <>
             <div className={styles.collabContainer}>
@@ -33,9 +56,21 @@ const Collaboration = () => {
                         Chat with your team, manage notifications, securely share and upload files, and manage <br /> and track multiple projects asynchronously through InvoChat.
                     </Typography>
                     <Box className={styles.inputWrapper}>
-                        <input type="text" placeholder="Enter your email" className={styles.inputField} />
-                        <Button className={styles.signUpbtn}>Sign up for free</Button>
+                        <input onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Enter your email" className={styles.inputField} />
+                        <Button onClick={onSubmit} className={styles.signUpbtn}>Sign up for free</Button>
                     </Box>
+                    <Typography
+                                sx={{
+                                    "& p": {
+                                        textAlign: "center",
+                                        fontSize: "18px",
+                                        color: errors === "Invalid Email" ? "red" : errors === "Successfully submitted" ? "green" : "",
+                                        fontWeight: "600",
+                                    },
+                                }}
+                            >
+                                {errors && <p>{errors}</p>}
+                            </Typography>
                     <Typography py={2} align="center" className={styles.autoText}>
                         Already have an account?<span>Sign in</span>
                     </Typography>
