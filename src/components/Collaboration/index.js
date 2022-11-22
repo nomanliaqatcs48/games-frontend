@@ -1,9 +1,5 @@
 import React from "react";
-
-// Library
 import { Container, Typography,Button, Box } from "@mui/material";
-
-// Assets
 import Chat from "../../Assets/images/chat.svg";
 import OneOnOne from "../../Assets/images/1on1.svg";
 import Notification from "../../Assets/images/notification.svg";
