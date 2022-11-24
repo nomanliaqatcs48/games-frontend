@@ -11,7 +11,7 @@ function Header(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
+        setMobileOpen(!mobileOpen); 
     };
 
     const drawer = (
