@@ -22,7 +22,7 @@ const Footer = () => {
             })
             .then((res) => {
                 setErrors("Successfully submitted");
-
+                setEmail('')
                 if (res.status === 200) {
                 } else {
                 }
@@ -44,17 +44,17 @@ const Footer = () => {
                                 </Link>
                             </Box>
                             <Box sx={{ pt: { xs: 4, md: 5.2 }, pl: 1 }}>
-                                <Link to="/about">
+                                <Link to="/about-us/">
                                     <Typography sx={{ textAlign: { xs: "center", md: "left" } }} variant="h5">
                                         About Us
                                     </Typography>
                                 </Link>
-                                <Link to="/features">
+                                <Link to="/features/">
                                     <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
                                         Features
                                     </Typography>
                                 </Link>
-                                <Link to="/pricing">
+                                <Link to="/pricing/">
                                     <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
                                         Pricing
                                     </Typography>
@@ -64,17 +64,17 @@ const Footer = () => {
                     </Grid>
                     <Grid item xs={12} md={5} lg={4} sx={{ display: "flex", justifyContent: "center", pt: { xs: 1, md: 8.5 } }}>
                         <Box sx={{ pt: { xs: 3, md: 3.5 } }}>
-                            <Link to="/blog">
+                            <Link to="/blog/">
                                 <Typography sx={{ textAlign: { xs: "center", md: "left" } }} variant="h5">
                                     Blog
                                 </Typography>
                             </Link>
-                            <Link to="/contact-us">
+                            <Link to="/contact-us/">
                                 <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
                                     Contact Us
                                 </Typography>
                             </Link>
-                            <Link to="/term-and-condition">
+                            <Link to="/terms-and-conditions/">
                                 <Typography sx={{ pt: 2.5, textAlign: { xs: "center", md: "left" } }} variant="h5">
                                     Terms and Conditions
                                 </Typography>
@@ -107,13 +107,19 @@ const Footer = () => {
                             </Typography>
                             <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" }, mt: { xs: 3.5, md: 2.5 } }}>
                                 <Box>
+                                    <Link to="https://twitter.com/Invochatnow" target="_blank">
                                     <img loading="lazy" src={Twitter} className="footer_logo" alt="social_media_icons" />
+                                    </Link>
                                 </Box>
                                 <Box sx={{ px: 2 }}>
+                                <Link to="https://www.linkedin.com/company/invochatnow" target="_blank">
                                     <img loading="lazy" src={Linkdin} className="footer_logo" alt="social_media_icons" />
+                                </Link>
                                 </Box>
                                 <Box>
+                                <Link to="https://www.facebook.com/invochatnow" target="_blank">
                                     <img loading="lazy" src={Facebook} className="footer_logo" alt="social_media_icons" />
+                                </Link>
                                 </Box>
                             </Box>
                         </Box>

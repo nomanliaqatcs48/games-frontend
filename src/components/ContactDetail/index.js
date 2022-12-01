@@ -32,21 +32,22 @@ const ContactDetail = () => {
     const registrationSchema = Yup.object().shape({
         FullName: Yup.string().min(3, "Minimum 3 symbols").max(50, "Maximum 50 symbols").required("First name is required"),
         Email: Yup.string().email("Wrong email format").min(3, "Minimum 3 symbols").max(50, "Maximum 50 symbols").required("Email is required"),
-        PhoneNumber: Yup.string().min(3, "Minimum 3 symbols").max(11, "Maximum 11 numbers").required("Phone number is required"),
+        PhoneNumber: Yup.number().required("Phone number is required"),
         Message: Yup.string().min(3, "Minimum 3 symbols").max(50, "Maximum 50 symbols").required("Message is required"),
     });
 
     const formik = useFormik({
         initialValues,
         validationSchema: registrationSchema,
-        onSubmit: (values, { setSubmitting }) => {
+        onSubmit: (values, { setSubmitting, resetForm }) => {
             axios
                 .post(`https://st-backend-invochat.invo.zone/api/contact-uses`, {
                     data: values,
                 })
                 .then((res) => {
                     setErrors("Successfully submitted");
-
+                    resetForm()
+                    setValue('')
                     if (res.status === 200) {
                         return <p>successful</p>;
                     } else {
@@ -55,7 +56,11 @@ const ContactDetail = () => {
                 .catch((error) => {
                     setSubmitting = false;
                     setErrors("Not Submitted");
-                });
+                })
+                .finally(() => {
+                    window.location.href= "/thank-you"
+                })
+                ;
         },
     });
 
@@ -97,7 +102,7 @@ const ContactDetail = () => {
                                         {formik.touched.FullName && formik.errors.FullName && (
                                             <div className="fv-plugins-message-container">
                                                 <div className="fv-help-block">
-                                                    <span role="alert" className="from-error">
+                                                <span role="alert" className={styles.formError}>
                                                         {formik.errors.FullName}
                                                     </span>
                                                 </div>
@@ -110,17 +115,25 @@ const ContactDetail = () => {
                                         </label>
                                         {/* <input id="phone" name="phone" type="Number" placeholder="Phone" {...formik.getFieldProps("PhoneNumber")} className={styles.inputField} /> */}
                                         <Box className={styles.inputField}>
-                                            <PhoneInput international className={styles.phoneInputInput} placeholder="Enter phone number" value={value} onChange={setValue} />
+                                            {/* <PhoneInput international type="tel" className={styles.phoneInputInput} {...formik.getFieldProps("PhoneNumber")} placeholder="Enter phone number" /> */}
+                                            <PhoneInput
+                                            className='anonymous'
+                                            placeholder='Phone Number'
+                                            name='PhoneNumber'
+                                            value={formik.values.PhoneNumber}
+                                            onChange={e => formik.setFieldValue("PhoneNumber", e)}
+                                            onBlur={formik.handleBlur("PhoneNumber")}
+                                            />
                                         </Box>
-                                        {/* {formik.touched.PhoneNumber && formik.errors.PhoneNumber && (
+                                        {formik.touched.PhoneNumber && formik.errors.PhoneNumber && (
                                             <div className="fv-plugins-message-container">
                                                 <div className="fv-help-block">
-                                                    <span role="alert" className="from-error">
+                                                    <span role="alert" className={styles.formError}>
                                                         {formik.errors.PhoneNumber}
                                                     </span>
                                                 </div>
                                             </div>
-                                        )} */}
+                                        )}
                                     </Box>
                                     <Box className={styles.flexColumn}>
                                         <label htmlFor="email" className={styles.label}>
@@ -130,7 +143,7 @@ const ContactDetail = () => {
                                         {formik.touched.Email && formik.errors.Email && (
                                             <div className="fv-plugins-message-container">
                                                 <div className="fv-help-block">
-                                                    <span role="alert" className="from-error">
+                                                    <span role="alert" className={styles.formError}>
                                                         {formik.errors.Email}
                                                     </span>
                                                 </div>
@@ -146,7 +159,7 @@ const ContactDetail = () => {
                                     {formik.touched.Message && formik.errors.Message && (
                                         <div className="fv-plugins-message-container">
                                             <div className="fv-help-block">
-                                                <span role="alert" className="from-error">
+                                            <span role="alert" className={styles.formError}>
                                                     {formik.errors.Message}
                                                 </span>
                                             </div>
@@ -165,6 +178,7 @@ const ContactDetail = () => {
                                                 fontWeight: "500",
                                             },
                                         }}
+                                        component="span"
                                     >
                                         {errors && <p>{errors}</p>}
                                     </Typography>

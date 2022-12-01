@@ -7,10 +7,10 @@ import InnerBlogMiddleImg from "../Assets/images/Inner_blog_img2.svg";
 import InnerBlogMiddleImg2 from "../Assets/images/middle_img2.svg";
 import "../styles/common/InnerBlog.scss";
 import { graphql } from "gatsby";
-
+// import Seo from "../components/seo";
+import SEO from "../components/common/SEO";
 const blogInnerContent = [
     {
-        id: 1,
         title: "Set Your Collaborative Workspace And Initiate Mapping Your Business!",
         mainImg: InnerBlogMainImg2,
         description1:
@@ -75,12 +75,13 @@ const InnerBlog = ({ data }) => {
             <Box className="innerBlog">
                 <Container>
                     <Grid container>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <Box className="innerBlog_content">
                                 {blogInnerContent.map((val) => (
-                                    <React.Fragment key={val.id}>
+                                    <>
+                                       <SEO title={record?.Title} blogId={record?.id} pageUrl="blogs"/>
                                         <Box>
-                                            <Typography variant="h2">{record?.Title}</Typography>
+                                            <Typography variant="h1">{record?.Title}</Typography>
                                         </Box>
                                         <Box>
                                             <img loading="lazy" src={record.Image[0].url} alt="Blog_content_image" />
@@ -88,7 +89,8 @@ const InnerBlog = ({ data }) => {
                                         <Box>
                                             <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record.check.data.check }}></Typography>
                                         </Box>
-                                    </React.Fragment>
+                                        <span dangerouslySetInnerHTML={{__html: record?.Add_Schema}} />
+                                    </>
                                 ))}
                             </Box>
                         </Grid>
@@ -117,6 +119,7 @@ export const query = graphql`
                 }
             }
             createdAt
+            Add_Schema
         }
     }
 `;

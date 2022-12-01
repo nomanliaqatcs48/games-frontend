@@ -1,10 +1,17 @@
 import React from "react";
 import { Container, Typography, Box } from "@mui/material";
 import "../Who/index.scss";
+import Seo  from "../../components/common/SEO";
 
+const content = [
+    {
+        metaTitle: 'About Invochat - An efficient communication platfrom',
+    },
+];
 const Who = (props) => {
     return (
         <Container>
+            <Seo title={content[0].metaTitle} description={props.description} tag='index' pageUrl='about-us/'/>
             <Box className="who-wrapper">
                 <Box className="who-content">
                     <Typography variant="h2">{props.title}</Typography>

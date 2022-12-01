@@ -6,9 +6,18 @@ import FreeTrialAbout from "../components/FreeTrialAbout";
 import { graphql } from "gatsby";
 import "../components/FreeTrialAbout/index.scss";
 import BlogHead from "../components/BlogHead";
+import Seo  from "../components/common/SEO";
+
+const content = [
+    {
+        metaTitle: 'Discover the lastest product news - Invochat Blog',
+        metaDescription: 'Read the latest product, team collaboration tricks, team building tips, & much more. Our resources help you stay connected with the latest trends in products.'
+    },
+];
 const blog = ({ data }) => {
     return (
         <Layout>
+            <Seo title={content[0].metaTitle} description={content[0].metaDescription} tag='index' pageUrl='blog/'/>
             <Container>
                 <Box className="BlogPage">
                     <BlogHead />
@@ -24,25 +33,25 @@ const blog = ({ data }) => {
     );
 };
 export const query = graphql`
-    query MyQuerystwo {
-        allStrapiBlog {
-            nodes {
-                Slug
-                Content
-                Title
-                id
-                Image {
-                    url
-                }
-                createdAt
-                check {
-                    data {
-                        check
-                    }
-                }
-            }
+query MyQuerystwo {
+    allStrapiBlog(sort: {fields: createdAt, order: DESC}) {
+      nodes {
+        Slug
+        Content
+        Title
+        id
+        Image {
+          url
         }
+        createdAt
+        check {
+          data {
+            check
+          }
+        }
+      }
     }
+  }  
 `;
 
 export default blog;

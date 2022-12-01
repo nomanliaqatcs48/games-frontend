@@ -12,13 +12,13 @@ const Blog = (props) => {
             <Grid item xs={12} md={6} lg={props.customClass ? 12 : 4} className={`${styles.blog} ${props.customClass ? styles.firstBlog : ""}`}>
                 <Card sx={{ boxShadow: 0 }}>
                     <CardActionArea className={`${styles.card} ${styles.flexClass}`}>
-                        <CardMedia className={props.customClass ? styles.customImg : ""} component="img" src={props.blog?.Image[0].url} />
+                        <CardMedia className={props.customClass ? styles.customImg : ""} component="img" src={props.blog?.Image[0].url}/>
                         <CardContent sx={{ pl: 0 }} className={`${styles.card_body} ${props.customClass ? styles.margin_left : ""}`}>
                             <Typography className={` ${props.customClass ? styles.zero_heading : ""}`} gutterBottom variant="h6">
                                 {props?.blog?.Title}
                             </Typography>
                             <Typography variant="h1">{props.blog?.Content.substring(0, 100)}</Typography>
-                            <Link to={`/blog/${props?.blog?.Slug}`}>
+                            <Link to={`/blog/${props?.blog?.Slug}/`}>
                                 <Box className={`${styles.card_btn} ${props.customClass ? styles.firstBtn : ""}`} sx={{ pl: 0 }}>
                                     View more
                                 </Box>

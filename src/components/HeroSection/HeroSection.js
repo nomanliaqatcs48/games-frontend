@@ -23,7 +23,7 @@ const HeroSection = () => {
             })
             .then((res) => {
                 setErrors("Successfully submitted");
-
+                setEmail('')
                 if (res.status === 200) {
                 } else {
                 }
@@ -75,7 +75,7 @@ const HeroSection = () => {
                         </Box>
                         <Box className="down_arrow" sx={{ pt: { md: 5, lg: 7 } }}>
                             <Link to="#SimpleSetup">
-                                <img loading="lazy" src={DownArrow} alt="scroll-icon" />
+                                <img loading="lazy" src={DownArrow} alt="scroll-icon"/>
                             </Link>
                         </Box>
                     </Grid>
@@ -89,16 +89,16 @@ const HeroSection = () => {
                     <Grid item xs={12} md={8} className="hero_social">
                         <Grid container sx={{ display: "flex", justifyContent: "space-around", py: 1 }}>
                             <Grid item xs={6} sm={3} sx={{ display: "flex", justifyContent: "center", alignItems: "center", pt: { xs: 2, sm: 0 } }}>
-                                <img loading="lazy" src={IOS} alt="web/mobile-screenshot" />
+                                <img loading="lazy" src={IOS} alt="web/mobile-screenshot"/>
                             </Grid>
                             <Grid item xs={6} sm={3} sx={{ display: "flex", justifyContent: "center", alignItems: "center", pt: { xs: 2, sm: 0 } }}>
-                                <img loading="lazy" src={Apple} alt="web/mobile-screenshot" />
+                                <img loading="lazy" src={Apple} alt="web/mobile-screenshot"/>
                             </Grid>
                             <Grid item xs={6} sm={3} sx={{ display: "flex", justifyContent: "center", alignItems: "center", pt: { xs: 2, sm: 0 } }}>
-                                <img loading="lazy" src={Window} alt="web/mobile-screenshot" />
+                                <img loading="lazy" src={Window} alt="web/mobile-screenshot"/>
                             </Grid>
                             <Grid item xs={6} sm={3} sx={{ display: "flex", justifyContent: "center", alignItems: "center", pt: { xs: 2, sm: 0 } }}>
-                                <img loading="lazy" src={Chrome} alt="web/mobile-screenshot" />
+                                <img loading="lazy" src={Chrome} alt="web/mobile-screenshot"/>
                             </Grid>
                         </Grid>
                     </Grid>

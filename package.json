@@ -12,6 +12,7 @@
         "@mui/material": "^5.9.2",
         "formik": "^2.2.9",
         "gatsby": "^4.19.2",
+        "gatsby-plugin-advanced-sitemap": "^2.1.0",
         "gatsby-plugin-image": "^2.18.0",
         "gatsby-plugin-load-script": "^1.1.0",
         "gatsby-plugin-manifest": "^4.18.0",
@@ -43,11 +44,11 @@
     ],
     "license": "0BSD",
     "scripts": {
+        "serve": "gatsby serve -p 8001",
         "build": "gatsby build",
         "develop": "gatsby develop",
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
         "start": "gatsby develop",
-        "serve": "gatsby serve",
         "clean": "gatsby clean",
         "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
     },

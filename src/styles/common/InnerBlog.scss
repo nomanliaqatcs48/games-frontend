@@ -10,6 +10,12 @@ $fontFamily: "Raleway";
     
     .innerBlog_content {
         padding: 0 50px;
+        h1{
+            font-family: $fontFamily;
+            color: #031838;
+            font-size: 44px;
+            font-weight: 800;
+        }
         h2 {
             font-family: $fontFamily;
             color: #031838;
