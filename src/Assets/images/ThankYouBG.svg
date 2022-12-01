@@ -1,0 +1,28 @@
+<svg width="1170" height="401" viewBox="0 0 1170 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_7_62" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1170" height="401">
+<rect width="1170" height="401" rx="15" fill="#0072FF"/>
+</mask>
+<g mask="url(#mask0_7_62)">
+<rect y="-185" width="1170" height="685" fill="#0072FF"/>
+</g>
+<circle cx="983.018" cy="101.09" r="2.08968" fill="white"/>
+<circle cx="999.736" cy="101.09" r="2.08968" fill="white"/>
+<circle cx="1016.45" cy="101.09" r="2.08968" fill="white"/>
+<circle cx="1033.17" cy="101.09" r="2.08968" fill="white"/>
+<circle cx="983.018" cy="118.504" r="2.08968" fill="white"/>
+<circle cx="983.018" cy="135.918" r="2.08968" fill="white"/>
+<circle cx="983.018" cy="153.332" r="2.08968" fill="white"/>
+<circle cx="999.736" cy="118.504" r="2.08968" fill="white"/>
+<circle cx="999.736" cy="135.918" r="2.08968" fill="white"/>
+<circle cx="999.736" cy="153.332" r="2.08968" fill="white"/>
+<circle cx="1016.45" cy="118.504" r="2.08968" fill="white"/>
+<circle cx="1016.45" cy="135.918" r="2.08968" fill="white"/>
+<circle cx="1016.45" cy="153.332" r="2.08968" fill="white"/>
+<circle cx="1033.17" cy="118.504" r="2.08968" fill="white"/>
+<circle cx="1033.17" cy="135.918" r="2.08968" fill="white"/>
+<circle cx="1033.17" cy="153.332" r="2.08968" fill="white"/>
+<rect x="198.521" y="77" width="14" height="14" rx="4" fill="white"/>
+<rect x="956" y="202.303" width="14" height="14" rx="4" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1170 37C1137.42 37 1111 63.6391 1111 96.5C1111 129.361 1137.42 156 1170 156V136C1148.62 136 1131 118.475 1131 96.5C1131 74.5253 1148.62 57 1170 57V37Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M151.751 401C151.915 399.524 152 398.023 152 396.5C152 374.525 134.38 357 113 357C91.6197 357 74 374.525 74 396.5C74 398.023 74.0846 399.524 74.2492 401H54.1662C54.0561 399.515 54 398.014 54 396.5C54 363.639 80.4152 337 113 337C145.585 337 172 363.639 172 396.5C172 398.014 171.944 399.515 171.834 401H151.751Z" fill="white"/>
+</svg>

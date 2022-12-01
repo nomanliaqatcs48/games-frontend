@@ -56,7 +56,11 @@ const ContactDetail = () => {
                 .catch((error) => {
                     setSubmitting = false;
                     setErrors("Not Submitted");
-                });
+                })
+                .finally(() => {
+                    window.location.href= "/thank-you"
+                })
+                ;
         },
     });
 
