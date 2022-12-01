@@ -12,9 +12,9 @@ const index = () => {
             <img src={Ops} alt="error-you"/>
             </Box>
             <Box className='error-content'>
-                <Typography variant='h2'>The page you are looking for does not seem to exist</Typography>
-                <Typography variant='h6'>But dont worry it can happen to the best of us.<br/>
-                Looking for anything specific</Typography>
+                <Typography variant='h2'>The page you are looking for does not seem to exist.</Typography>
+                <Typography variant='h6'>But don’t worry, it can happen to the best of us.<br/>
+                Looking for anything specific?</Typography>
             </Box>
             <Box className='error-button'>
                 <Link to="/">
