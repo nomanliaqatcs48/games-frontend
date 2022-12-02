@@ -7,13 +7,13 @@ on:
 jobs:
   build:
 
-    runs-on: [self-hosted, Linux, X64, invochat-io]
+    runs-on: [self-hosted, Linux, X64, invochat-io-pm03]
 
     steps:
     - uses: actions/checkout@v3
     - name: Applying Changes
       run: |-
-        cd /home/invochat-io/public_html/invochat-frontend
+        cd /home/invochat-io-fe/public_html/invochat-frontend
         git reset --hard
         git pull origin Frontend-live
         npm run clean
