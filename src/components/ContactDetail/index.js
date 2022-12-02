@@ -84,7 +84,7 @@ const ContactDetail = () => {
                             </Typography>
                             <Typography className={styles.emailWrap}>
                                 <img loading="lazy" src={Email} alt="" className={styles.iconWrap} />
-                                <span>Email:</span> product@invocom.io
+                                <span>Email:</span> info@invochat.io
                             </Typography>
                             <Typography className={styles.phoneWrap}>
                                 <img loading="lazy" src={Phone} alt="" className={styles.iconWrap} />
