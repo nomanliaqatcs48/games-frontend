@@ -1,17 +1,18 @@
-import React from "react";
+import React from 'react'
+import Privacy from "./PrivacyData";
 import { Container, Box, Typography } from "@mui/material";
-import Terms from "./TermData";
 
-import * as styles from "../TermCondition/styles.module.scss";
+import * as styles from "../PrivacyPolicy/styles.module.scss";
 
-const TermCondition = () => {
+
+const index = () => {
   return (
     <Container>
-      <Box className={styles.termContainer}>
+      <Box className={styles.disclaimerContainer}>
         <Typography align="center" component="h1" className={styles.heading}>
-          Terms and Conditions
+          Privacy Policy
         </Typography>
-        {Terms.map((item) => (
+        {Privacy.map((item) => (
           <>
             <div className={styles.headWrap}>{item.heading}</div>
             <Typography className={styles.descWrap}>
@@ -21,7 +22,7 @@ const TermCondition = () => {
         ))}
       </Box>
     </Container>
-  );
-};
+  )
+}
 
-export default TermCondition;
+export default index

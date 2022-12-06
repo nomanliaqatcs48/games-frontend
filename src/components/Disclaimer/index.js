@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react'
+import Disclaimer from "./DisclaimerData";
 import { Container, Box, Typography } from "@mui/material";
-import Terms from "./TermData";
 
-import * as styles from "../TermCondition/styles.module.scss";
+import * as styles from "../Disclaimer/styles.module.scss";
 
-const TermCondition = () => {
+
+const index = () => {
   return (
     <Container>
-      <Box className={styles.termContainer}>
+      <Box className={styles.disclaimerContainer}>
         <Typography align="center" component="h1" className={styles.heading}>
-          Terms and Conditions
+          Disclaimer
         </Typography>
-        {Terms.map((item) => (
+        {Disclaimer.map((item) => (
           <>
-            <div className={styles.headWrap}>{item.heading}</div>
             <Typography className={styles.descWrap}>
               {item.Description}
             </Typography>
@@ -21,7 +21,7 @@ const TermCondition = () => {
         ))}
       </Box>
     </Container>
-  );
-};
+  )
+}
 
-export default TermCondition;
+export default index
