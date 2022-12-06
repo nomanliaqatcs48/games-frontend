@@ -1,0 +1,27 @@
+$FontFamily: "Raleway";
+
+.disclaimerContainer {
+    padding: 50px 0px 130px;
+    .heading{
+        font-family: $FontFamily;
+        font-weight: 800;
+        font-size: 46px;
+        text-align: center;
+        color: #031838;
+        margin-bottom: 20px;
+    }
+    .headWrap {
+        font-family: $FontFamily;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 47px;
+        color: #031838;
+        padding: 1rem 0rem;
+    }
+    .descWrap {
+        font-family: $FontFamily;
+        font-size: 19.5px;
+        line-height: 31px;
+        color: #031838;
+    }
+}

@@ -35,7 +35,7 @@ const Footer = () => {
     return (
         <Box className="footer" sx={{ pt: 7.5, pb: { xs: 3, md: 3.5 } }}>
             <Container>
-                <Grid className="footer_content" sx={{ display: "flex", justifyContent: { sx: "center", md: "space-between" }, py: 3 }} container>
+                <Grid className="footer_content" sx={{ display: "flex", justifyContent: { sx: "center", md: "space-between" }, py: 3, }} container>
                     <Grid item xs={12} md={2}>
                         <Box>
                             <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
@@ -59,24 +59,34 @@ const Footer = () => {
                                         Pricing
                                     </Typography>
                                 </Link>
+                                <Link to="/blog/">
+                                    <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
+                                        Blog
+                                    </Typography>
+                                </Link>
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={5} lg={4} sx={{ display: "flex", justifyContent: "center", pt: { xs: 1, md: 8.5 } }}>
+                    <Grid item xs={12} md={5} lg={4} sx={{ display: "flex", justifyContent: "center", pt: { xs: 1, md: 6.7 } }}>
                         <Box sx={{ pt: { xs: 3, md: 3.5 } }}>
-                            <Link to="/blog/">
-                                <Typography sx={{ textAlign: { xs: "center", md: "left" } }} variant="h5">
-                                    Blog
-                                </Typography>
-                            </Link>
                             <Link to="/contact-us/">
                                 <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
                                     Contact Us
                                 </Typography>
                             </Link>
                             <Link to="/terms-and-conditions/">
-                                <Typography sx={{ pt: 2.5, textAlign: { xs: "center", md: "left" } }} variant="h5">
-                                    Terms and Conditions
+                                <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
+                                    Terms & Conditions
+                                </Typography>
+                            </Link>
+                            <Link to="/privacy-policy">
+                                <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
+                                    Privacy Policy
+                                </Typography>
+                            </Link>
+                            <Link to="/disclaimer/">
+                                <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
+                                    Disclaimer
                                 </Typography>
                             </Link>
                         </Box>
