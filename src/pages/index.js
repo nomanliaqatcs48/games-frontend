@@ -119,6 +119,35 @@ const IndexPage = ({ data }) => {
           }
         `}
         </script>
+        
+        <script type="application/ld+json">
+        {`
+         {
+          "@context": "https://schema.org",
+          "@type": "Corporation",
+          "name": "Invochat",
+          "url": "https://invochat.io/",
+          "logo": "https://invochat.io/static/InvoChat-Logo-2b715d305637b88a9882988f4d62b5b0.png",
+          "alternateName": "Invochat",
+          "sameAs": [
+            "https://www.facebook.com/invochatnow",
+            "https://www.linkedin.com/company/invochatnow",
+            "https://twitter.com/Invochatnow"
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1(754) 258-7812",
+              "contactType": "customer service",
+              "email": "info@invochat.io",
+              "areaServed": "US",
+              "availableLanguage": "en"
+            }
+          ]
+        }
+        
+        `}
+        </script>
         </ThemeProvider>
     );
 };
