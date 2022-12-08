@@ -19,9 +19,10 @@
         color: #ffffff;
         font-size: 22px;
         font-weight: 700;
-    }
-    .free_trial_btn:hover {
-        background: #031838;
+        &:hover {
+            background: #FCB92B;
+            color: #031838;
+        }
     }
 }
 

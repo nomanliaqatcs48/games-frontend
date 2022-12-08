@@ -9,11 +9,13 @@ $fontFamily: "Raleway";
     z-index: 1;
 
     .heading {
-        font-family: $fontFamily;
+        h3{
+            font-family: $fontFamily;
         font-size: 19px !important;
         font-weight: 800;
         line-height: 22px;
         color: #031838;
+        }
     }
     .desc {
         font-family: $fontFamily;

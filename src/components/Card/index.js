@@ -9,9 +9,11 @@ const Card = (props) => {
             <div>
                 <img loading="lazy" src={props.icon} alt="card"  />
             </div>
-            <Typography py={2} className={styles.heading}>
+            <Box className={styles.heading}>
+            <Typography py={2} variant="h3">
                 {props.heading}
             </Typography>
+            </Box>
             <Typography className={styles.desc}>{props.description}</Typography>
         </Box>
     );

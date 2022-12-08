@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
+import { Link } from "gatsby";
 import "../StreamLine/index.scss";
 
 const StreamLine = () => {
@@ -11,8 +12,10 @@ const StreamLine = () => {
                     <br />
                     businesses to streamline their communication
                 </Typography>
-                <Box>
-                    <Button className="streamLine-btn">See pricing</Button>
+                <Box className="streamLine-btn">
+                    <Link to="/pricing">
+                    <Button>See pricing</Button>
+                    </Link>
                 </Box>
             </Box>
         </Box>

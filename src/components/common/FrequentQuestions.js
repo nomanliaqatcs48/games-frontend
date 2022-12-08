@@ -46,7 +46,7 @@ return (
    <Container>
       <Box className="faq-wrapper">
          <Box className="faq-head">
-            <Typography variant="h2">Frequently Asked Questions</Typography>
+            <Typography variant="h3">Frequently Asked Questions</Typography>
             <Typography variant="h6">We love to hear from your side</Typography>
          </Box>
          <Box className="faq-accordion">

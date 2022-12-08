@@ -5,7 +5,7 @@ import "../../src/components/BlogHead.scss";
 const BlogHead = () => {
     return (
         <Box className="blog_head">
-            <Typography variant="h2" sx={{ textAlign: "center" }}>
+            <Typography variant="h1" sx={{ textAlign: "center" }}>
                 Our Blog Division
             </Typography>
             <Typography variant="h3" sx={{ textAlign: "center", pt: 1.5 }}>

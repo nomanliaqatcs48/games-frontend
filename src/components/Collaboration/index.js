@@ -45,9 +45,11 @@ const Collaboration = () => {
             <div className={styles.collabContainer}>
                 <img loading="lazy" src={LeftImage} alt="" className={styles.featureLeft} />
                 <Container>
-                    <Typography align="center" px={3} className={styles.headText}>
+                    <Box className={styles.headText}>
+                    <Typography align="center" px={3} variant="h1">
                         Secure and user-friendly features for project collaboration at your disposal{" "}
                     </Typography>
+                    </Box>
                     <Typography align="center" py={2} className={styles.descText}>
                         Chat with your team, manage notifications, securely share and upload files, and manage <br /> and track multiple projects asynchronously through InvoChat.
                     </Typography>
@@ -70,11 +72,13 @@ const Collaboration = () => {
                     <Typography py={2} align="center" className={styles.autoText}>
                         Already have an account?<span>Sign in</span>
                     </Typography>
-                    <Typography align="center" px={3} className={styles.headText}>
+                    <Box className={styles.headText}>
+                    <Typography align="center" px={3} variant="h2">
                         Bring global teams together through an all-
                         <br />
                         in-one platform{" "}
                     </Typography>
+                    </Box>
                     <Box className={styles.flexWrap}>
                         <img loading="lazy" src={square} alt="" className={styles.square} />
                         <Card

@@ -48,6 +48,10 @@
                 border: 1.5px solid #000000;
                 border-radius: 5px;
                 font-family: "raleway";
+                transition: 0.1s ease-in;
+                &:hover{
+                    border: 2.5px solid #000000;
+                }
             }
             .header_btn_p {
                 width: 177px;
@@ -59,6 +63,10 @@
                 background: #0072ff;
                 border-radius: 5px;
                 font-family: "raleway";
+                transition: 0.1s ease-in;
+                &:hover{
+                    border: 1.5px solid #ffffff;
+                }
             }
         }
     }

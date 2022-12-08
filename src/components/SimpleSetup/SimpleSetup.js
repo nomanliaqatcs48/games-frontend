@@ -67,7 +67,7 @@ const SimpleSetup = () => {
                                         <img loading="lazy" src={val.imageName} alt="picture_showing_one" />
                                     </Box>
                                     <Box>
-                                        <Typography sx={{ textAlign: "center" }} variant="h4">
+                                        <Typography sx={{ textAlign: "center" }} variant="h3">
                                             {val.cardHeading}
                                         </Typography>
                                     </Box>

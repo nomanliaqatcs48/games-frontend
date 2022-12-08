@@ -27,13 +27,21 @@
         }
     }
     .streamLine-btn{
-        background: #0072FF;
+        a{
+            text-decoration: none;
+        }
+        button{
+            background: #0072FF;
         font-family: 'Raleway';
         font-size: 24px;
         font-weight: 700;
         color: #FFFFFF;
         padding: 5px 55px;
         text-transform: none;
+        &:hover{
+            background: #FCB92B;
+            color: #031838;
+        }
         @media screen and (max-width: 768px) {
             padding: 3px 45px;
             font-size: 20px;
@@ -41,6 +49,7 @@
         @media screen and (max-width: 428px) {
             padding: 5px 35px;
             font-size: 15px;
+        }
         }
     }
 }

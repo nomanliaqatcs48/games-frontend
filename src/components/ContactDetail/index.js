@@ -71,7 +71,7 @@ const ContactDetail = () => {
                 <Container>
                     <Box className={styles.flexWrap}>
                         <div className={styles.detail}>
-                            <Typography className={styles.headText}>
+                            <Typography variant="h1">
                                 Thanks for your
                                 <br /> interest in invochat
                             </Typography>

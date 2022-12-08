@@ -26,6 +26,10 @@ $fontFamily: "Raleway";
         font-weight: 700;
         text-align: center;
         color: #031838;
+        &:hover{
+            background: #031838;
+            color: #ffffff;
+        }
     }
 }
 

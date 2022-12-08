@@ -14,7 +14,7 @@ const Who = (props) => {
             <Seo title={content[0].metaTitle} description={props.description} tag='index' pageUrl='about-us/'/>
             <Box className="who-wrapper">
                 <Box className="who-content">
-                    <Typography variant="h2">{props.title}</Typography>
+                    <Typography variant="h1">{props.title}</Typography>
                     <Typography variant="h6">{props.description}</Typography>
                 </Box>
                 <Box className="who-image">

@@ -14,7 +14,7 @@ const SuperEasy = () => {
         <Box className="super_easy" sx={{ pt: { xs: 7, md: 9 } }}>
             <Box className="super_heading" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <Box>
-                    <Typography sx={{ textAlign: "center" }} variant="h1">
+                    <Typography sx={{ textAlign: "center" }} variant="h2">
                         Super Easy to Start
                     </Typography>
                     <Box sx={{ display: "flex", justifyContent: "center", pt: 4 }}>
@@ -25,7 +25,7 @@ const SuperEasy = () => {
                 </Box>
             </Box>
             <Container className="custom_container">
-                <Box sx={{ pt: { xs: 5, md: 8 } }}>
+                <Box className="super_easy_card" sx={{ pt: { xs: 5, md: 8 } }}>
                     <Grid container sx={{ display: "flex", flexDirection: { xs: "column-reverse", md: "row" } }}>
                         <Grid item xs={12} md={6} sx={{ pt: { xs: 2, md: 0 } }}>
                             <Box>
