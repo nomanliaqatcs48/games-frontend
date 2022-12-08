@@ -79,7 +79,7 @@ const InnerBlog = ({ data }) => {
                             <Box className="innerBlog_content">
                                 {blogInnerContent.map((val) => (
                                     <>
-                                       <SEO title={record?.Title} blogId={record?.id} pageUrl="blogs"/>
+                                       <SEO title={record?.metaTitle} blogId={record?.id} pageUrl="blogs"/>
                                         <Box>
                                             <Typography variant="h1">{record?.Title}</Typography>
                                         </Box>
@@ -87,7 +87,7 @@ const InnerBlog = ({ data }) => {
                                             <img loading="lazy" src={record.Image[0].url} alt="Blog_content_image" />
                                         </Box>
                                         <Box>
-                                            <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record.check.data.check }}></Typography>
+                                            <Typography variant="h3" dangerouslySetInnerHTML={{ __html: record?.check?.data?.check }}></Typography>
                                         </Box>
                                         <span dangerouslySetInnerHTML={{__html: record?.Add_Schema}} />
                                     </>
@@ -110,6 +110,7 @@ export const query = graphql`
             Title
             Content
             Slug
+            metaTitle
             Image {
                 url
             }

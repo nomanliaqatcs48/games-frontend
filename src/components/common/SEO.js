@@ -26,6 +26,7 @@ const Seo = ( {description, lang, meta, title, blogId, tag, pageUrl} ) => {
               }
             }
             metaTitle
+            metaKeywords
             metaDescription
             Tags
             Add_Canonical_Link
