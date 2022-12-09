@@ -8,8 +8,9 @@ export default function HTML(props) {
                 <meta charSet="utf-8" />
                 <meta httpEquiv="x-ua-compatible" content="ie=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                <meta name="facebook-domain-verification" content="9wmku1cbn7ngo1lni3r50i80qrrdlo" />
-
+                <meta name="facebook-domain-verification" 
+                content="9wmku1cbn7ngo1lni3r50i80qrrdlo" />
+                <meta name="google-site-verification" content="jMgcmd1e6TmCYq0--r_A5exa8p33tq-keEFHUsthDMk" />
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
