@@ -13,7 +13,7 @@ const StreamLine = () => {
                     businesses to streamline their communication
                 </Typography>
                 <Box className="streamLine-btn">
-                    <Link to="/pricing">
+                    <Link to="/pricing/">
                     <Button>See pricing</Button>
                     </Link>
                 </Box>

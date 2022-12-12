@@ -79,7 +79,7 @@ const Footer = () => {
                                     Terms & Conditions
                                 </Typography>
                             </Link>
-                            <Link to="/privacy-policy">
+                            <Link to="/privacy-policy/">
                                 <Typography sx={{ pt: { xs: 2.5, md: 2 }, textAlign: { xs: "center", md: "left" } }} variant="h5">
                                     Privacy Policy
                                 </Typography>
