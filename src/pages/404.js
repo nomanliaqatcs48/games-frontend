@@ -17,8 +17,7 @@ const thank = () => {
       <Seo
         title={content[0].metaTitle}
         description={content[0].metaDescription}
-        tag="index"
-        pageUrl="404/"
+        tag="index" pageUrl="404/"
       />
         <Error/>
     </Layout>
