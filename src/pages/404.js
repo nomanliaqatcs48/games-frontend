@@ -18,7 +18,7 @@ const thank = () => {
         title={content[0].metaTitle}
         description={content[0].metaDescription}
         tag="index"
-        pageUrl="thank-you/"
+        pageUrl="404/"
       />
         <Error/>
     </Layout>
