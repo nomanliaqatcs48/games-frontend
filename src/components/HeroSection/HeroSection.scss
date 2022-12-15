@@ -1,5 +1,6 @@
 .hero {
-  .home_img_box{
+  margin-top: 80px;
+  .home_img_box {
     width: 530px;
     height: 400px;
   }
@@ -104,9 +105,9 @@
 @media (max-width: 899px) {
   .hero {
     position: relative;
-    .home_img_box{
-    width: 450px;
-  }
+    .home_img_box {
+      width: 450px;
+    }
     .down_arrow {
       position: absolute;
       bottom: 22%;

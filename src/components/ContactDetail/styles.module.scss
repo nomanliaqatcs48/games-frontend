@@ -1,138 +1,139 @@
 $fontFamily: "Raleway";
 .contactDetail {
-    background-color: #f5f5f5;
-    position: relative;
-    padding: 4rem 0rem 8rem 0rem;
-    .featureLeft {
-        position: absolute;
-        bottom: -9%;
+  background-color: #f5f5f5;
+  position: relative;
+  padding: 4rem 0rem 8rem 0rem;
+  margin-top: 80px;
+  .featureLeft {
+    position: absolute;
+    bottom: -9%;
+  }
+  .flexWrap {
+    display: flex;
+    @media screen and (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
     }
-    .flexWrap {
-        display: flex;
+    .detail {
+      flex: 0 0 50%;
+      h1 {
+        font-size: 40px;
+        font-weight: 800;
+        font-family: $fontFamily;
+        line-height: 46px;
+        color: #031838;
         @media screen and (max-width: 1100px) {
-            flex-direction: column;
-            align-items: center;
+          text-align: center;
         }
-        .detail {
-            flex: 0 0 50%;
-                h1{
-                font-size: 40px;
-                font-weight: 800;
-                font-family: $fontFamily;
-                line-height: 46px;
-                color: #031838;
-                @media screen and (max-width: 1100px) {
-                    text-align: center;
-                }
-            }
-            .descText {
-                font-weight: 400;
-                font-size: 19.5px;
-                line-height: 23px;
-                font-family: $fontFamily;
-                color: #031838;
-                @media screen and (max-width: 1100px) {
-                    text-align: center;
-                }
-            }
-            .emailWrap {
-                font-weight: 400;
-                font-family: $fontFamily;
-                font-size: 20px;
-                span {
-                    font-weight: 500;
-                }
-                .iconWrap {
-                    padding-right: 8px;
-                }
-                @media screen and (max-width: 1100px) {
-                    text-align: center;
-                }
-            }
-            .phoneWrap {
-                font-weight: 400;
-                font-family: $fontFamily;
-                font-size: 20px;
-                span {
-                    font-weight: 500;
-                }
-                .iconWrap {
-                    padding-right: 8px;
-                }
-                @media screen and (max-width: 1100px) {
-                    text-align: center;
-                }
-            }
-            @media screen and (max-width: 1100px) {
-                padding-bottom: 2rem;
-            }
+      }
+      .descText {
+        font-weight: 400;
+        font-size: 19.5px;
+        line-height: 23px;
+        font-family: $fontFamily;
+        color: #031838;
+        @media screen and (max-width: 1100px) {
+          text-align: center;
         }
-        .formBox {
-            box-shadow: 25px 25px #0072ff;
-            margin-left: 30px;
-            border-radius: 5px;
-            .form {
-                width: 509px;
-                font-family: $fontFamily;
-                height: 593px;
-                background: #ffffff;
-                border-radius: 5px;
-                box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
-                -webkit-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
-                -moz-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
-                position: relative;
-                @media screen and (max-width: 540px) {
-                    width: 100%;
-                    height: auto;
-                }
-                .paddingWrap {
-                    padding: 54px;
-                    @media screen and (max-width: 399px) {
-                        padding: 30px;
-                    }
-                    .flexColumn {
-                        display: flex;
-                        flex-direction: column;
-                        margin-bottom: 0.5rem;
-                        margin-top: 0.5rem;
-                        .label {
-                            font-weight: 800;
-                            font-family: $fontFamily;
-                            font-size: 15px;
-                            color: #031838;
-                            margin-bottom: 5px;
-                        }
-                        .inputField {
-                            border: 1px solid #6c6c6c;
-                            font-family: $fontFamily;
-                            border-radius: 5px;
-                            padding: 1rem;
-                        }
-                        .inputField input {
-                            padding-left: 5px;
-                            outline: none;
-                            border: none;
-                        }
-                        .msgBtn {
-                            background: #0072ff;
-                            border-radius: 5px;
-                            outline: none;
-                            border: none;
-                            font-family: $fontFamily;
-                            font-weight: 500;
-                            font-size: 14px;
-                            text-align: center;
-                            color: #ffffff;
-                            padding: 1rem;
-                            cursor: pointer;
-                        }
-                    }
-
-                    .formError{
-                        color:red;
-                    }
-                }
-            }
+      }
+      .emailWrap {
+        font-weight: 400;
+        font-family: $fontFamily;
+        font-size: 20px;
+        span {
+          font-weight: 500;
         }
+        .iconWrap {
+          padding-right: 8px;
+        }
+        @media screen and (max-width: 1100px) {
+          text-align: center;
+        }
+      }
+      .phoneWrap {
+        font-weight: 400;
+        font-family: $fontFamily;
+        font-size: 20px;
+        span {
+          font-weight: 500;
+        }
+        .iconWrap {
+          padding-right: 8px;
+        }
+        @media screen and (max-width: 1100px) {
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        padding-bottom: 2rem;
+      }
     }
+    .formBox {
+      box-shadow: 25px 25px #0072ff;
+      margin-left: 30px;
+      border-radius: 5px;
+      .form {
+        width: 509px;
+        font-family: $fontFamily;
+        height: 593px;
+        background: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
+        -webkit-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
+        -moz-box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
+        position: relative;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+          height: auto;
+        }
+        .paddingWrap {
+          padding: 54px;
+          @media screen and (max-width: 399px) {
+            padding: 30px;
+          }
+          .flexColumn {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            .label {
+              font-weight: 800;
+              font-family: $fontFamily;
+              font-size: 15px;
+              color: #031838;
+              margin-bottom: 5px;
+            }
+            .inputField {
+              border: 1px solid #6c6c6c;
+              font-family: $fontFamily;
+              border-radius: 5px;
+              padding: 1rem;
+            }
+            .inputField input {
+              padding-left: 5px;
+              outline: none;
+              border: none;
+            }
+            .msgBtn {
+              background: #0072ff;
+              border-radius: 5px;
+              outline: none;
+              border: none;
+              font-family: $fontFamily;
+              font-weight: 500;
+              font-size: 14px;
+              text-align: center;
+              color: #ffffff;
+              padding: 1rem;
+              cursor: pointer;
+            }
+          }
+
+          .formError {
+            color: red;
+          }
+        }
+      }
+    }
+  }
 }
