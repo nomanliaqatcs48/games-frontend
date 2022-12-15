@@ -1,84 +1,96 @@
 .footer {
-    background: #031838;
-    position: relative;
-    .footer_content {
-        .footer_logo {
-            cursor: pointer;
-        }
-        h5 {
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 500;
-            font-family: "raleway";
-            cursor: pointer;
-        }
+  background: #031838;
+  position: relative;
+  .footer_content {
+    .footer_logo {
+      cursor: pointer;
     }
-    .footer_btn {
-        img {
-            max-width: 100%;
-            height: auto;
-            cursor: pointer;
-        }
-        h4 {
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 500;
-            font-family: "raleway";
-        }
-        input {
-            background: transparent;
-            border-radius: 5px 0 0 5px;
-            border: 0.768259px solid #ffffff;
-            padding: 13px 30px 13px 15px;
-            color: #ffffff;
-            outline: none;
-        }
-        .footer_sub {
-            background: #ffffff;
-            border-radius: 0px 5px 5px 0px;
-            padding: 10px 13px;
-            font-weight: 600;
-            color: #031838;
-        }
+    h5 {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 500;
+      font-family: "raleway";
+      cursor: pointer;
     }
-    .footer_border {
-        border-top: 0.5px solid #0072ff;
-        .powered {
-            width: 300px;
-            padding-top: 16px;
-            .img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-        h4 {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.5);
-            font-family: "raleway";
-        }
-        h5 {
-            font-size: 14px;
-            color: #ffffff;
-            font-family: "raleway";
-            cursor: pointer;
-        }
+  }
+  .footer_btn {
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
     }
-    a {
-        text-decoration: none;
+    h4 {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 500;
+      font-family: "raleway";
     }
+    .footer_Form {
+      input {
+        background: transparent;
+        border-radius: 5px 0 0 5px;
+        border: 0.768259px solid #ffffff;
+        padding: 13px 30px 13px 15px;
+        color: #ffffff;
+        outline: none;
+        &::placeholder {
+          color: #e1e1e158;
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+          -webkit-text-fill-color: #e1e1e1 !important;
+          -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+          transition: background-color 5000s ease-in-out 0s !important;
+        }
+      }
+    }
+    .footer_sub {
+      background: #ffffff;
+      border-radius: 0px 5px 5px 0px;
+      padding: 10px 13px;
+      font-weight: 600;
+      color: #031838;
+    }
+  }
+  .footer_border {
+    border-top: 0.5px solid #0072ff;
+    .powered {
+      width: 300px;
+      padding-top: 16px;
+      .img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    h4 {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      font-family: "raleway";
+    }
+    h5 {
+      font-size: 14px;
+      color: #ffffff;
+      font-family: "raleway";
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 599px) {
-    .footer {
-        .footer_content {
-            h5 {
-                font-size: 16px;
-            }
-        }
-        .footer_btn {
-            h4 {
-                font-size: 16px;
-            }
-        }
+  .footer {
+    .footer_content {
+      h5 {
+        font-size: 16px;
+      }
     }
+    .footer_btn {
+      h4 {
+        font-size: 16px;
+      }
+    }
+  }
 }

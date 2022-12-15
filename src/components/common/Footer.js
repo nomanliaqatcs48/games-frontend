@@ -8,31 +8,69 @@ import PoweredBy from "../../Assets/images/powererd.svg";
 import Facebook from "../../Assets/images/fb.svg";
 import "../../styles/common/Footer.scss";
 import axios from "axios";
-import { useState } from "react";
+// import { useState } from "react";
+import { useFormik } from "formik";
+import { signUpSchema } from "../../schemas";
+
+const initialValues = {
+  email: "",
+};
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState("");
+  // const [message, setMessage] = useState("");
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    // let formData = new FormData();
-    // formData.append("Email", email);
-    axios
-      .post(`https://st-backend-invochat.invo.zone/api/messages`, {
-        Email: email,
-      })
-      .then((res) => {
-        setErrors("Successfully submitted");
-        setEmail("");
-        if (res.status === 200) {
-        } else {
-        }
-      })
-      .catch((error) => {
-        setErrors("Invalid Email");
-      });
-  };
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    status,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: signUpSchema,
+    onSubmit: (values, action) => {
+      axios
+        .post(`https://st-backend-invochat.invo.zone/api/messages`, {
+          Email: values?.email,
+        })
+        .then((res) => {
+          if (res.status === 200) {
+            action.setStatus({ success: "Email sent !" });
+            setTimeout(() => {
+              action.resetForm();
+            }, 1000);
+          } else {
+          }
+        })
+        .catch((error) => {});
+      action.setStatus({ success: "Email sent !" });
+    },
+  });
+  console.log("Errors => ", errors);
+  // const [email, setEmail] = useState("");
+  // const [errors, setErrors] = useState("");
+
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  //   // let formData = new FormData();
+  //   // formData.append("Email", email);
+  // axios
+  //   .post(`https://st-backend-invochat.invo.zone/api/messages`, {
+  //     Email: email,
+  //   })
+  //   .then((res) => {
+  //     setErrors("Successfully submitted");
+  //     setEmail("");
+  //     if (res.status === 200) {
+  //     } else {
+  //     }
+  //   })
+  //   .catch((error) => {
+  //     setErrors("Invalid Email");
+  //   });
+  // };
 
   return (
     <Box className="footer" sx={{ pt: 7.5, pb: { xs: 3, md: 3.5 } }}>
@@ -188,33 +226,51 @@ const Footer = () => {
               >
                 Newsletter subscription
               </Typography>
-              <Box sx={{ my: 2 }}>
-                <input
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                  placeholder="Enter your email"
-                ></input>
-                <span>
-                  <Button onClick={onSubmit} className="footer_sub">
-                    Subscribe
-                  </Button>
-                </span>
+              <Box sx={{ my: 2 }} className="footer_Form">
+                <form onSubmit={handleSubmit}>
+                  <input
+                    // onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  ></input>
+                  <span>
+                    <Button
+                      onClick={handleSubmit}
+                      type="submit"
+                      className="footer_sub"
+                    >
+                      Subscribe
+                    </Button>
+                  </span>
+                </form>
               </Box>
               <Typography
                 sx={{
-                  "& p": {
-                    fontSize: "18px",
-                    color:
-                      errors === "Invalid Email"
-                        ? "red"
-                        : errors === "Successfully submitted"
-                        ? "green"
-                        : "",
-                    fontWeight: "600",
+                  fontSize: "16px",
+                  color: "red",
+                  ":first-letter": {
+                    textTransform: "capitalize",
                   },
+                  fontWeight: "600",
                 }}
               >
-                {errors && <p>{errors}</p>}
+                {errors.email && touched.email ? errors.email : null}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "16px",
+                  color: "green",
+                  ":first-letter": {
+                    textTransform: "capitalize",
+                  },
+                  fontWeight: "600",
+                }}
+              >
+                {/* {errors.email && touched.email ? errors.email : null} */}
+                <div>{status ? status.success : ""}</div>
               </Typography>
               <Box
                 sx={{
