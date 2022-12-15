@@ -45,10 +45,10 @@ const Footer = () => {
           }
         })
         .catch((error) => {});
-      action.setStatus({ success: "Email sent !" });
+      action.setStatus({ success: "Email not sent !" });
     },
   });
-  console.log("Errors => ", errors);
+  // console.log("Errors => ", errors);
   // const [email, setEmail] = useState("");
   // const [errors, setErrors] = useState("");
 
