@@ -1,36 +1,39 @@
 .getstarted-back {
-    position: relative;
-    .getstarted-Wrapper {
-        .getstarted-heading {
-            margin: 75px 0 50px 0;
-            h2 {
-                font-weight: 800;
-                font-size: 40px;
-                line-height: 42px;
-                text-align: center;
-                font-family: 'Raleway';
-            }
-            h6 {
-                font-weight: 500;
-                font-size: 20px;
-                padding-top: 20px;
-                line-height: 23px;
-                text-align: center;
-                font-family: 'Raleway';
-            }
-        }
-        .priceBox-wrapper {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            column-gap: 40px;
-            row-gap: 20px;
-        }
+  position: relative;
+  margin-top: 130px;
+  .getstarted-Wrapper {
+    .getstarted-heading {
+      margin: 75px 0 50px 0;
+      h2 {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 42px;
+        text-align: center;
+        font-family: "Raleway";
+      }
+      h6 {
+        font-weight: 500;
+        font-size: 20px;
+        padding-top: 20px;
+        line-height: 23px;
+        text-align: center;
+        font-family: "Raleway";
+      }
     }
+    .priceBox-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 40px;
+      row-gap: 20px;
+    }
+  }
 }
 
-.link-st{
-    text-decoration: none;
+.link-st {
+  text-decoration: none;
 }
- 
-Link:link { text-decoration: none; }
+
+Link:link {
+  text-decoration: none;
+}

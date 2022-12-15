@@ -1,134 +1,137 @@
 .header {
-    a {
-        text-decoration: none;
-        &:active {
-            color: red;
-        }
+  a {
+    text-decoration: none;
+    &:active {
+      color: red;
     }
-    margin-bottom: 15px;
-    background: #f5f5f5;
-    nav {
-        position: static;
+  }
+  margin-bottom: 15px;
+  background: #f5f5f5;
+  nav {
+    // position: static;
+  }
+  .active {
+    color: red !important;
+  }
+  .appBar {
+    max-width: 1350px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 0px 0px 10px 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    .logo {
+      cursor: pointer;
+      height: 50px;
     }
-    .active {
-        color: red !important;
-    }
-    .appBar {
-        max-width: 1350px;
-        margin: 0 auto;
-        background: #ffffff;
-        border: 1px solid #d0d0d0;
-        border-radius: 0px 0px 10px 10px;
-        .logo {
-            cursor: pointer;
-            height: 50px;
-        }
-        box-shadow: none;
-        .toolBar {
-            padding: 12px 0 !important;
-            .header_items {
-                color: #000000;
-                text-transform: unset;
-                font-size: 15px;
-                font-family: "raleway";
-            }
-            .fw_500 {
-                font-weight: 500;
-            }
-            .fw_700 {
-                font-weight: 700;
-            }
-            .header_btn_t {
-                width: 105px;
-                color: #000000;
-                text-transform: unset;
-                font-size: 700;
-                font-size: 15px;
-                padding: 8px 18px;
-                border: 1.5px solid #000000;
-                border-radius: 5px;
-                font-family: "raleway";
-                transition: 0.1s ease-in;
-                &:hover{
-                    border: 2.5px solid #000000;
-                }
-            }
-            .header_btn_p {
-                width: 177px;
-                color: #ffffff;
-                text-transform: unset;
-                font-size: 700;
-                font-size: 15px;
-                padding: 10px 18px;
-                background: #0072ff;
-                border-radius: 5px;
-                font-family: "raleway";
-                transition: 0.1s ease-in;
-                &:hover{
-                    border: 1.5px solid #ffffff;
-                }
-            }
-        }
-    }
-    .css-ukouoi-MuiButtonBase-root-MuiIconButton-root {
-        color: rgb(76, 81, 66);
-    }
-}
-.header_button {
-    .header_btn_t {
-        width: 150px;
+    box-shadow: none;
+    .toolBar {
+      padding: 12px 0 !important;
+      .header_items {
+        color: #000000;
+        text-transform: unset;
+        font-size: 15px;
+        font-family: "raleway";
+      }
+      .fw_500 {
+        font-weight: 500;
+      }
+      .fw_700 {
+        font-weight: 700;
+      }
+      .header_btn_t {
+        width: 105px;
         color: #000000;
         text-transform: unset;
         font-size: 700;
         font-size: 15px;
-        margin-top: 40px;
         padding: 8px 18px;
         border: 1.5px solid #000000;
         border-radius: 5px;
         font-family: "raleway";
-    }
-    .header_btn_p {
-        width: 150px;
+        transition: 0.1s ease-in;
+        &:hover {
+          border: 2.5px solid #000000;
+        }
+      }
+      .header_btn_p {
+        width: 177px;
         color: #ffffff;
         text-transform: unset;
         font-size: 700;
         font-size: 15px;
-        margin-top: 30px;
-        padding: 10px 20px;
+        padding: 10px 18px;
         background: #0072ff;
         border-radius: 5px;
         font-family: "raleway";
+        transition: 0.1s ease-in;
+        &:hover {
+          border: 1.5px solid #ffffff;
+        }
+      }
     }
+  }
+  .css-ukouoi-MuiButtonBase-root-MuiIconButton-root {
+    color: rgb(76, 81, 66);
+  }
+}
+.header_button {
+  .header_btn_t {
+    width: 150px;
+    color: #000000;
+    text-transform: unset;
+    font-size: 700;
+    font-size: 15px;
+    margin-top: 40px;
+    padding: 8px 18px;
+    border: 1.5px solid #000000;
+    border-radius: 5px;
+    font-family: "raleway";
+  }
+  .header_btn_p {
+    width: 150px;
+    color: #ffffff;
+    text-transform: unset;
+    font-size: 700;
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #0072ff;
+    border-radius: 5px;
+    font-family: "raleway";
+  }
 }
 .close {
-    position: absolute;
-    right: 3%;
-    top: 5%;
-    font-size: 26px;
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  font-size: 26px;
 }
 .header_items {
-    color: #000000 !important;
-    text-transform: unset;
-    font-size: 15px;
-    font-family: "raleway";
-    &:active {
-        color: red;
-    }
+  color: #000000 !important;
+  text-transform: unset;
+  font-size: 15px;
+  font-family: "raleway";
+  &:active {
+    color: red;
+  }
 }
 .text_underline {
-    text-decoration: none;
+  text-decoration: none;
 }
 @media (max-width: 899px) {
-    .MuiList-root {
-        .MuiListItem-root {
-            margin: 20px 0 !important;
-        }
+  .MuiList-root {
+    .MuiListItem-root {
+      margin: 20px 0 !important;
     }
+  }
 }
 @media (max-width: 599px) {
-    .header_button {
-        .header_btn_t {
-            margin-top: 10px;
-        }
+  .header_button {
+    .header_btn_t {
+      margin-top: 10px;
     }
+  }
 }
