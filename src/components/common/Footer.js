@@ -44,8 +44,9 @@ const Footer = () => {
           } else {
           }
         })
-        .catch((error) => {});
-      action.setStatus({ success: "Email not sent !" });
+        .catch((error) => {
+          console.log(error);
+        });
     },
   });
   // console.log("Errors => ", errors);
