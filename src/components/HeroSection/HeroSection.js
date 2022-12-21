@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Link } from "gatsby";
-import TransitionsModal from "../Newsletter";
 import HeroPic from "../../Assets/images/hero_new.png";
 import DownArrow from "../../Assets/images/down_arrow.svg";
 import IOS from "../../Assets/images/ios.svg";
@@ -221,7 +220,6 @@ const HeroSection = () => {
         >
           <Box className="line"></Box>
         </Box>
-        <TransitionsModal />
       </Container>
     </Box>
   );

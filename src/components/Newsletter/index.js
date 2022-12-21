@@ -1,42 +1,39 @@
-import * as React from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import { Button, Box, Typography } from "@mui/material";
-import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import News from "../../Assets/images/News-Image.svg";
 import ModalCancel from "../../Assets/images/CancelModal.svg";
 // import { RxCross2 } from "react-icons/rx";
 import "../Newsletter/index.scss";
 
 export default function Modal() {
-  const [open, setOpen] = React.useState(() => {
+  const [show, isShow] = useState();
+
+  typeof window !== "undefined" &&
+    (window.onbeforeunload = () => {
+      localStorage.removeItem("popup");
+    });
+
+  useEffect(() => {
     setTimeout(() => {
-      setOpen(true);
+      if (!localStorage.getItem("popup")) isShow(true);
     }, 3000);
-  });
-
-  // const handleClickOpen = () => {
-  //   setTimeout(() => {
-  //     setOpen(true);
-  //   }, 1000);
-  // };
-
+  }, []);
   const handleClose = () => {
-    setOpen(false);
+    isShow(false);
+    localStorage.setItem("popup", false);
   };
 
   return (
     <div>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={show} onClose={handleClose}>
         <Box className="modalWrapper">
-          {/* <RxCross2 className="cancelModal" onClick={handleClose} /> */}
           <img
             src={ModalCancel}
             className="cancelModal"
             onClick={handleClose}
+            alt="close"
           />
           <Box className="modalContent">
             <Typography variant="h4">
@@ -52,13 +49,9 @@ export default function Modal() {
             </form>
           </Box>
           <Box>
-            <img src={News} />
+            <img src={News} alt="newsletter" />
           </Box>
         </Box>
-        <DialogActions>
-          {/* <Button onClick={handleClose}>Cancel</Button> */}
-          {/* <Button onClick={handleClose}>Subscribe</Button> */}
-        </DialogActions>
       </Dialog>
     </div>
   );
