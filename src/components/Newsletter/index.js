@@ -7,6 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import News from "../../Assets/images/News-Image.svg";
+import ModalCancel from "../../Assets/images/CancelModal.svg";
 // import { RxCross2 } from "react-icons/rx";
 import "../Newsletter/index.scss";
 
@@ -32,6 +33,11 @@ export default function Modal() {
       <Dialog open={open} onClose={handleClose}>
         <Box className="modalWrapper">
           {/* <RxCross2 className="cancelModal" onClick={handleClose} /> */}
+          <img
+            src={ModalCancel}
+            className="cancelModal"
+            onClick={handleClose}
+          />
           <Box className="modalContent">
             <Typography variant="h4">
               Exceptional Teamwork Begins with an Online Workspace
