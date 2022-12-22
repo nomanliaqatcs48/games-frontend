@@ -7,18 +7,3 @@ body {
   background: #f5f5f5;
   font-family: "Raleway";
 }
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-  min-height: 395px !important;
-  max-width: 790px !important;
-  padding: 0px 50px;
-  justify-content: center;
-  border-radius: 6px;
-}
-
-@media screen and (max-width: 476px) {
-  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-    padding: 0px 20px;
-    min-height: 340px !important;
-    min-width: 260px;
-  }
-}
