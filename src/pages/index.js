@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Container} from "@mui/material";
+import { Box, Grid, Container } from "@mui/material";
 import Layout from "../baseStructure/Layout";
 import Blog from "../components/Blog/Blog";
 import { graphql } from "gatsby";
@@ -13,10 +13,10 @@ import GetStarted from "../components/common/GetStarted";
 import Feedback from "../components/FeedBack/FeedBack";
 import FrequentQuestions from "../components/common/FrequentQuestions";
 import FreeTrial from "../components/FreeTrial/FreeTrial";
-import '../../src/styles/common/globalStyles.module.scss'
+import "../../src/styles/common/globalStyles.module.scss";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Seo from "../components/common/SEO";
-import {Helmet} from 'react-helmet'
+import { Helmet } from "react-helmet";
 
 const theme = createTheme({
   typography: {
@@ -29,40 +29,45 @@ const theme = createTheme({
   },
 });
 
-
 const IndexPage = ({ data }) => {
-    return (
-      <ThemeProvider theme={theme}>
-          <Helmet>
-          <meta name="robots" content="index, follow"/>
-          <meta name="robots" content="max-image-preview:standard"/>
+  return (
+    <ThemeProvider theme={theme}>
+      <Helmet>
+        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="max-image-preview:standard" />
+      </Helmet>
+      <Layout>
+        <Helmet>
+          <meta name="robots" content="index, follow" />
+          <meta name="robots" content="max-image-preview:standard" />
         </Helmet>
-        <Layout>
-            <Helmet>
-                <meta name="robots" content="index, follow"/>
-                <meta name="robots" content="max-image-preview:standard"/>
-            </Helmet>
-            <Seo title="Home" description="home" tag='index' pageUrl='' />
-            <HeroSection/>
-            <SimpleSetup/>
-            <Plateforms/>
-            <SuperEasy/>
-            <GetStarted/>
-            <Feedback/>
-            <Container>
-                <Box className="BlogPage">
-                    <BlogHead />
-                    <Grid container spacing={3} sx={{ display: "flex" }}>
-                        {data?.allStrapiBlog?.nodes?.map((blog, index) => {
-                            return <Blog blog={blog} key={index} customClass={index === 0 ? true : false} />;
-                        })}
-                    </Grid>
-                </Box>
-            </Container>
-            <FrequentQuestions/>
-            <FreeTrial/>
-        </Layout>
-        <script type="application/ld+json">
+        <Seo title="Home" description="home" tag="index" pageUrl="" />
+        <HeroSection />
+        <SimpleSetup />
+        <Plateforms />
+        <SuperEasy />
+        <GetStarted />
+        <Feedback />
+        <Container>
+          <Box className="BlogPage">
+            <BlogHead />
+            <Grid container spacing={3} sx={{ display: "flex" }}>
+              {data?.allStrapiBlog?.nodes?.map((blog, index) => {
+                return (
+                  <Blog
+                    blog={blog}
+                    key={index}
+                    customClass={index === 0 ? true : false}
+                  />
+                );
+              })}
+            </Grid>
+          </Box>
+        </Container>
+        <FrequentQuestions />
+        <FreeTrial />
+      </Layout>
+      <script type="application/ld+json">
         {`
             { 
               "@context": "https://schema.org/",
@@ -76,8 +81,8 @@ const IndexPage = ({ data }) => {
               }
             }
         `}
-        </script>
-        <script type="application/ld+json">
+      </script>
+      <script type="application/ld+json">
         {`
           {
             "@context": "https://schema.org/",
@@ -118,9 +123,9 @@ const IndexPage = ({ data }) => {
             ]
           }
         `}
-        </script>
-        
-        <script type="application/ld+json">
+      </script>
+
+      <script type="application/ld+json">
         {`
          {
           "@context": "https://schema.org",
@@ -147,31 +152,31 @@ const IndexPage = ({ data }) => {
         }
         
         `}
-        </script>
-        </ThemeProvider>
-    );
+      </script>
+    </ThemeProvider>
+  );
 };
 export const query = graphql`
-    query MyQuerystwo {
-        allStrapiBlog {
-            nodes {
-                Slug
-                Content
-                Title
-                id
-                Image {
-                    url
-                }
-                createdAt
-                check {
-                    data {
-                        check
-                    }
-                }
-                createdAt
-            }
+  query MyQuerystwo {
+    allStrapiBlog {
+      nodes {
+        Slug
+        Content
+        Title
+        id
+        Image {
+          url
         }
+        createdAt
+        check {
+          data {
+            check
+          }
+        }
+        createdAt
+      }
     }
+  }
 `;
 
 export default IndexPage;

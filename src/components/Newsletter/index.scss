@@ -1,0 +1,113 @@
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  min-height: 395px !important;
+  max-width: 790px !important;
+  padding: 0px 50px;
+  justify-content: center;
+  border-radius: 6px;
+  @media screen and (max-width: 476px) {
+    padding: 0px 20px;
+    min-height: 340px !important;
+    min-width: 260px;
+  }
+}
+.modalWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .cancelModal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25px, -30px);
+    font-size: 30px;
+    color: #6c6c6c;
+    cursor: pointer;
+    @media screen and (max-width: 476px) {
+      transform: translate(0px, -35px);
+    }
+  }
+  .modalContent {
+    h4 {
+      max-width: 340px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: 23px;
+      line-height: 30px;
+      color: #031838;
+      margin-bottom: 10px;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+      @media screen and (max-width: 476px) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+    h6 {
+      max-width: 315px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: #6c6c6c;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    form {
+      margin-top: 30px;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+      input {
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 15px;
+        min-width: 300px;
+        background: #f6f6f6;
+        border: 1px solid #d0d0d0;
+        border-radius: 6px;
+        &::placeholder {
+          color: #838383cc;
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+          -webkit-text-fill-color: #000000 !important;
+          -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+          transition: background-color 5000s ease-in-out 0s !important;
+        }
+        &:focus {
+          outline: none;
+        }
+        @media screen and (max-width: 768px) {
+          min-width: 220px;
+          margin: 0 auto;
+        }
+      }
+      button {
+        min-width: 332px;
+        background-color: #0072ff;
+        color: #ffffff;
+        padding: 12px;
+        margin-top: 14px;
+        border-radius: 6px;
+        text-transform: capitalize;
+        @media screen and (max-width: 768px) {
+          min-width: 250px;
+          margin: 14px auto 0;
+        }
+      }
+    }
+  }
+  .newsletter-Image {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
