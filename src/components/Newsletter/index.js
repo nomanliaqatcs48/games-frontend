@@ -118,7 +118,7 @@ export default function Modal() {
               <div>{status ? status.success : ""}</div>
             </Typography>
           </Box>
-          <Box>
+          <Box className="newsletter-Image">
             <img src={News} alt="newsletter" />
           </Box>
         </Box>
