@@ -98,7 +98,7 @@ export default function Modal() {
                   ":first-letter": {
                     textTransform: "capitalize",
                   },
-                  fontWeight: "600",
+                  fontWeight: "500",
                 }}
               >
                 {errors.email && touched.email ? errors.email : null}
