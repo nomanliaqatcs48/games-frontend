@@ -108,7 +108,7 @@ export default function Modal() {
             <Typography
               sx={{
                 fontSize: "16px",
-                color: "green",
+                color: "#008000",
                 ":first-letter": {
                   textTransform: "capitalize",
                 },
