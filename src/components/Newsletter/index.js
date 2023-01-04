@@ -98,7 +98,7 @@ export default function Modal() {
                   ":first-letter": {
                     textTransform: "capitalize",
                   },
-                  fontWeight: "600",
+                  fontWeight: "500",
                 }}
               >
                 {errors.email && touched.email ? errors.email : null}
@@ -108,7 +108,7 @@ export default function Modal() {
             <Typography
               sx={{
                 fontSize: "16px",
-                color: "green",
+                color: "#008000",
                 ":first-letter": {
                   textTransform: "capitalize",
                 },
