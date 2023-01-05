@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-advanced-sitemap`,
+      resolve: `gatsby-plugin-advanced-sitemap-patch`,
       options: {
         query: `
                 {
@@ -55,7 +55,7 @@ module.exports = {
             serializer: (edges) => {
               const siteMapEntries = [];
               edges.forEach((edge) => {
-                edge.node.slug = "/blog/" + edge.node.slug;
+                edge.node.slug = "/blog/" + edge.node.slug + "/";
                 siteMapEntries.push(edge);
               });
               return siteMapEntries;
