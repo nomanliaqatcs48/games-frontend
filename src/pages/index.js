@@ -32,16 +32,18 @@ const theme = createTheme({
 const IndexPage = ({ data }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Helmet>
-        <meta name="robots" content="index, follow" />
-        <meta name="robots" content="max-image-preview:standard" />
-      </Helmet>
       <Layout>
         <Helmet>
           <meta name="robots" content="index, follow" />
           <meta name="robots" content="max-image-preview:standard" />
         </Helmet>
-        <Seo title="Home" description="home" tag="index" pageUrl="" />
+        {/* \SEO Component */}
+        <Seo
+          title="Invochat - An all-in-one business collaboration tool"
+          description="Invochat is an innovative way to conduct internal/external business collaboration. It's faster, better, organised, and more effective than email"
+          tag="index"
+          pageUrl=""
+        />
         <HeroSection />
         <SimpleSetup />
         <Plateforms />
