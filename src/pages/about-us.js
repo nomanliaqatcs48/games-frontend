@@ -9,17 +9,17 @@ import Stronger from "../components/Stronger";
 import WhoAndWhy from "../components/WhoAndWhy";
 
 const About = () => {
-    return (
-        <Layout>
-            <WhoAndWhy />
-            <GlobalAndCard />
-            <StreamLine />
-            <Stronger />
-            <CardStrongerFlex />
-            <ClientQuote />
-            <FreeTrialAbout />
-        </Layout>
-    );
+  return (
+    <Layout>
+      <WhoAndWhy />
+      <GlobalAndCard />
+      <StreamLine />
+      <Stronger />
+      <CardStrongerFlex />
+      <ClientQuote />
+      <FreeTrialAbout />
+    </Layout>
+  );
 };
 
 export default About;
