@@ -37,6 +37,7 @@ const IndexPage = ({ data }) => {
           <meta name="robots" content="index, follow" />
           <meta name="robots" content="max-image-preview:standard" />
         </Helmet>
+        {/* \SEO Component */}
         <Seo
           title="Invochat - An all-in-one business collaboration tool"
           description="Invochat is an innovative way to conduct internal/external business collaboration. It's faster, better, organised, and more effective than email"
