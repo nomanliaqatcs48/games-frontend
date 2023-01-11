@@ -17,7 +17,7 @@ $fontFamily: "Raleway";
       font-weight: 800;
     }
     h2 {
-      font-family: $fontFamily;
+      font-family: $fontFamily !important;
       color: #031838;
       font-size: 44px;
       font-weight: 800;
@@ -26,7 +26,19 @@ $fontFamily: "Raleway";
       color: #031838;
       font-size: 18px;
       font-weight: 500;
-      font-family: $fontFamily;
+      font-family: $fontFamily !important;
+    }
+    p {
+      color: #031838;
+      font-size: 13px;
+      font-family: $fontFamily !important;
+    }
+    ul {
+      li {
+        color: #031838;
+        font-size: 13px;
+        font-family: $fontFamily !important;
+      }
     }
     .list {
       padding-top: 20px;

@@ -29,6 +29,8 @@ const theme = createTheme({
   },
 });
 
+const array = ["1", "2", "3", "4"];
+
 const IndexPage = ({ data }) => {
   return (
     <ThemeProvider theme={theme}>
@@ -52,8 +54,8 @@ const IndexPage = ({ data }) => {
         <Feedback />
         <Container>
           <Box className="BlogPage">
-            <BlogHead />
-            <Grid container spacing={3} sx={{ display: "flex" }}>
+            <BlogHead blog={data?.allStrapiBlog?.nodes} />
+            {/* <Grid container spacing={3} sx={{ display: "flex" }}>
               {data?.allStrapiBlog?.nodes?.map((blog, index) => {
                 return (
                   <Blog
@@ -63,7 +65,7 @@ const IndexPage = ({ data }) => {
                   />
                 );
               })}
-            </Grid>
+            </Grid> */}
           </Box>
         </Container>
         <FrequentQuestions />
@@ -160,7 +162,7 @@ const IndexPage = ({ data }) => {
 };
 export const query = graphql`
   query MyQuerystwo {
-    allStrapiBlog {
+    allStrapiBlog(sort: { fields: createdAt, order: DESC }) {
       nodes {
         Slug
         Content
