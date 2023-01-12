@@ -29,7 +29,14 @@ function Header(props) {
     <Box sx={{ textAlign: "center" }}>
       <Box sx={{ py: { xs: 2, lg: 0 } }}>
         <Link to="/">
-          <img loading="lazy" src={Logo} alt="Logo_picture" />
+          <img
+            loading="lazy"
+            src={Logo}
+            alt="Logo_picture"
+            style={{
+              maxWidth: "190px",
+            }}
+          />
         </Link>
         <Box>
           <MdOutlineClose onClick={handleDrawerToggle} className="close" />
@@ -189,7 +196,7 @@ function Header(props) {
       </AppBar>
       <Box component="nav">
         <Drawer
-          anchor="left"
+          anchor="top"
           container={container}
           variant="temporary"
           open={mobileOpen}

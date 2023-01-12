@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Grid, Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Layout from "../baseStructure/Layout";
-import Blog from "../components/Blog/Blog";
+// import Blog from "../components/Blog/Blog";
 import { graphql } from "gatsby";
 import "../components/FreeTrialAbout/index.scss";
 import BlogHead from "../components/BlogHead";
@@ -28,8 +28,6 @@ const theme = createTheme({
     },
   },
 });
-
-const array = ["1", "2", "3", "4"];
 
 const IndexPage = ({ data }) => {
   return (
