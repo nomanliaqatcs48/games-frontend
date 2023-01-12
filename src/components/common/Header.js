@@ -39,7 +39,11 @@ function Header(props) {
           />
         </Link>
         <Box>
-          <MdOutlineClose onClick={handleDrawerToggle} className="close" />
+          <MdOutlineClose
+            onClick={handleDrawerToggle}
+            className="close"
+            fill="#000000"
+          />
         </Box>
       </Box>
       <Divider />
@@ -189,7 +193,11 @@ function Header(props) {
               onClick={handleDrawerToggle}
               sx={{ display: { lg: "none" } }}
             >
-              <MenuIcon></MenuIcon>
+              <MenuIcon
+                style={{
+                  fill: "#000000",
+                }}
+              />
             </IconButton>
           </Toolbar>
         </Container>
