@@ -10,7 +10,7 @@ const BlogHead = ({ blog }) => {
         <Typography variant="h1" sx={{ textAlign: "center" }}>
           Our Blog Division
         </Typography>
-        <Typography variant="h3" sx={{ textAlign: "center", p: 1.5 }}>
+        <Typography variantMapping="p" sx={{ textAlign: "center", p: 1.5 }}>
           You'll love it!
         </Typography>
         <Grid container spacing={3} sx={{ display: "flex" }}>

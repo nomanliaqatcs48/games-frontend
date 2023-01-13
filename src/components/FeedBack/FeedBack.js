@@ -10,128 +10,185 @@ import ClientC from "../../Assets/images/client_C.svg";
 import "../../components/FeedBack/FeedBack.scss";
 
 const Feedback = () => {
-    const settings = {
-        dots: false,
-        centerMode: false,
-        centerPadding: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 2.7,
-                },
-            },
-            {
-                breakpoint: 1020,
-                settings: {
-                    slidesToShow: 2.3,
-                },
-            },
-            {
-                breakpoint: 875,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 770,
-                settings: {
-                    slidesToShow: 1.7,
-                },
-            },
-            {
-                breakpoint: 650,
-                settings: {
-                    slidesToShow: 1.5,
-                },
-            },
-            {
-                breakpoint: 599,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    };
-    return (
-        <Box className="feedback" sx={{ pt: 8 }}>
-            <Container>
-                <Typography variant="h2" sx={{ textAlign: "center" }}>
-                    What people think about us
-                </Typography>
-                <Box sx={{ pt: 6 }}>
-                    <Slider {...settings} className="slide">
-                        <Box className="margin">
-                            <Box className="feedback_card">
-                                <Box sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "space-around" }, px: { xs: 4, sm: 0 } }}>
-                                    <Box sx={{ display: "flex" }}>
-                                        <img loading="lazy" src={ClientA} alt="picture_of_client"/>
-                                        <Box sx={{ pl: 2 }}>
-                                            <Typography className="client_name"> Dane A. </Typography>
-                                            <Typography className="client_about">Product Manager </Typography>
-                                        </Box>
-                                    </Box>
-                                    <Box sx={{ pt: 0.5 }}>
-                                        <img loading="lazy" src={Comma} alt="picture_of_comma"/>
-                                    </Box>
-                                </Box>
-                                <Typography variant="h5">The platform automatically assigns conversations and tickets to availableThe platform automatically assigns conversations and tickets to available </Typography>
-                            </Box>
-                        </Box>
-                        <Box className="feedback_card">
-                            <Box sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "space-around" }, px: { xs: 4, sm: 0 } }}>
-                                <Box sx={{ display: "flex" }}>
-                                    <img loading="lazy" src={ClientB} alt="picture_of_client"/>
-                                    <Box sx={{ pl: 2 }}>
-                                        <Typography className="client_name poppins"> Marie B. Hill </Typography>
-                                        <Typography className="client_about poppins">Product Growth Manager </Typography>
-                                    </Box>
-                                </Box>
-                                <Box>
-                                    <img loading="lazy" src={Comma} alt="picture_of_comma"/>
-                                </Box>
-                            </Box>
-                            <Typography variant="h5">The platform automatically assigns conversations and tickets to availableThe platform automatically assigns conversations and tickets to available </Typography>
-                        </Box>
-                        <Box className="feedback_card">
-                            <Box sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "space-around" }, px: { xs: 4, sm: 0 } }}>
-                                <Box sx={{ display: "flex" }}>
-                                    <img loading="lazy" src={ClientC} alt="picture_of_client"/>
-                                    <Box sx={{ pl: 2 }}>
-                                        <Typography className="client_name poppins"> Jacob C.. </Typography>
-                                        <Typography className="client_about poppins">Contect Writer </Typography>
-                                    </Box>
-                                </Box>
-                                <Box>
-                                    <img loading="lazy" src={Comma} alt="picture_of_comma"/>
-                                </Box>
-                            </Box>
-                            <Typography variant="h5">The platform automatically assigns conversations and tickets to availableThe platform automatically assigns conversations and tickets to available </Typography>
-                        </Box>
-                        <Box className="feedback_card">
-                            <Box sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "space-around" }, px: { xs: 4, sm: 0 } }}>
-                                <Box sx={{ display: "flex" }}>
-                                    <img loading="lazy" src={ClientB} alt="picture_of_client"/>
-                                    <Box sx={{ pl: 2 }}>
-                                        <Typography className="client_name poppins"> Marie B. Hill </Typography>
-                                        <Typography className="client_about poppins">Product Growth Manager </Typography>
-                                    </Box>
-                                </Box>
-                                <Box>
-                                    <img loading="lazy" src={Comma} alt="picture_of_comma"/>
-                                </Box>
-                            </Box>
-                            <Typography variant="h5">The platform automatically assigns conversations and tickets to availableThe platform automatically assigns conversations and tickets to available </Typography>
-                        </Box>
-                    </Slider>
+  const settings = {
+    dots: false,
+    centerMode: false,
+    centerPadding: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 2.7,
+        },
+      },
+      {
+        breakpoint: 1020,
+        settings: {
+          slidesToShow: 2.3,
+        },
+      },
+      {
+        breakpoint: 875,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 1.7,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+      {
+        breakpoint: 599,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <Box className="feedback" sx={{ pt: 8 }}>
+      <Container>
+        <Typography variant="h2" sx={{ textAlign: "center" }}>
+          What people think about us
+        </Typography>
+        <Box sx={{ pt: 6 }}>
+          <Slider {...settings} className="slide">
+            <Box className="margin">
+              <Box className="feedback_card">
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: { xs: "space-between", sm: "space-around" },
+                    px: { xs: 4, sm: 0 },
+                  }}
+                >
+                  <Box sx={{ display: "flex" }}>
+                    <img loading="lazy" src={ClientA} alt="picture_of_client" />
+                    <Box sx={{ pl: 2 }}>
+                      <Typography className="client_name"> Dane A. </Typography>
+                      <Typography className="client_about">
+                        Product Manager{" "}
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Box sx={{ pt: 0.5 }}>
+                    <img loading="lazy" src={Comma} alt="picture_of_comma" />
+                  </Box>
                 </Box>
-            </Container>
+                <Typography className="feedback_Content">
+                  The platform automatically assigns conversations and tickets
+                  to availableThe platform automatically assigns conversations
+                  and tickets to available{" "}
+                </Typography>
+              </Box>
+            </Box>
+            <Box className="feedback_card">
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: { xs: "space-between", sm: "space-around" },
+                  px: { xs: 4, sm: 0 },
+                }}
+              >
+                <Box sx={{ display: "flex" }}>
+                  <img loading="lazy" src={ClientB} alt="picture_of_client" />
+                  <Box sx={{ pl: 2 }}>
+                    <Typography className="client_name poppins">
+                      {" "}
+                      Marie B. Hill{" "}
+                    </Typography>
+                    <Typography className="client_about poppins">
+                      Product Growth Manager{" "}
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box>
+                  <img loading="lazy" src={Comma} alt="picture_of_comma" />
+                </Box>
+              </Box>
+              <Typography className="feedback_Content">
+                The platform automatically assigns conversations and tickets to
+                availableThe platform automatically assigns conversations and
+                tickets to available{" "}
+              </Typography>
+            </Box>
+            <Box className="feedback_card">
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: { xs: "space-between", sm: "space-around" },
+                  px: { xs: 4, sm: 0 },
+                }}
+              >
+                <Box sx={{ display: "flex" }}>
+                  <img loading="lazy" src={ClientC} alt="picture_of_client" />
+                  <Box sx={{ pl: 2 }}>
+                    <Typography className="client_name poppins">
+                      {" "}
+                      Jacob C..{" "}
+                    </Typography>
+                    <Typography className="client_about poppins">
+                      Contect Writer{" "}
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box>
+                  <img loading="lazy" src={Comma} alt="picture_of_comma" />
+                </Box>
+              </Box>
+              <Typography className="feedback_Content">
+                The platform automatically assigns conversations and tickets to
+                availableThe platform automatically assigns conversations and
+                tickets to available{" "}
+              </Typography>
+            </Box>
+            <Box className="feedback_card">
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: { xs: "space-between", sm: "space-around" },
+                  px: { xs: 4, sm: 0 },
+                }}
+              >
+                <Box sx={{ display: "flex" }}>
+                  <img loading="lazy" src={ClientB} alt="picture_of_client" />
+                  <Box sx={{ pl: 2 }}>
+                    <Typography className="client_name poppins">
+                      {" "}
+                      Marie B. Hill{" "}
+                    </Typography>
+                    <Typography className="client_about poppins">
+                      Product Growth Manager{" "}
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box>
+                  <img loading="lazy" src={Comma} alt="picture_of_comma" />
+                </Box>
+              </Box>
+              <Typography className="feedback_Content">
+                The platform automatically assigns conversations and tickets to
+                availableThe platform automatically assigns conversations and
+                tickets to available{" "}
+              </Typography>
+            </Box>
+          </Slider>
         </Box>
-    );
+      </Container>
+    </Box>
+  );
 };
 
 export default Feedback;

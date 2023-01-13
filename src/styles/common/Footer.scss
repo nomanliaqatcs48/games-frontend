@@ -68,7 +68,7 @@
       color: rgba(255, 255, 255, 0.5);
       font-family: "raleway";
     }
-    h5 {
+    p {
       font-size: 14px;
       color: #ffffff;
       font-family: "raleway";
@@ -76,8 +76,15 @@
     }
   }
   a {
+    font-weight: 600;
     text-decoration: none;
+    color: #ffffff;
   }
+}
+.newsletter-sub {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "raleway";
 }
 
 @media (max-width: 599px) {

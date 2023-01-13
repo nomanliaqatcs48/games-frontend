@@ -34,7 +34,7 @@ const Blog = (props) => {
               <Typography
                 className={` ${props.customClass ? styles.zero_heading : ""}`}
                 gutterBottom
-                variant="h6"
+                variant="h2"
               >
                 {props?.blog?.Title}
               </Typography>

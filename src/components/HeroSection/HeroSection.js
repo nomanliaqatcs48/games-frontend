@@ -107,7 +107,7 @@ const HeroSection = () => {
               >
                 <Typography
                   sx={{ textAlign: { xs: "center", md: "left" } }}
-                  variant="h5"
+                  variantMapping="p"
                 >
                   Catch up on important conversations and say hi to productive
                   collaboration - An all-in-one solution. Be it tasks or

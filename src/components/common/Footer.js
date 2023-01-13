@@ -106,7 +106,7 @@ const Footer = () => {
                 <Link to="/about-us/">
                   <Typography
                     sx={{ textAlign: { xs: "center", md: "left" } }}
-                    variant="h5"
+                    variantMapping="p"
                   >
                     About Us
                   </Typography>
@@ -117,7 +117,7 @@ const Footer = () => {
                       pt: { xs: 2.5, md: 2 },
                       textAlign: { xs: "center", md: "left" },
                     }}
-                    variant="h5"
+                    variantMapping="p"
                   >
                     Features
                   </Typography>
@@ -128,7 +128,7 @@ const Footer = () => {
                       pt: { xs: 2.5, md: 2 },
                       textAlign: { xs: "center", md: "left" },
                     }}
-                    variant="h5"
+                    variantMapping="p"
                   >
                     Pricing
                   </Typography>
@@ -139,7 +139,7 @@ const Footer = () => {
                       pt: { xs: 2.5, md: 2 },
                       textAlign: { xs: "center", md: "left" },
                     }}
-                    variant="h5"
+                    variantMapping="p"
                   >
                     Blog
                   </Typography>
@@ -165,7 +165,7 @@ const Footer = () => {
                     pt: { xs: 2.5, md: 2 },
                     textAlign: { xs: "center", md: "left" },
                   }}
-                  variant="h5"
+                  variantMapping="p"
                 >
                   Contact Us
                 </Typography>
@@ -176,7 +176,7 @@ const Footer = () => {
                     pt: { xs: 2.5, md: 2 },
                     textAlign: { xs: "center", md: "left" },
                   }}
-                  variant="h5"
+                  variantMapping="p"
                 >
                   Terms & Conditions
                 </Typography>
@@ -187,7 +187,7 @@ const Footer = () => {
                     pt: { xs: 2.5, md: 2 },
                     textAlign: { xs: "center", md: "left" },
                   }}
-                  variant="h5"
+                  variantMapping="p"
                 >
                   Privacy Policy
                 </Typography>
@@ -198,7 +198,7 @@ const Footer = () => {
                     pt: { xs: 2.5, md: 2 },
                     textAlign: { xs: "center", md: "left" },
                   }}
-                  variant="h5"
+                  variantMapping="p"
                 >
                   Disclaimer
                 </Typography>
@@ -223,7 +223,8 @@ const Footer = () => {
                   textAlign: { xs: "center", md: "left" },
                   my: { xs: 3, md: 0 },
                 }}
-                variant="h4"
+                variantMapping="p"
+                className="newsletter-sub"
               >
                 Newsletter subscription
               </Typography>
@@ -336,9 +337,9 @@ const Footer = () => {
               <Typography
                 sx={{ pt: 3, textAlign: { xs: "center", md: "left" } }}
                 className="poppins"
-                variant="h4"
+                variantMapping="p"
               >
-                All Rights Reserved.
+                All Rights Reserved © 2023
               </Typography>
               <Box sx={{ display: "flex", justifyContent: { xs: "center" } }}>
                 <Link

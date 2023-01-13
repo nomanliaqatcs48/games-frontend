@@ -75,10 +75,10 @@ export default function Modal() {
             alt="close"
           />
           <Box className="modalContent">
-            <Typography variant="h4">
+            <Typography variant="h1">
               Exceptional Teamwork Begins with an Online Workspace
             </Typography>
-            <Typography variant="h6">
+            <Typography variantMapping="p">
               Get access to insights, tactics and case studies that I don’t
               offer anywhere and are only available here.
             </Typography>

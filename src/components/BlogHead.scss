@@ -1,27 +1,27 @@
 $fontFamily: "raleway";
 .blog_head {
-    padding-top: 30px;
-    .custom-css {
-        width: 100% !important;
-    }
+  padding-top: 30px;
+  .custom-css {
+    width: 100% !important;
+  }
 
-    h1 {
-        padding-top: 40px;
-        font-family: $fontFamily;
-        font-size: 46px;
-        @media (max-width: 899px) {
-            font-size: 34px;
-        }
-        @media (max-width: 599px) {
-            font-size: 30px;
-        }
-        font-weight: 800;
-        color: #031838;
+  h1 {
+    padding-top: 40px;
+    font-family: $fontFamily;
+    font-size: 46px;
+    @media (max-width: 899px) {
+      font-size: 34px;
     }
-    h3 {
-        font-family: $fontFamily;
-        font-size: 24px;
-        font-weight: 500;
-        color: #031838;
+    @media (max-width: 599px) {
+      font-size: 30px;
     }
+    font-weight: 800;
+    color: #031838;
+  }
+  p {
+    font-family: $fontFamily;
+    font-size: 24px;
+    font-weight: 500;
+    color: #031838;
+  }
 }
