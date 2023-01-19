@@ -1,19 +1,19 @@
-.icon-main{
-    display: flex;
-    max-width: 104px;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-right: 16px;
-    @media screen and (max-width:992px) {
-        max-width: 85px;
+.icon-main {
+  display: flex;
+  max-width: 104px;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-right: 16px;
+  @media screen and (max-width: 992px) {
+    max-width: 85px;
+  }
+  p {
+    font-family: "Raleway";
+    font-size: 15px;
+    text-align: center;
+    @media screen and (max-width: 992px) {
+      font-size: 12px;
     }
-    h6{
-        font-family: 'Raleway';
-        font-size: 15px;
-        text-align: center;
-        @media screen and (max-width:992px) {
-            font-size: 12px;
-        }
-    }
+  }
 }

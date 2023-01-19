@@ -10,7 +10,7 @@ function GetStarted() {
       <Container>
         <Box className="getstarted-Wrapper">
           <Box className="getstarted-heading">
-            <Typography variant="h2">Ready to get started?</Typography>
+            <Typography variant="h1">Ready to get started?</Typography>
             <Typography variantMapping="p">
               Choose a plan tailored to your needs
             </Typography>

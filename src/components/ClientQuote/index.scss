@@ -1,31 +1,31 @@
 .clientquote-wrapper {
-    position: relative;
-    .quoteRightImage{
-        position: absolute;
-        left: 0;
-        bottom: 60px;
-        @media screen and (max-width:768px) {
-          display: none;
-        }
+  position: relative;
+  .quoteRightImage {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    @media screen and (max-width: 768px) {
+      display: none;
     }
-    .client-head {
-        margin-top: 67px;
-        z-index: 0;
-        @media screen and (max-width:768px) {
-          margin-top: 50px;
-        }
-      h2 {
-        font-weight: 800;
-        font-family: 'Raleway';
-        font-size: 40px;
-        line-height: 47px;
-        text-align: center;
-        @media screen and (max-width:768px) {
-          font-size: 30px;
-          line-height: 40px;
-        }
+  }
+  .client-head {
+    margin-top: 67px;
+    z-index: 0;
+    @media screen and (max-width: 768px) {
+      margin-top: 50px;
+    }
+    h2 {
+      font-weight: 800;
+      font-family: "Raleway";
+      font-size: 40px;
+      line-height: 47px;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
+        line-height: 40px;
       }
     }
+  }
   .clientquote-content {
     max-width: 622px;
     margin: 0 auto;
@@ -34,22 +34,22 @@
       justify-content: center;
       align-items: center;
       margin: 17px 0px 20px 0px;
-      img{
+      img {
         width: 7%;
       }
     }
     .client-para {
-        margin-top: 33px;
-        @media screen and (max-width:768px) {
-          margin-top: 20px;
-        }
-      h6 {
+      margin-top: 33px;
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
+      p {
         font-weight: 500;
-        font-family: 'Raleway';
+        font-family: "Raleway";
         font-size: 20px;
         line-height: 23px;
         text-align: center;
-        @media screen and (max-width:768px) {
+        @media screen and (max-width: 768px) {
           font-size: 15px;
         }
       }
