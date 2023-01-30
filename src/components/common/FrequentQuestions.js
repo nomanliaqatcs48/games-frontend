@@ -81,11 +81,30 @@ function FrequentQuestions() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography variantMapping="p">
-                  1. What features do I get with InvoChat? 2. Read receipts 3.
-                  Screen pin lock 4. Google Drive and Meet integration 5.
-                  Notification management 6. Dedicated workspaces 7.
-                  Topic-specific chatroom 8. Unlimited team members 9. File
-                  sharing & attachments
+                  <span>
+                    <ol>
+                      <li style={{ paddingLeft: "1rem" }}>Read receipts</li>
+                      <li style={{ paddingLeft: "1rem" }}>Screen pin lock</li>
+                      <li style={{ paddingLeft: "1rem" }}>
+                        Google Drive and Meet integration
+                      </li>
+                      <li style={{ paddingLeft: "1rem" }}>
+                        Notification management
+                      </li>
+                      <li style={{ paddingLeft: "1rem" }}>
+                        Dedicated workspaces
+                      </li>
+                      <li style={{ paddingLeft: "1rem" }}>
+                        Topic-specific chatroom
+                      </li>
+                      <li style={{ paddingLeft: "1rem" }}>
+                        Unlimited team members
+                      </li>
+                      <li style={{ paddingLeft: "1rem" }}>
+                        File sharing & attachments
+                      </li>
+                    </ol>
+                  </span>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -135,7 +154,7 @@ function FrequentQuestions() {
                   details such as first name, last name, and username, and set
                   your password and pin for further security. Give your
                   workspace a name and hand-pick a URL. You can get started by
-                  bringing in your team members to your workspace.{" "}
+                  bringing in your team membes to your workspace.{" "}
                 </Typography>
               </AccordionDetails>
             </Accordion>
