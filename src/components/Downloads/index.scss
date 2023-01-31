@@ -1,0 +1,58 @@
+.cardsDicWrapper {
+  display: flex;
+  justify-content: space-between;
+  .downloadCardWrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    min-width: 200px;
+    min-height: 280px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15.1189px;
+    &::after {
+      content: "";
+      background-color: #0072ff;
+      position: absolute;
+      width: 27px;
+      height: 5px;
+      right: -27px;
+      top: 65px;
+    }
+    &:nth-last-child(1)::after {
+      content: none;
+      background-color: #0072ff;
+      position: absolute;
+      width: 27px;
+      height: 5px;
+      right: -27px;
+      top: 65px;
+    }
+    .cardBody {
+      display: flex;
+      align-items: center;
+      row-gap: 35px;
+      flex-direction: column;
+      p {
+        color: #031838;
+        font-family: "Raleway";
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 25px;
+      }
+      a {
+        text-decoration: none;
+      }
+      button {
+        background-color: #0072ff;
+        color: #ffffff;
+        padding: 10px 15px;
+        &:hover {
+          background-color: #0059c8;
+        }
+      }
+    }
+  }
+}
