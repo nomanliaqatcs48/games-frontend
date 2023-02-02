@@ -35,7 +35,7 @@ const index = () => {
       buttonImage: "",
       buttonText: "Download",
       imageAlt: "windows",
-      fileLink: "",
+      fileLink: "https://invochat-bucket.s3.amazonaws.com/windows-build.zip",
     },
     {
       titleImage: MACOS,
@@ -43,7 +43,7 @@ const index = () => {
       buttonImage: "",
       buttonText: "Download",
       imageAlt: "macOS",
-      fileLink: "https://invochat-bucket.s3.amazonaws.com/Invochat.app.zip",
+      fileLink: "https://invochat-bucket.s3.amazonaws.com/Invochat.zip",
     },
     {
       titleImage: Linux,
@@ -51,7 +51,8 @@ const index = () => {
       buttonImage: "",
       buttonText: "Download 64-Bit",
       imageAlt: "linux",
-      fileLink: "",
+      fileLink:
+        "https://invochat-bucket.s3.amazonaws.com/mattermost-desktop-5.2.0-develop.1-linux-x86_64.rpm",
     },
   ];
   return (
