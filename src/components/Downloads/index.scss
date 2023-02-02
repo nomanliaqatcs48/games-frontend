@@ -1,6 +1,9 @@
 .cardsDicWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 25px;
   .downloadCardWrapper {
     display: flex;
     position: relative;
@@ -23,12 +26,57 @@
     }
     &:nth-last-child(1)::after {
       content: none;
-      background-color: #0072ff;
-      position: absolute;
-      width: 27px;
-      height: 5px;
-      right: -27px;
-      top: 65px;
+    }
+    @media screen and (max-width: 1195px) {
+      &:nth-last-child(2)::after {
+        content: none;
+      }
+    }
+    @media screen and (max-width: 970px) {
+      &:nth-last-child(3)::after {
+        content: none;
+      }
+      &:nth-last-child(2)::after {
+        content: "";
+        background-color: #0072ff;
+        position: absolute;
+        width: 27px;
+        height: 5px;
+        right: -27px;
+        top: 65px;
+      }
+    }
+    @media screen and (max-width: 745px) {
+      &:nth-last-child(2)::after {
+        content: none;
+      }
+      &:nth-last-child(3)::after {
+        content: "";
+        background-color: #0072ff;
+        position: absolute;
+        width: 27px;
+        height: 5px;
+        right: -27px;
+        top: 65px;
+      }
+      &:nth-last-child(4)::after {
+        content: none;
+      }
+    }
+    @media screen and (max-width: 488px) {
+      &:nth-child(n):after {
+        content: "";
+        background-color: #0072ff;
+        position: absolute;
+        width: 27px;
+        height: 5px;
+        right: 87px;
+        top: 291px;
+        transform: rotate(90deg);
+      }
+      &:nth-last-child(1)::after {
+        content: none;
+      }
     }
     .cardBody {
       display: flex;
@@ -49,6 +97,9 @@
         background-color: #0072ff;
         color: #ffffff;
         padding: 10px 15px;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: capitalize;
         &:hover {
           background-color: #0059c8;
         }

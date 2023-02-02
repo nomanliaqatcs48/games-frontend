@@ -68,6 +68,9 @@
           transform: scale(1.25);
         }
       }
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
     }
   }
   .hero_social {
