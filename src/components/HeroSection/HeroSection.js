@@ -3,13 +3,10 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Link } from "gatsby";
 import HeroPic from "../../Assets/images/hero_new.png";
 import DownArrow from "../../Assets/images/down_arrow.svg";
-import IOS from "../../Assets/images/ios.svg";
-import Apple from "../../Assets/images/apple.svg";
-import Window from "../../Assets/images/window.svg";
-import Chrome from "../../Assets/images/chrome_new.png";
 import "../HeroSection/HeroSection.scss";
 import axios from "axios";
 import { useState } from "react";
+import Download from "../Downloads";
 
 const HeroSection = () => {
   const [email, setEmail] = useState("");
@@ -151,65 +148,7 @@ const HeroSection = () => {
             pt: { xs: 12, sm: 6 },
           }}
         >
-          <Grid item xs={12} md={8} className="hero_social">
-            <Grid
-              container
-              sx={{ display: "flex", justifyContent: "space-around", py: 1 }}
-            >
-              <Grid
-                item
-                xs={6}
-                sm={3}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  pt: { xs: 2, sm: 0 },
-                }}
-              >
-                <img loading="lazy" src={IOS} alt="web/mobile-screenshot" />
-              </Grid>
-              <Grid
-                item
-                xs={6}
-                sm={3}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  pt: { xs: 2, sm: 0 },
-                }}
-              >
-                <img loading="lazy" src={Apple} alt="web/mobile-screenshot" />
-              </Grid>
-              <Grid
-                item
-                xs={6}
-                sm={3}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  pt: { xs: 2, sm: 0 },
-                }}
-              >
-                <img loading="lazy" src={Window} alt="web/mobile-screenshot" />
-              </Grid>
-              <Grid
-                item
-                xs={6}
-                sm={3}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  pt: { xs: 2, sm: 0 },
-                }}
-              >
-                <img loading="lazy" src={Chrome} alt="web/mobile-screenshot" />
-              </Grid>
-            </Grid>
-          </Grid>
+          <Download />
         </Grid>
         <Box
           sx={{

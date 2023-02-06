@@ -1,0 +1,109 @@
+.cardsDicWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 25px;
+  .downloadCardWrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    min-width: 200px;
+    min-height: 280px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15.1189px;
+    &::after {
+      content: "";
+      background-color: #0072ff;
+      position: absolute;
+      width: 27px;
+      height: 5px;
+      right: -27px;
+      top: 65px;
+    }
+    &:nth-last-child(1)::after {
+      content: none;
+    }
+    @media screen and (max-width: 1195px) {
+      &:nth-last-child(2)::after {
+        content: none;
+      }
+    }
+    @media screen and (max-width: 970px) {
+      &:nth-last-child(3)::after {
+        content: none;
+      }
+      &:nth-last-child(2)::after {
+        content: "";
+        background-color: #0072ff;
+        position: absolute;
+        width: 27px;
+        height: 5px;
+        right: -27px;
+        top: 65px;
+      }
+    }
+    @media screen and (max-width: 745px) {
+      &:nth-last-child(2)::after {
+        content: none;
+      }
+      &:nth-last-child(3)::after {
+        content: "";
+        background-color: #0072ff;
+        position: absolute;
+        width: 27px;
+        height: 5px;
+        right: -27px;
+        top: 65px;
+      }
+      &:nth-last-child(4)::after {
+        content: none;
+      }
+    }
+    @media screen and (max-width: 488px) {
+      &:nth-child(n):after {
+        content: "";
+        background-color: #0072ff;
+        position: absolute;
+        width: 27px;
+        height: 5px;
+        right: 87px;
+        top: 291px;
+        transform: rotate(90deg);
+      }
+      &:nth-last-child(1)::after {
+        content: none;
+      }
+    }
+    .cardBody {
+      display: flex;
+      align-items: center;
+      row-gap: 35px;
+      flex-direction: column;
+      p {
+        color: #031838;
+        font-family: "Raleway";
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 25px;
+      }
+      a {
+        text-decoration: none;
+      }
+      button {
+        background-color: #0072ff;
+        color: #ffffff;
+        padding: 10px 15px;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: capitalize;
+        &:hover {
+          background-color: #0059c8;
+        }
+      }
+    }
+  }
+}
