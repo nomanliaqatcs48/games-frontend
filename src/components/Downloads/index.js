@@ -44,7 +44,8 @@ const index = () => {
       buttonImage: "",
       buttonText: "Download",
       imageAlt: "macOS",
-      fileLink: "https://invochat-bucket.s3.amazonaws.com/Invochat.zip",
+      fileLink:
+        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-5.2.2-mac-x64.dmg",
     },
     {
       titleImage: Linux,
