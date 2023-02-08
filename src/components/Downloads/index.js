@@ -27,7 +27,7 @@ const index = () => {
       buttonImage: AndroidButton,
       buttonText: "",
       imageAlt: "android",
-      fileLink: "",
+      fileLink: "https://play.google.com/store/apps/details?id=com.invochat.co",
     },
     {
       titleImage: Windows,
@@ -66,8 +66,8 @@ const index = () => {
               <img src={content.titleImage} alt={content.imageAlt} />
               <Typography variantMapping="p">{content.title}</Typography>
               {content.buttonImage ? (
-                <a href={content.fileLink}>
-                  <img src={content.buttonImage} />
+                <a href={content.fileLink} target="_blank" rel="noreferrer">
+                  <img src={content.buttonImage} alt="download" />
                 </a>
               ) : (
                 <a href={content.fileLink}>
