@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "gatsby";
+import ReCAPTCHA from "react-google-recaptcha";
 
 // Library
 import { Container, Typography, Button, Box } from "@mui/material";
@@ -10,7 +12,7 @@ import LeftBgIcon from "../../Assets/images/featureleft.svg";
 import axios from "axios";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 // Styles
@@ -19,14 +21,19 @@ import * as styles from "../ContactDetail/styles.module.scss";
 // Components
 
 const ContactDetail = () => {
-  //   const [errors, setErrors] = useState("");
-  //   const [value, setValue] = useState();
+  const [captcha, isCaptcha] = useState(false);
+  const captchaRef = useRef();
+
+  const onChangeReCaptcha = (value) => {
+    isCaptcha({ ...captcha, code: value, validation: true });
+  };
 
   const initialValues = {
     FullName: "",
     Email: "",
     PhoneNumber: "",
     Message: "",
+    acceptedTos: false,
   };
 
   const registrationSchema = Yup.object().shape({
@@ -44,6 +51,10 @@ const ContactDetail = () => {
       .min(3, "Minimum 3 symbols")
       .max(50, "Maximum 50 symbols")
       .required("Message is required"),
+    acceptedTos: Yup.boolean().oneOf(
+      [true],
+      "Please accept the terms of services"
+    ),
   });
 
   const formik = useFormik({
@@ -56,6 +67,7 @@ const ContactDetail = () => {
           Email: values?.Email,
           PhoneNumber: values?.PhoneNumber,
           Message: values?.Message,
+          recaptchaToken: captcha?.code,
         })
         .then((res) => {
           if (res.status === 200) {
@@ -144,9 +156,7 @@ const ContactDetail = () => {
                     <label htmlFor="phone" className={styles.label}>
                       Phone
                     </label>
-                    {/* <input id="phone" name="phone" type="Number" placeholder="Phone" {...formik.getFieldProps("PhoneNumber")} className={styles.inputField} /> */}
                     <Box className={styles.inputField}>
-                      {/* <PhoneInput international type="tel" className={styles.phoneInputInput} {...formik.getFieldProps("PhoneNumber")} placeholder="Enter phone number" /> */}
                       <PhoneInput
                         className="anonymous"
                         placeholder="Phone Number"
@@ -211,10 +221,67 @@ const ContactDetail = () => {
                       </div>
                     </div>
                   )}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                      columnGap: "15px",
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      {...formik.getFieldProps("acceptedTos")}
+                    />
+                    <Typography
+                      sx={{
+                        margin: "0px",
+                        color: "#303030",
+                        fontFamily: "Raleway",
+                        fontSize: "15px",
+                      }}
+                    >
+                      I understand and agree to the{" "}
+                      <Link to="/terms-and-conditions">
+                        <Typography
+                          variant="span"
+                          sx={{
+                            fontFamily: "Raleway",
+                            fontWeight: "500",
+                            color: "#303030",
+                            transition: "0.2s ease-in all",
+                            "&:hover": {
+                              textDecoration: "underline",
+                            },
+                          }}
+                        >
+                          terms & conditions.
+                        </Typography>
+                      </Link>
+                    </Typography>
+                  </Box>
+                  {formik.touched.acceptedTos && formik.errors.acceptedTos && (
+                    <div className="fv-plugins-message-container">
+                      <div className="fv-help-block">
+                        <span role="alert" className={styles.formError}>
+                          {formik.errors.acceptedTos}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                  <Box>
+                    <ReCAPTCHA
+                      sitekey="6LfHxnckAAAAAGw31H0pNcJlECKWzkQB591Bhl9G"
+                      onChange={onChangeReCaptcha}
+                      onExpired={() => isCaptcha(false)}
+                      ref={captchaRef}
+                    />
+                  </Box>
                   <Box className={styles.flexColumn}>
                     <Button
                       onClick={formik.handleSubmit}
                       className={styles.msgBtn}
+                      disabled={formik.isSubmitting || !captcha.code}
                     >
                       SEND MESSAGE
                     </Button>
@@ -232,23 +299,6 @@ const ContactDetail = () => {
                     {/* {errors.email && touched.email ? errors.email : null} */}
                     <div>{formik.status ? formik.status.success : ""}</div>
                   </Typography>
-                  {/* <Typography
-                    sx={{
-                      "& p": {
-                        fontSize: "16px",
-                        color:
-                          errors === "Not Submitted"
-                            ? "red"
-                            : errors === "Successfully submitted"
-                            ? "green"
-                            : "",
-                        fontWeight: "500",
-                      },
-                    }}
-                    component="span"
-                  >
-                    {errors && <p>{errors}</p>}
-                  </Typography> */}
                 </div>
               </div>
             </div>

@@ -75,7 +75,7 @@ $fontFamily: "Raleway";
       .form {
         width: 509px;
         font-family: $fontFamily;
-        height: 593px;
+        min-height: 593px;
         background: #ffffff;
         border-radius: 5px;
         box-shadow: 0px 0px 32px -3px rgba(181, 181, 181, 0.45);
@@ -126,11 +126,16 @@ $fontFamily: "Raleway";
               color: #ffffff;
               padding: 1rem;
               cursor: pointer;
+              &:disabled {
+                opacity: 0.35;
+                cursor: progress;
+              }
             }
           }
 
           .formError {
             color: red;
+            font-size: 13px;
           }
         }
       }
