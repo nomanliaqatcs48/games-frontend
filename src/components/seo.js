@@ -20,6 +20,7 @@ function Seo({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const image = "https://invochat.io/static/LogoInvoChat-c91ae0016800d8f491b3efae697e10e6.svg"
 
   return (
     <Helmet
@@ -47,7 +48,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -60,6 +61,50 @@ function Seo({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `og:locale`,
+          content: "en-us",
+        },
+        {
+          property: `og:url`,
+          content: url,
+        },
+        {
+          name: `image`,
+          content: image,
+        },
+        {
+          property: "og:image",
+          content: image,
+        },
+        {
+          property: "og:image:width",
+          content: 1200,
+        },
+        {
+          property: "og:image:height",
+          content: 600,
+        },
+        {
+          property: "og:image:alt",
+          content: title,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: title,
+        },
+        {
+          name: `twitter:image`,
+          content: image,
+        },
+        {
+          name: `twitter:site`,
+          content: `@invozone`,
+        },
+        {
+          name: `twitter:url`,
+          content: url,
         },
       ].concat(meta)}
     />
