@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import { siteMetadata } from "../../../gatsby-config";
 
 const Seo = ({ description, lang, meta, title, tag, pageUrl, data }) => {
-  const image = `https://invozone.com/static/fdff9a8231f428161146a1d36f03e5de/collaborative_intelligence_c7fcee57a2.jpg`;
+  const image = data ? data.Image[0].url : ``;
   const pageLink =
     pageUrl == "blogs"
       ? data?.Add_Canonical_Link
