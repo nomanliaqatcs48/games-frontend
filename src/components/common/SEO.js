@@ -1,54 +1,10 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import { Helmet } from "react-helmet";
-// import favicon from "../../images/favicon.svg";
-import { useStaticQuery, graphql } from "gatsby";
 import { siteMetadata } from "../../../gatsby-config";
 
-const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl, data }) => {
-//   const data = useStaticQuery(
-//     graphql`
-//       query {
-//         allStrapiBlog {
-//           nodes {
-//             Slug
-//             Content
-//             Title
-//             id
-//             Image {
-//               url
-//               alternativeText
-//             }
-//             createdAt
-//             check {
-//               data {
-//                 check
-//               }
-//             }
-//             metaTitle
-//             metaKeywords
-//             metaDescription
-//             Tags
-//             Add_Canonical_Link
-//           }
-//         }
-//       }
-//     `
-//   );
-
-  /* Filtering the data from the query to get the data for the specific blog. */
-//   const GlobalSeo = data?.allStrapiBlog?.nodes;
-//   const results = GlobalSeo?.filter((element) => element?.id === blogId);
-
-//   console.log("title", blogId);
-//   console.log("title_1", title || data?.metaTitle);
-//   console.log("title_2", description || data?.metaDescription);
-  //   const pageTitle = title || data?.metaTitle;
-  const pageTitle = "InvoChat Title";
-  //   const pageDesc = description || data?.metaDescription;
-  const pageDesc = "InvoChat Description";
-  const image = `https://invozone.com/static/fdff9a8231f428161146a1d36f03e5de/collaborative_intelligence_c7fcee57a2.jpg`; //data ? data.Image[0].url : "";
-  const imgAlt = title || data?.metaTitle; //data ? data?.Image[0]?.alternativeText : "";
+const Seo = ({ description, lang, meta, title, tag, pageUrl, data }) => {
+  const image = `https://invozone.com/static/fdff9a8231f428161146a1d36f03e5de/collaborative_intelligence_c7fcee57a2.jpg`;
   const pageLink =
     pageUrl == "blogs"
       ? data?.Add_Canonical_Link
@@ -57,7 +13,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl, data }) => 
   return (
     <Helmet
       htmlAttributes={{ lang }}
-      title={pageTitle}
+      title={title}
       link={[
         {
           rel: `canonical`,
@@ -67,7 +23,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl, data }) => 
       meta={[
         {
           name: `description`,
-          content: pageDesc,
+          content: description,
         },
         {
           name: `robots`,
@@ -79,11 +35,11 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl, data }) => 
         },
         {
           property: `og:title`,
-          content: pageTitle,
+          content: title,
         },
         {
           property: `og:description`,
-          content: pageDesc,
+          content: description,
         },
         {
           property: `og:url`,
@@ -95,7 +51,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl, data }) => 
         },
         {
           property: "og:image:alt",
-          content: imgAlt,
+          content: title,
         },
         {
           property: `tag`,
@@ -103,11 +59,11 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl, data }) => 
         },
         {
           name: `twitter:title`,
-          content: pageTitle,
+          content: title,
         },
         {
           name: `twitter:description`,
-          content: pageDesc,
+          content: description,
         },
         {
           name: `twitter:url`,
@@ -139,7 +95,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl, data }) => 
         },
         {
           name: `twitter:image:alt`,
-          content: imgAlt,
+          content: title,
         },
         {
           name: `twitter:site`,

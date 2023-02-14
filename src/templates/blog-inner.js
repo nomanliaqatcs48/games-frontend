@@ -93,7 +93,7 @@ const InnerBlog = ({ data }) => {
                   <>
                     <SEO
                       title={record?.metaTitle}
-                      blogId={record?.id}
+                      description={record?.metaDescription}
                       data={record}
                       pageUrl="blogs"
                     />
@@ -139,8 +139,13 @@ export const query = graphql`
       Content
       Slug
       metaTitle
+      metaDescription
+      metaKeywords
+      Tags
+      Add_Canonical_Link
       Image {
         url
+        alternativeText
       }
       check {
         data {
