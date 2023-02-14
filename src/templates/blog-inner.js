@@ -81,7 +81,7 @@ const blogInnerContent = [
   },
 ];
 const InnerBlog = ({ data }) => {
-  const record = data.strapiBlog;
+  const record = data?.strapiBlog;
   return (
     <Layout>
       <Box className="innerBlog">
@@ -89,8 +89,8 @@ const InnerBlog = ({ data }) => {
           <Grid container>
             <Grid xs={12}>
               <Box className="innerBlog_content">
-                {blogInnerContent.map((val) => (
-                  <>
+                {/* {blogInnerContent.map((val) => (
+                  <> */}
                     <SEO
                       title={record?.metaTitle}
                       description={record?.metaDescription}
@@ -118,8 +118,8 @@ const InnerBlog = ({ data }) => {
                     <span
                       dangerouslySetInnerHTML={{ __html: record?.Add_Schema }}
                     />
-                  </>
-                ))}
+                  {/* </>
+                ))} */}
               </Box>
             </Grid>
           </Grid>
