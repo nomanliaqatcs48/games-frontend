@@ -40,9 +40,13 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
   const GlobalSeo = data?.allStrapiBlog?.nodes;
   const results = GlobalSeo?.filter((element) => element?.id === blogId);
 
-
-  const pageTitle = title || results[0]?.metaTitle;
-  const pageDesc = description || results[0]?.metaDescription;
+//   console.log("title", title);
+//   console.log("title_1", title || results[0]?.metaTitle);
+//   console.log("title_2", description || results[0]?.metaDescription);
+  //   const pageTitle = title || results[0]?.metaTitle;
+  const pageTitle = "InvoChat Title";
+  //   const pageDesc = description || results[0]?.metaDescription;
+  const pageDesc = "InvoChat Description";
   const image = `https://invozone.com/static/fdff9a8231f428161146a1d36f03e5de/collaborative_intelligence_c7fcee57a2.jpg`; //results[0] ? results[0].Image[0].url : "";
   const imgAlt = title || results[0]?.metaTitle; //results[0] ? results[0]?.Image[0]?.alternativeText : "";
   const pageLink =
