@@ -5,53 +5,53 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { siteMetadata } from "../../../gatsby-config";
 
-const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allStrapiBlog {
-          nodes {
-            Slug
-            Content
-            Title
-            id
-            Image {
-              url
-              alternativeText
-            }
-            createdAt
-            check {
-              data {
-                check
-              }
-            }
-            metaTitle
-            metaKeywords
-            metaDescription
-            Tags
-            Add_Canonical_Link
-          }
-        }
-      }
-    `
-  );
+const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl, data }) => {
+//   const data = useStaticQuery(
+//     graphql`
+//       query {
+//         allStrapiBlog {
+//           nodes {
+//             Slug
+//             Content
+//             Title
+//             id
+//             Image {
+//               url
+//               alternativeText
+//             }
+//             createdAt
+//             check {
+//               data {
+//                 check
+//               }
+//             }
+//             metaTitle
+//             metaKeywords
+//             metaDescription
+//             Tags
+//             Add_Canonical_Link
+//           }
+//         }
+//       }
+//     `
+//   );
 
   /* Filtering the data from the query to get the data for the specific blog. */
-  const GlobalSeo = data?.allStrapiBlog?.nodes;
-  const results = GlobalSeo?.filter((element) => element?.id === blogId);
+//   const GlobalSeo = data?.allStrapiBlog?.nodes;
+//   const results = GlobalSeo?.filter((element) => element?.id === blogId);
 
-//   console.log("title", title);
-//   console.log("title_1", title || results[0]?.metaTitle);
-//   console.log("title_2", description || results[0]?.metaDescription);
-  //   const pageTitle = title || results[0]?.metaTitle;
+//   console.log("title", blogId);
+//   console.log("title_1", title || data?.metaTitle);
+//   console.log("title_2", description || data?.metaDescription);
+  //   const pageTitle = title || data?.metaTitle;
   const pageTitle = "InvoChat Title";
-  //   const pageDesc = description || results[0]?.metaDescription;
+  //   const pageDesc = description || data?.metaDescription;
   const pageDesc = "InvoChat Description";
-  const image = `https://invozone.com/static/fdff9a8231f428161146a1d36f03e5de/collaborative_intelligence_c7fcee57a2.jpg`; //results[0] ? results[0].Image[0].url : "";
-  const imgAlt = title || results[0]?.metaTitle; //results[0] ? results[0]?.Image[0]?.alternativeText : "";
+  const image = `https://invozone.com/static/fdff9a8231f428161146a1d36f03e5de/collaborative_intelligence_c7fcee57a2.jpg`; //data ? data.Image[0].url : "";
+  const imgAlt = title || data?.metaTitle; //data ? data?.Image[0]?.alternativeText : "";
   const pageLink =
     pageUrl == "blogs"
-      ? results[0]?.Add_Canonical_Link
+      ? data?.Add_Canonical_Link
       : siteMetadata?.siteUrl + pageUrl;
 
   return (
@@ -75,7 +75,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
         },
         {
           name: `keywords`,
-          content: results[0] ? results[0]?.metaKeywords : "",
+          content: data ? data?.metaKeywords : "",
         },
         {
           property: `og:title`,
@@ -99,7 +99,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
         },
         {
           property: `tag`,
-          content: tag || results[0]?.Tags,
+          content: tag || data?.Tags,
         },
         {
           name: `twitter:title`,

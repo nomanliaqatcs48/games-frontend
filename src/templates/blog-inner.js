@@ -94,6 +94,7 @@ const InnerBlog = ({ data }) => {
                     <SEO
                       title={record?.metaTitle}
                       blogId={record?.id}
+                      data={record}
                       pageUrl="blogs"
                     />
                     <Box>
