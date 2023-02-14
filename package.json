@@ -10,6 +10,7 @@
         "@fontsource/raleway": "^4.5.11",
         "@mui/icons-material": "^5.8.4",
         "@mui/material": "^5.9.2",
+        "deepmerge": "^4.3.0",
         "formik": "^2.2.9",
         "gatsby": "^4.19.2",
         "gatsby-plugin-advanced-sitemap": "^2.1.0",
