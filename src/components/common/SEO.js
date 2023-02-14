@@ -39,7 +39,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
   /* Filtering the data from the query to get the data for the specific blog. */
   const GlobalSeo = data?.allStrapiBlog?.nodes;
   const results = GlobalSeo.filter((element) => element.id === blogId);
-  const image = results[0] ? results[0].Image[0].url : "";
+  const image = `https://invochat.io/static/LogoInvoChat-c91ae0016800d8f491b3efae697e10e6.svg` //results[0] ? results[0].Image[0].url : "";
 
   return (
     <Helmet
