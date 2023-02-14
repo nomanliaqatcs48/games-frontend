@@ -38,16 +38,17 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
 
   /* Filtering the data from the query to get the data for the specific blog. */
   const GlobalSeo = data?.allStrapiBlog?.nodes;
-  const results = GlobalSeo.filter((element) => element?.id === blogId);
+  const results = GlobalSeo?.filter((element) => element?.id === blogId);
 
+
+  const pageTitle = title || results[0]?.metaTitle;
+  const pageDesc = description || results[0]?.metaDescription;
   const image = `https://invozone.com/static/fdff9a8231f428161146a1d36f03e5de/collaborative_intelligence_c7fcee57a2.jpg`; //results[0] ? results[0].Image[0].url : "";
-  const imgAlt = title; //results[0] ? results[0]?.Image[0]?.alternativeText : "";
+  const imgAlt = title || results[0]?.metaTitle; //results[0] ? results[0]?.Image[0]?.alternativeText : "";
   const pageLink =
     pageUrl == "blogs"
       ? results[0]?.Add_Canonical_Link
       : siteMetadata?.siteUrl + pageUrl;
-  const pageTitle = title || results[0]?.metaTitle;
-  const pageDesc = description || results[0]?.metaDescription;
 
   return (
     <Helmet
@@ -89,20 +90,12 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
           content: "website",
         },
         {
-          property: "og:image",
-          content: image,
-        },
-        {
           property: "og:image:alt",
           content: imgAlt,
         },
         {
           property: `tag`,
           content: tag || results[0]?.Tags,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
         },
         {
           name: `twitter:title`,
@@ -117,7 +110,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
           content: pageLink,
         },
         {
-          name: `twitter:image`,
+          name: "twitter:image",
           content: image,
         },
         {
@@ -148,7 +141,27 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
           name: `twitter:site`,
           content: `@invochat`,
         },
-      ].concat(meta)}
+      ]
+        .concat(
+          image
+            ? [
+                {
+                  property: "og:image",
+                  content: image,
+                },
+                {
+                  name: "twitter:card",
+                  content: "summary_large_image",
+                },
+              ]
+            : [
+                {
+                  name: "twitter:card",
+                  content: "summary",
+                },
+              ]
+        )
+        .concat(meta)}
     >
       {/* <link rel="shortcut icon" href={GlobalSeo?.metaImage.localFile.publicURL} /> */}
     </Helmet>
