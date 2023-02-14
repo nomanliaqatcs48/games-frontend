@@ -46,7 +46,7 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
     pageUrl == "blogs"
       ? results[0]?.Add_Canonical_Link
       : siteMetadata?.siteUrl + pageUrl;
-  const pageTitle = pageTitle;
+  const pageTitle = title || results[0]?.metaTitle;
   const pageDesc = description || results[0]?.metaDescription;
 
   return (
