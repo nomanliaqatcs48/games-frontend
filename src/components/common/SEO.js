@@ -1,63 +1,29 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import { Helmet } from "react-helmet";
-// import favicon from "../../images/favicon.svg";
-import { useStaticQuery, graphql } from "gatsby";
 import { siteMetadata } from "../../../gatsby-config";
 
-const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allStrapiBlog {
-          nodes {
-            Slug
-            Content
-            Title
-            id
-            Image {
-              url
-              alternativeText
-            }
-            createdAt
-            check {
-              data {
-                check
-              }
-            }
-            metaTitle
-            metaKeywords
-            metaDescription
-            Tags
-            Add_Canonical_Link
-          }
-        }
-      }
-    `
-  );
-
-  /* Filtering the data from the query to get the data for the specific blog. */
-  const GlobalSeo = data?.allStrapiBlog?.nodes;
-  const results = GlobalSeo.filter((element) => element.id === blogId);
-  const image = `https://invozone.com/static/fdff9a8231f428161146a1d36f03e5de/collaborative_intelligence_c7fcee57a2.jpg` //results[0] ? results[0].Image[0].url : "";
+const Seo = ({ description, lang, meta, title, tag, pageUrl, data }) => {
+  const image = data ? data.Image[0].url : ``;
+  const pageLink =
+    pageUrl == "blogs"
+      ? data?.Add_Canonical_Link
+      : siteMetadata?.siteUrl + pageUrl;
 
   return (
     <Helmet
       htmlAttributes={{ lang }}
-      title={title || results[0].metaTitle}
+      title={title}
       link={[
         {
           rel: `canonical`,
-          href:
-            pageUrl == "blogs"
-              ? results[0].Add_Canonical_Link
-              : siteMetadata.siteUrl + pageUrl,
+          href: pageLink,
         },
       ]}
       meta={[
         {
           name: `description`,
-          content: description || results[0].metaDescription,
+          content: description,
         },
         {
           name: `robots`,
@@ -65,65 +31,51 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
         },
         {
           name: `keywords`,
-          content: results[0] ? results[0].metaKeywords : "",
+          content: data ? data?.metaKeywords : "",
         },
         {
           property: `og:title`,
-          content: title || results[0].metaTitle,
+          content: title,
         },
         {
           property: `og:description`,
-          content: description || results[0].metaDescription,
+          content: description,
         },
         {
           property: `og:url`,
-          content:
-            pageUrl == "blogs"
-              ? results[0].Add_Canonical_Link
-              : siteMetadata.siteUrl + pageUrl,
+          content: pageLink,
         },
         {
           property: `og:type`,
           content: "website",
         },
         {
-          property: `og:image`,
-          content: image,
-        },
-        {
-          property: `og:image:alt`,
-          content: results[0] ? results[0]?.Image[0]?.alternativeText : "",
+          property: "og:image:alt",
+          content: title,
         },
         {
           property: `tag`,
-          content: tag || results[0].Tags,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
+          content: tag || data?.Tags,
         },
         {
           name: `twitter:title`,
-          content: title || results[0].metaTitle,
+          content: title,
         },
         {
           name: `twitter:description`,
-          content: description || results[0].metaDescription,
+          content: description,
         },
         {
           name: `twitter:url`,
-          content:
-            pageUrl == "blogs"
-              ? results[0].Add_Canonical_Link
-              : siteMetadata.siteUrl + pageUrl,
+          content: pageLink,
         },
         {
-          name: `twitter:image`,
+          name: "twitter:image",
           content: image,
         },
         {
           name: `twitter:creator`,
-          content: `@invozone`,
+          content: `@invochat`,
         },
         {
           name: `og:locale`,
@@ -147,9 +99,29 @@ const Seo = ({ description, lang, meta, title, blogId, tag, pageUrl }) => {
         },
         {
           name: `twitter:site`,
-          content: `@invozone`,
+          content: `@invochat`,
         },
-      ].concat(meta)}
+      ]
+        .concat(
+          image
+            ? [
+                {
+                  property: "og:image",
+                  content: image,
+                },
+                {
+                  name: "twitter:card",
+                  content: "summary_large_image",
+                },
+              ]
+            : [
+                {
+                  name: "twitter:card",
+                  content: "summary",
+                },
+              ]
+        )
+        .concat(meta)}
     >
       {/* <link rel="shortcut icon" href={GlobalSeo?.metaImage.localFile.publicURL} /> */}
     </Helmet>
