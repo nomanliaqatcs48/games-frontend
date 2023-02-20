@@ -13,7 +13,7 @@ const SignUp = () => {
 
     return (
         <Layout>
-            <Seo title={content[0].metaTitle} description={content[0].metaDescription} tag='index' pageUrl='term-and-condition/'/>
+            <Seo title={content[0].metaTitle} description={content[0].metaDescription} tag='index' pageUrl='terms-and-conditions/'/>
             <TermCondition />
         </Layout>
     );
