@@ -19,7 +19,7 @@ const index = () => {
       buttonImage: IOSButton,
       buttonText: "",
       imageAlt: "ios",
-      fileLink: "",
+      fileLink: "https://apps.apple.com/us/app/invochat/id1614223566",
     },
     {
       titleImage: Android,
