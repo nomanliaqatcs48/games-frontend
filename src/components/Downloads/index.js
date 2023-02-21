@@ -36,7 +36,7 @@ const index = () => {
       buttonText: "Download",
       imageAlt: "windows",
       fileLink:
-        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-setup-5.2.2-win.exe",
+        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-setup-win.exe",
     },
     {
       titleImage: MACOS,
@@ -45,7 +45,7 @@ const index = () => {
       buttonText: "Download",
       imageAlt: "macOS",
       fileLink:
-        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-5.2.2-mac-x64.dmg",
+        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-mac-x64.dmg",
     },
     {
       titleImage: Linux,
@@ -54,7 +54,7 @@ const index = () => {
       buttonText: "Download 64-Bit",
       imageAlt: "linux",
       fileLink:
-        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop_5.2.2-1_amd64.deb",
+        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-amd64.deb",
     },
   ];
   return (
