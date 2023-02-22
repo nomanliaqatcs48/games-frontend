@@ -4,7 +4,9 @@ import { Helmet } from "react-helmet";
 import { siteMetadata } from "../../../gatsby-config";
 
 const Seo = ({ description, lang, meta, title, tag, pageUrl, data }) => {
-  const image = data ? data.Image[0].url : ``;
+  const defaultImage =
+    "https://invochat-bucket.s3.amazonaws.com/Invo_Chat_Logo_e53f93277b.png?updated_at=2023-02-22T06:31:50.682Z";
+  const image = data ? data.Image[0].url : defaultImage ? defaultImage : "";
   const pageLink =
     pageUrl == "blogs"
       ? data?.Add_Canonical_Link
