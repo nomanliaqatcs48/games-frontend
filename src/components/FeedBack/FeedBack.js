@@ -137,7 +137,7 @@ const Feedback = () => {
                       Jacob C..{" "}
                     </Typography>
                     <Typography className="client_about poppins">
-                      Contect Writer{" "}
+                      Content Writer{" "}
                     </Typography>
                   </Box>
                 </Box>
