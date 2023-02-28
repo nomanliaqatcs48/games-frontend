@@ -18,6 +18,7 @@ const Feedback = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1199,
@@ -88,9 +89,7 @@ const Feedback = () => {
                   </Box>
                 </Box>
                 <Typography className="feedback_Content">
-                  The platform automatically assigns conversations and tickets
-                  to availableThe platform automatically assigns conversations
-                  and tickets to available{" "}
+                  InvoChat enables us to have all our conversations in one place. Plus, we can seamlessly share files through secure attachments. 
                 </Typography>
               </Box>
             </Box>
@@ -119,9 +118,7 @@ const Feedback = () => {
                 </Box>
               </Box>
               <Typography className="feedback_Content">
-                The platform automatically assigns conversations and tickets to
-                availableThe platform automatically assigns conversations and
-                tickets to available{" "}
+                InvoChat’s simple and easy to use interface and intuitive features make our work more productive and enjoyable.
               </Typography>
             </Box>
             <Box className="feedback_card">
@@ -140,7 +137,7 @@ const Feedback = () => {
                       Jacob C..{" "}
                     </Typography>
                     <Typography className="client_about poppins">
-                      Contect Writer{" "}
+                      Content Writer{" "}
                     </Typography>
                   </Box>
                 </Box>
@@ -149,9 +146,7 @@ const Feedback = () => {
                 </Box>
               </Box>
               <Typography className="feedback_Content">
-                The platform automatically assigns conversations and tickets to
-                availableThe platform automatically assigns conversations and
-                tickets to available{" "}
+                With InvoChat, we are now more focused than ever before. All the features are put together in a simple and easy to use way. 
               </Typography>
             </Box>
             <Box className="feedback_card">
@@ -179,9 +174,7 @@ const Feedback = () => {
                 </Box>
               </Box>
               <Typography className="feedback_Content">
-                The platform automatically assigns conversations and tickets to
-                availableThe platform automatically assigns conversations and
-                tickets to available{" "}
+                InvoChat’s simple and easy to use interface and intuitive features make our work more productive and enjoyable.  
               </Typography>
             </Box>
           </Slider>

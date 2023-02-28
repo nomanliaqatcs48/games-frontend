@@ -20,7 +20,7 @@ const content = [
 ];
 const BlogPage = ({ data }) => {
   const [items, setItems] = useState(data?.allStrapiBlog?.nodes || []);
-  let itemsPerPage = 4;
+  let itemsPerPage = 7;
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);
