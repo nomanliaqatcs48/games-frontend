@@ -14,7 +14,7 @@ const BlogHead = ({ blog }) => {
           You'll love it!
         </Typography>
         <Grid container spacing={3} sx={{ display: "flex" }}>
-          {blog?.map((blog, index) => {
+          {blog?.slice(0,4).map((blog, index) => {
             return (
               <Blog
                 blog={blog}

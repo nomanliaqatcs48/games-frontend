@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, Typography, CardActionArea } from "@mui/material";
+import { Grid, Button, Typography, CardActionArea } from "@mui/material";
 import { Link } from "gatsby";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -23,7 +23,7 @@ const Blog = (props) => {
             <CardMedia
               className={props.customClass ? styles.customImg : ""}
               component="img"
-              src={props.blog?.Image[0].url}
+              src={props?.blog?.Image[0]?.url}
             />
             <CardContent
               sx={{ pl: 0 }}
@@ -32,24 +32,24 @@ const Blog = (props) => {
               }`}
             >
               <Typography
-                className={` ${props.customClass ? styles.zero_heading : ""}`}
+                className={` ${props.customClass ? styles.zero_heading : ""} ${
+                  styles.cardTitle
+                }`}
                 gutterBottom
                 variant="h2"
               >
                 {props?.blog?.Title}
               </Typography>
-              <Typography variantMapping="p">
-                {props.blog?.Content.substring(0, 100)}
-              </Typography>
+              <Typography variantMapping="p">{props.blog?.Content}</Typography>
               <Link to={`/blog/${props?.blog?.Slug}/`}>
-                <Box
+                <Button
                   className={`${styles.card_btn} ${
                     props.customClass ? styles.firstBtn : ""
                   }`}
                   sx={{ pl: 0 }}
                 >
                   View more
-                </Box>
+                </Button>
               </Link>
             </CardContent>
           </CardActionArea>

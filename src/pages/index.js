@@ -53,17 +53,6 @@ const IndexPage = ({ data }) => {
         <Container>
           <Box className="BlogPage">
             <BlogHead blog={data?.allStrapiBlog?.nodes} />
-            {/* <Grid container spacing={3} sx={{ display: "flex" }}>
-              {data?.allStrapiBlog?.nodes?.map((blog, index) => {
-                return (
-                  <Blog
-                    blog={blog}
-                    key={index}
-                    customClass={index === 0 ? true : false}
-                  />
-                );
-              })}
-            </Grid> */}
           </Box>
         </Container>
         <FrequentQuestions />
