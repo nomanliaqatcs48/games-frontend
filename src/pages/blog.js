@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Grid, Container } from "@mui/material";
 import Layout from "../baseStructure/Layout";
 import Blog from "../components/Blog/Blog";
@@ -30,6 +30,12 @@ const BlogPage = ({ data }) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
   };
+
+  // Scroll to top when Pagination changes
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [currentItems]);
+
   return (
     <Layout>
       <Seo
