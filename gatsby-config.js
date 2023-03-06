@@ -98,6 +98,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
+        // Api URL
         apiURL: "https://st-backend-invochat.invo.zone/",
         // apiURL: "http://127.0.0.1:1337",
         // add access token
