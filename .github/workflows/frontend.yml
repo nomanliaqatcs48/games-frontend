@@ -3,8 +3,9 @@ name: Deploy on Production Frontend
 on:
   push:
     branches: [ "Frontend-live" ]
-  #schedule: 
-  #  - cron: '0/5 * * * *'
+  schedule: 
+    - cron: '1 23 * * *'
+    - cron: '1 15 * * *'
 
 jobs:
   build:
