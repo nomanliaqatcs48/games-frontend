@@ -124,7 +124,7 @@ const ContactDetail = () => {
                   alt=""
                   className={styles.iconWrap}
                 />
-                <span>Phone:</span> +1(754) 258-7812
+                <span>Phone:</span> +6011 2844 3855
               </Typography>
             </div>
             <div className={styles.formBox}>
