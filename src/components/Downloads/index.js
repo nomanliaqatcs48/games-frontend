@@ -54,7 +54,7 @@ const index = () => {
       buttonText: "Download 64-Bit",
       imageAlt: "linux",
       fileLink:
-        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-amd64.deb",
+        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-2.0.8-linux-x86_64.AppImage",
     },
   ];
   return (
