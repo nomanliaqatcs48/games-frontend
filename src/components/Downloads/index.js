@@ -36,7 +36,7 @@ const index = () => {
       buttonText: "Download",
       imageAlt: "windows",
       fileLink:
-        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-setup-win.exe",
+        "https://invochat-bucket.s3.amazonaws.com/invochat-desktop-setup-2.0.9-win.exe",
     },
     {
       titleImage: MACOS,
