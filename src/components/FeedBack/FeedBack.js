@@ -4,10 +4,42 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box, Typography, Container } from "@mui/material";
 import Comma from "../../Assets/images/commas.svg";
-import ClientA from "../../Assets/images/client_A.svg";
-import ClientB from "../../Assets/images/client_B.svg";
-import ClientC from "../../Assets/images/client_C.svg";
+import ClientA from "../../Assets/images/Client-One.jpeg";
+import ClientB from "../../Assets/images/Client-Two.jpeg";
+import ClientC from "../../Assets/images/Client-Three.jpg";
+import ClientD from "../../Assets/images/Client-Four.svg";
 import "../../components/FeedBack/FeedBack.scss";
+
+const content = [
+  {
+    name: "William Murray",
+    designation: "Product Manager",
+    feedback:
+      "InvoChat enables us to have all our conversations in one place. Plus, we can seamlessly share files through secure attachments.",
+    image: [ClientA],
+  },
+  {
+    name: "Marina Korgay",
+    designation: "Product Growth Manager",
+    feedback:
+      "InvoChat’s simple and easy to use interface and intuitive features make our work more productive and enjoyable.",
+    image: [ClientB],
+  },
+  {
+    name: "Ryan McGaha",
+    designation: "Product Manager",
+    feedback:
+      "InvoChat enables us to have all our conversations in one place. Plus, we can seamlessly share files through secure attachments.",
+    image: [ClientC],
+  },
+  {
+    name: "Dane A.",
+    designation: "Content Writer",
+    feedback:
+      "With InvoChat, we are now more focused than ever before. All the features are put together in a simple and easy to use way.",
+    image: [ClientD],
+  },
+];
 
 const Feedback = () => {
   const settings = {
@@ -65,119 +97,52 @@ const Feedback = () => {
           What people think about us
         </Typography>
         <Box sx={{ pt: 6 }}>
-          <Slider {...settings} className="slide">
-            <Box className="margin">
-              <Box className="feedback_card">
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: { xs: "space-between", sm: "space-around" },
-                    px: { xs: 4, sm: 0 },
-                  }}
-                >
-                  <Box sx={{ display: "flex" }}>
-                    <img loading="lazy" src={ClientA} alt="picture_of_client" />
-                    <Box sx={{ pl: 2 }}>
-                      <Typography className="client_name"> Dane A. </Typography>
-                      <Typography className="client_about">
-                        Product Manager{" "}
-                      </Typography>
+          <Box className="margin">
+            <Slider {...settings} className="slide">
+              {content.map((data) => {
+                return (
+                  <Box className="feedback_card">
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: {
+                          xs: "space-between",
+                          sm: "space-around",
+                        },
+                        px: { xs: 4, sm: 0 },
+                      }}
+                    >
+                      <Box className="client_Image" sx={{ display: "flex" }}>
+                        <img
+                          loading="lazy"
+                          src={data.image}
+                          alt="picture_of_client"
+                        />
+                        <Box sx={{ pl: 2 }}>
+                          <Typography className="client_name">
+                            {data.name}
+                          </Typography>
+                          <Typography className="client_about">
+                            {data.designation}
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box sx={{ pt: 0.5 }}>
+                        <img
+                          loading="lazy"
+                          src={Comma}
+                          alt="picture_of_comma"
+                        />
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box sx={{ pt: 0.5 }}>
-                    <img loading="lazy" src={Comma} alt="picture_of_comma" />
-                  </Box>
-                </Box>
-                <Typography className="feedback_Content">
-                  InvoChat enables us to have all our conversations in one place. Plus, we can seamlessly share files through secure attachments. 
-                </Typography>
-              </Box>
-            </Box>
-            <Box className="feedback_card">
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: { xs: "space-between", sm: "space-around" },
-                  px: { xs: 4, sm: 0 },
-                }}
-              >
-                <Box sx={{ display: "flex" }}>
-                  <img loading="lazy" src={ClientB} alt="picture_of_client" />
-                  <Box sx={{ pl: 2 }}>
-                    <Typography className="client_name poppins">
-                      {" "}
-                      Marie B. Hill{" "}
-                    </Typography>
-                    <Typography className="client_about poppins">
-                      Product Growth Manager{" "}
+                    <Typography className="feedback_Content">
+                      {data.feedback}
                     </Typography>
                   </Box>
-                </Box>
-                <Box>
-                  <img loading="lazy" src={Comma} alt="picture_of_comma" />
-                </Box>
-              </Box>
-              <Typography className="feedback_Content">
-                InvoChat’s simple and easy to use interface and intuitive features make our work more productive and enjoyable.
-              </Typography>
-            </Box>
-            <Box className="feedback_card">
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: { xs: "space-between", sm: "space-around" },
-                  px: { xs: 4, sm: 0 },
-                }}
-              >
-                <Box sx={{ display: "flex" }}>
-                  <img loading="lazy" src={ClientC} alt="picture_of_client" />
-                  <Box sx={{ pl: 2 }}>
-                    <Typography className="client_name poppins">
-                      {" "}
-                      Jacob C..{" "}
-                    </Typography>
-                    <Typography className="client_about poppins">
-                      Content Writer{" "}
-                    </Typography>
-                  </Box>
-                </Box>
-                <Box>
-                  <img loading="lazy" src={Comma} alt="picture_of_comma" />
-                </Box>
-              </Box>
-              <Typography className="feedback_Content">
-                With InvoChat, we are now more focused than ever before. All the features are put together in a simple and easy to use way. 
-              </Typography>
-            </Box>
-            <Box className="feedback_card">
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: { xs: "space-between", sm: "space-around" },
-                  px: { xs: 4, sm: 0 },
-                }}
-              >
-                <Box sx={{ display: "flex" }}>
-                  <img loading="lazy" src={ClientB} alt="picture_of_client" />
-                  <Box sx={{ pl: 2 }}>
-                    <Typography className="client_name poppins">
-                      {" "}
-                      Marie B. Hill{" "}
-                    </Typography>
-                    <Typography className="client_about poppins">
-                      Product Growth Manager{" "}
-                    </Typography>
-                  </Box>
-                </Box>
-                <Box>
-                  <img loading="lazy" src={Comma} alt="picture_of_comma" />
-                </Box>
-              </Box>
-              <Typography className="feedback_Content">
-                InvoChat’s simple and easy to use interface and intuitive features make our work more productive and enjoyable.  
-              </Typography>
-            </Box>
-          </Slider>
+                );
+              })}
+            </Slider>
+          </Box>
         </Box>
       </Container>
     </Box>
